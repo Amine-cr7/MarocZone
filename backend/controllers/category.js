@@ -2,7 +2,6 @@ const path = require("path")
 const asynchandler = require('express-async-handler')
 const Category = require('../models/Category')
 const ErrorResponse = require('../utils/ErrorResponse');
-
 const getCategories = asynchandler(async (req, res, next) => {
     const categories = await Category.find()
     res.status(200).json({ message: "success", count: categories.length, categories })
