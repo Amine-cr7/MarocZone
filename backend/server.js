@@ -2,12 +2,16 @@ const path = require('path')
 const express = require('express');
 
 const morgan = require('morgan')
+
+const dotenv = require('dotenv');
+dotenv.config({ path: path.resolve(__dirname, '../.env') });
+
  
 const cors = require('cors')
 const connectDb = require('./config/db');
 const {errorHandler} = require('./middlewares/errorMiddleware');
 
-const dotenv = require('dotenv').config();
+
 
 connectDb()
 
@@ -27,3 +31,4 @@ app.use('/api/categories',require('./routes/category'));
 app.use(errorHandler)
 
 app.listen(port, () => console.log('Server Started On Port ' + port))
+
