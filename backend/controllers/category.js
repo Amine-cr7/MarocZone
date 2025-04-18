@@ -2,10 +2,17 @@ const path = require("path")
 const asynchandler = require('express-async-handler')
 const Category = require('../models/Category')
 const ErrorResponse = require('../utils/ErrorResponse');
-const getCategories = asynchandler(async (req, res, next) => {
-    const categories = await Category.find()
+const getTopCat = asynchandler(async (req, res, next) => {
+    const categories = await Category.find({parent:null})
     res.status(200).json({ message: "success", count: categories.length, categories })
 })
+const getSubCat = asynchandler(async (req, res, next) => {
+    const subcategories = await Category.find({ parent: req.params.parentId });
+    
+  
+    res.status(200).json({ message: "success",subcategories});
+  });
+  
 
 const setCategory = asynchandler(async (req, res, next) => {
     const { name, parent } = req.body
@@ -23,5 +30,5 @@ const setCategory = asynchandler(async (req, res, next) => {
     })
 })
 module.exports = {
-    getCategories,setCategory
+    getSubCat,setCategory,getTopCat
 }

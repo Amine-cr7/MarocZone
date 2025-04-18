@@ -13,7 +13,7 @@ const cars = JSON.parse(
 const importData = async () => {
   try {
     await Category.create(informatique)
-    await Category.create(cars)
+    // await Category.create(cars)
     console.log(`✅ ALL DATA IMPORTED`);
     process.exit();
   } catch (error) {

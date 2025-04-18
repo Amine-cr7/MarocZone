@@ -12,7 +12,7 @@ const dotenv = require('dotenv').config();
 connectDb()
 
 const port = process.env.PORT || 5000;
-console.log(process.env)
+
 
 const app = express();
 
@@ -25,6 +25,7 @@ if (process.env.NODE_ENV === 'development') {
 };
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/categories',require('./routes/category'));
+app.use('/api/cities',require('./routes/city'));
 app.use(errorHandler)
 
 app.listen(port, () => console.log('Server Started On Port ' + port))
