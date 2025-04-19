@@ -1,10 +1,10 @@
-const express = require('express')
+// const express = require('express')
 
-const router = express.Router()
+// const router = express.Router()
 
-const { createCity, createNeighborhood } = require('../controllers/city')
-const { protect ,authorize} = require('../middlewares/authMiddleware')
-router.route('/').post(createCity)
-router.route('/neighborhood').post(createNeighborhood)
+// const { createCity, createNeighborhood } = require('../controllers/city')
+// const { protect ,authorize} = require('../middlewares/authMiddleware')
+// router.route('/').post(createCity)
+// router.route('/neighborhood').post(createNeighborhood)
 
-module.exports = router
+// module.exports = router

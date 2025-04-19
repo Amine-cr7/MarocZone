@@ -6,5 +6,4 @@ const {setCategory, getSubCat, getTopCat } = require('../controllers/category')
 const { protect ,authorize} = require('../middlewares/authMiddleware')
 router.route('/').get(getTopCat).post(setCategory)
 router.route('/:parent').get(getSubCat)
-router.route('/').get(getCategories).post(protect,setCategory)
 module.exports = router

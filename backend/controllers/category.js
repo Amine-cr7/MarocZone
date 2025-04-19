@@ -1,4 +1,4 @@
-const path = require("path")
+
 const asynchandler = require('express-async-handler')
 const Category = require('../models/Category')
 const ErrorResponse = require('../utils/ErrorResponse');

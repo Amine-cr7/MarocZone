@@ -8,8 +8,8 @@ const nodemailer = require("nodemailer");
 const dotenv = require('dotenv').config();
 
 const registerUser = asynchandler(async (req, res, next) => {
-  const { FullName, email, password, phone, city,adresse } = req.body;
-  if (!FullName || !email || !password || !phone || !city || !adresse) {
+  const { FullName, email, password, phone} = req.body;
+  if (!FullName || !email || !password || !phone ) {
     return next(new ErrorResponse("All fields (FullName,city,adresse,phone, email, password) are required.", 400));
   }
   const checkUser = await User.findOne({ email });
@@ -24,7 +24,7 @@ const registerUser = asynchandler(async (req, res, next) => {
     email,
     password: hashedPassword,
     phone,
-    location,
+    // location,
   });
 
   res.status(201).json({
