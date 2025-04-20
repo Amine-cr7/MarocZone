@@ -1,3 +1,5 @@
+const mongoose = require("mongoose");
+
 const adSchema = new mongoose.Schema({
     title: String,
     description: String,
@@ -9,3 +11,5 @@ const adSchema = new mongoose.Schema({
     details: mongoose.Schema.Types.Mixed,
     createdAt: { type: Date, default: Date.now }
 });  
+
+module.exports = mongoose.model('Ad',adSchema)
