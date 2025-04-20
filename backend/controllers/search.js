@@ -1,7 +1,7 @@
-const expressAsyncHandler = require('express-async-handler')
+const asynchandler = require('express-async-handler')
 const Ad = require('../models/Ad') 
 
-const searchAds = expressAsyncHandler( async(req,res) => {
+const searchAds = asynchandler( async(req,res) => {
     const { keyword , category , minPrice , maxPrice} = req.query
 
     let filter = {}
@@ -27,7 +27,7 @@ const searchAds = expressAsyncHandler( async(req,res) => {
     })
 })
 
-const filterAds = expressAsyncHandler(async (req, res) => {
+const filterAds = asynchandler(async (req, res) => {
     const { minPrice, maxPrice, location, dateFrom, dateTo } = req.query;
 
     let filter = {};
@@ -56,7 +56,18 @@ const filterAds = expressAsyncHandler(async (req, res) => {
         data: ads
     });
 });
+
+const getPopularAds = asynchandler(async(req,res) => {
+    const ads = await Ad.find().sort({views : -1}).limit(10).populate('category')
+
+    res.status(200).json({
+        message: 'Popular ads fetched successfully',
+        count: ads.length,
+        data: ads
+    });
+})
 module.exports = {
     searchAds,
-    filterAds
+    filterAds,
+    getPopularAds
 }
