@@ -10,7 +10,7 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const cors = require('cors')
 const connectDb = require('./config/db');
 const { errorHandler } = require('./middlewares/errorMiddleware');
-const fileUpload = require('express-fileupload');
+const fileupload = require('express-fileupload');
 
 
 
@@ -28,9 +28,11 @@ app.use(express.json())
 if (process.env.NODE_ENV === 'development') {
     app.use(morgan('dev'))
 };
+app.use(fileupload())
+app.use(express.static(path.join(__dirname , 'public')))
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/categories',require('./routes/category'));
-app.use('/api/cities',require('./routes/city'));
+app.use('/api/ads',require('./routes/ad'));
 app.use(errorHandler)
 
 app.listen(port, () => console.log('Server Started On Port ' + port))

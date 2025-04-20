@@ -2,7 +2,6 @@ const asynchandler = require('express-async-handler')
 const Ad = require('../models/Ad')
 const path = require('path')
 const dotenv = require('dotenv');
-const Category = require('../models/Category');
 const ErrorResponse = require('../utils/ErrorResponse');
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
