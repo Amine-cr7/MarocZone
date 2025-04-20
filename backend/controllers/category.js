@@ -2,6 +2,7 @@
 const asynchandler = require('express-async-handler')
 const Category = require('../models/Category')
 const ErrorResponse = require('../utils/ErrorResponse');
+const Ad = require('../models/Ad');
 const getTopCat = asynchandler(async (req, res, next) => {
     const categories = await Category.find({parent:null})
     res.status(200).json({ message: "success", count: categories.length, categories })
@@ -29,6 +30,25 @@ const setCategory = asynchandler(async (req, res, next) => {
         category
     })
 })
+
+
+const getAdsByCategory = asynchandler(async(req,res) => {
+    const CatID = req.params.id
+    const Ads = await Ad.find({category : CatID})
+    .populate('category', 'name') 
+
+    if(!Ads || Ads.length === 0){
+        return res.status(404).json({
+            message: 'No ads found for this category',
+        });
+    }
+
+    res.status(201).json({
+        message: 'Ad created successfully',
+        adsByCat : Ads
+    })
+})
+
 module.exports = {
-    getSubCat,setCategory,getTopCat
+    getSubCat,setCategory,getTopCat,getAdsByCategory
 }

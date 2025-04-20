@@ -2,26 +2,41 @@ const asynchandler = require('express-async-handler')
 const Ad = require('../models/Ad')
 const path = require('path')
 const dotenv = require('dotenv');
+const Category = require('../models/Category');
+const ErrorResponse = require('../utils/ErrorResponse');
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 
-const createAd = asynchandler(async (req, res) => {
-    const newAd = await Ad.create(req.body)
+const createAd = asynchandler(async (req, res,next) => {
+    const { title, description, price, category, user, location } = req.body;
+    if (!title || !description || !price || !category || !user || !location) {
+        return next(
+            new ErrorResponse("All fields (title, description, price, category, user, location) are required.", 400)
+        );
+    }
+    const newAd = await Ad.create(req.body);
     res.status(201).json({
         message: 'Ad created successfully',
         ad: newAd
     })
 })
 
-const getAllAds = asynchandler(async (req, res) => {
-    const AllAds = await Ad.find()
+const getAllAds = asynchandler(async (req, res, next) => {
+    const allAds = await Ad.find()
         .populate('category', 'name')
-        .populate('user', 'FullName email')
+        .populate('user', 'FullName email phone');
+    if (!allAds || allAds.length === 0) {
+        return res.status(404).json({
+            message: 'No ads found',
+            ads: []
+        });
+    }
     res.status(200).json({
         message: 'Retrieved all ads',
-        ads: AllAds
-    })
-})
+        ads: allAds
+    });
+});
+
 
 const getAdById = asynchandler(async (req, res) => {
     const id = req.params.id
@@ -78,61 +93,63 @@ const deleteAd = asynchandler(async (req, res) => {
     });
 });
 
-const uploadPhotoAd = asynchandler(async (req, res) => {
-    const ad = await Ad.findById(req.params.id)
-
+const uploadPhotosAd = asynchandler(async (req, res, next) => {
+    const ad = await Ad.findById(req.params.id);
     if (!ad) {
-        return res.status(404).json({ message: 'Ad not found' })
+        return next(new ErrorResponse("Ad not found", 404));
     }
 
-    if (!req.files || !req.files.file) {
-        return res.status(400).json({ message: 'No file uploaded' })
+    if (ad.user != req.user.id) {
+        return next(new ErrorResponse("This is not your ad", 403));
     }
 
-    const file = req.files.file
-
-    if (!file.mimetype.startsWith('image')) {
-        return res.status(400).json({ message: 'Invalid file type, image only' })
+    if (!req.files || !req.files.files) {
+        return next(new ErrorResponse("No files uploaded", 400));
     }
 
-    if (file.size > process.env.MAX_FILE_UPLOAD) {
-        return res.status(400).json({ message: `File size exceeds limit (${process.env.MAX_FILE_UPLOAD})` })
+    let files = req.files.files;
+
+    // Make sure files is always an array
+    if (!Array.isArray(files)) {
+        files = [files];
     }
-    
 
-    file.name = `ad_${ad._id}${path.extname(file.name)}`
-    const uploadPath = `${process.env.FILE_UPLOAD_PATH}/${file.name}`
+    const uploadedFileNames = [];
 
-    file.mv(uploadPath, async (err) => {
-        if (err) {
-            return res.status(500).json({ message: 'File upload failed' })
+    for (const file of files) {
+        if (!file.mimetype.startsWith('image')) {
+            return next(new ErrorResponse("One of the files is not an image", 400));
         }
 
-        await Ad.findByIdAndUpdate(req.params.id, { images: `/uploads/${file.name}` })
+        if (file.size > process.env.MAX_FILE_UPLOAD) {
+            return next(new ErrorResponse(`File size too large: ${file.name}`, 400));
+        }
 
-        res.status(200).json({
-            message: 'Photo uploaded successfully',
-            imageUrl: `/uploads/${file.name}`
-        })
-    })
-})
+        // Rename file
+        const fileName = `photo_${ad._id}_${Date.now()}_${file.name}`;
+        const uploadPath = `${process.env.FILE_UPLOAD_PATH}/${fileName}`;
 
-const getAdsByCategory = asynchandler(async(req,res) => {
-    const CatID = req.params.id
-    const Ads = await Ad.find({category : CatID})
-    .populate('category', 'name') 
-
-    if(!Ads || Ads.length === 0){
-        return res.status(404).json({
-            message: 'No ads found for this category',
+        await file.mv(uploadPath, (err) => {
+            if (err) {
+                console.error("UPLOAD ERROR:", err);
+                return next(new ErrorResponse("File upload failed", 500));
+            }
         });
+
+        uploadedFileNames.push(fileName);
     }
 
-    res.status(201).json({
-        message: 'Ad created successfully',
-        adsByCat : Ads
-    })
-})
+    // Example: Save array of file names to ad model
+    ad.images = uploadedFileNames; // Make sure your model supports this
+    await ad.save();
+
+    res.status(200).json({
+        success: true,
+        message: 'Images uploaded successfully',
+        data: uploadedFileNames
+    });
+});
+
 
 
 module.exports = {
@@ -141,6 +158,6 @@ module.exports = {
     getAdById,
     updateAd,
     deleteAd,
-    uploadPhotoAd,
-    getAdsByCategory
+    uploadPhotosAd,
+    
 }
