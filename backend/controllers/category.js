@@ -1,4 +1,3 @@
-
 const asynchandler = require('express-async-handler')
 const Category = require('../models/Category')
 const ErrorResponse = require('../utils/ErrorResponse');
@@ -14,7 +13,6 @@ const getSubCat = asynchandler(async (req, res, next) => {
     res.status(200).json({ message: "success",subcategories});
   });
   
-
 const setCategory = asynchandler(async (req, res, next) => {
     const { name, parent } = req.body
     if (!name) {

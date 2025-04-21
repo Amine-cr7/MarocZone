@@ -32,8 +32,8 @@ app.use(fileupload())
 app.use(express.static(path.join(__dirname , 'public')))
 app.use('/api/auth',require('./routes/auth'));
 app.use('/api/categories',require('./routes/category'));
-app.use('/api/ads',require('./routes/ad'));
+app.use('/api/ads', require('./routes/ad') )
+app.use('/api/tools', require('./routes/search'))
 app.use(errorHandler)
-
 app.listen(port, () => console.log('Server Started On Port ' + port))
 

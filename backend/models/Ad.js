@@ -9,6 +9,10 @@ const adSchema = new mongoose.Schema({
     user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
     location: String,
     details: mongoose.Schema.Types.Mixed,
+    views: {
+        type:Number,
+        default:0
+    },
     createdAt: { type: Date, default: Date.now }
 });  
 

@@ -1,5 +1,5 @@
-const asynchandler = require('express-async-handler')
 const Ad = require('../models/Ad')
+const asynchandler = require('express-async-handler')
 const path = require('path')
 const dotenv = require('dotenv');
 const ErrorResponse = require('../utils/ErrorResponse');
@@ -47,21 +47,22 @@ const getAdById = asynchandler(async (req, res) => {
             message: 'ad not found',
         })
     }
+    
+    AdById.views = (AdById.views || 0) + 1; 
+    await AdById.save();
+    
 
     res.status(200).json({
         message: 'Retrieved ads',
         ads: AdById
     })
 })
-
 const updateAd = asynchandler(async (req, res) => {
     const id = req.params.id
-
     const updatedAd = await Ad.findByIdAndUpdate(id, req.body, {
         new: true,
         runValidators: true
     });
-
     if (!updatedAd) {
         return res.status(404).json({
             message: 'ad not found'
@@ -72,20 +73,15 @@ const updateAd = asynchandler(async (req, res) => {
         UpdateAds: updatedAd
     })
 })
-
 const deleteAd = asynchandler(async (req, res) => {
     const id = req.params.id;
-
     const ad = await Ad.findById(id);
-
     if (!ad) {
         return res.status(404).json({
             message: 'Ad not found'
         });
     }
-
     await Ad.findByIdAndDelete(id);
-
     res.status(202).json({
         message: 'Deleted successfully',
         deletedAd: ad 
@@ -158,5 +154,4 @@ module.exports = {
     updateAd,
     deleteAd,
     uploadPhotosAd,
-    
 }
