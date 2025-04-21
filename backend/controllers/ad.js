@@ -154,5 +154,4 @@ module.exports = {
     updateAd,
     deleteAd,
     uploadPhotosAd,
-
 }
