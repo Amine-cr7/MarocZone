@@ -1,10 +1,12 @@
 {
   "name": "frontend",
-  "proxy":"http://localhost:5000",
+  "proxy": "http://localhost:5000",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^2.7.0",
+    "axios": "^1.8.4",
+    "axois": "^0.0.1-security",
     "cra-template-redux": "2.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
