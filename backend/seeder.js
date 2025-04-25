@@ -8,17 +8,13 @@ const Category = require('./models/Category');
 mongoose.connect(process.env.MONGO_URI);
 
 
-const informatique = JSON.parse(
-  fs.readFileSync(path.join(__dirname, './_data', 'informatique.json'), 'utf-8')
-);
-const cars = JSON.parse(
-  fs.readFileSync(path.join(__dirname, './_data', 'cars.json'), 'utf-8')
+const electronics = JSON.parse(
+  fs.readFileSync(path.join(__dirname, './_data', 'electronics.json'), 'utf-8')
 );
 
 const importData = async () => {
   try {
-    await Category.create(informatique)
-    await Category.create(cars)    
+    await Category.create(electronics)
     console.log(`✅ ALL DATA IMPORTED`);
     process.exit();
   } catch (error) {
