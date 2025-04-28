@@ -4,8 +4,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login";
 import Header from "./components/Header";
 import { ToastContainer } from 'react-toastify'
-import Home from "./pages/Home";
-import OneSelectCascade from "./pages/CatSelect";
+import CreateAd from "./pages/CreateAd";
 function App() {
 
   return (
@@ -16,7 +15,7 @@ function App() {
 
         <Header />
         <Routes>
-          <Route path="/" element={<OneSelectCascade />} />
+          <Route path="/add" element={<CreateAd />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>

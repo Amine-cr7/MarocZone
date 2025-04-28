@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCategories } from '../features/category/catSlice';
 
-export default function CatSelect() {
+export default function Category({setSelectedBrand}) {
   const dispatch = useDispatch();
   const { categories, loading } = useSelector(state => state.categories);
 
@@ -17,18 +17,16 @@ export default function CatSelect() {
   const [activeSub, setActiveSub] = useState(null);
   const [activeBrand, setActiveBrand] = useState(null);
 
-  const [selectedBrand, setSelectedBrand] = useState(null);
-  const [selectedModel, setSelectedModel] = useState(null);
-
   const handleSelectBrand = (brandObj) => {
+    console.log(setSelectedBrand);
     setSelectedCategory(brandObj.name);
-    setSelectedBrand(brandObj);
+    setSelectedBrand(brandObj);  
     setIsOpen(false);
     setActiveParent(null);
     setActiveSub(null);
     setActiveBrand(null);
-    setSelectedModel(null);
   };
+  
 
   return (
     <div className="p-6 max-w-xl mx-auto space-y-6 font-sans">
@@ -44,22 +42,6 @@ export default function CatSelect() {
           </svg>
         </div>
       </div>
-
-      {selectedBrand && (
-        <div>
-          <label className="block text-gray-800 text-lg mb-2 font-semibold">Modèle</label>
-          <select
-            className="border rounded-lg p-3 w-full bg-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400"
-            value={selectedModel || ""}
-            onChange={(e) => setSelectedModel(e.target.value)}
-          >
-            <option value="" disabled>Sélectionner un modèle</option>
-            {selectedBrand.models.map((model, idx) => (
-              <option key={idx} value={model}>{model}</option>
-            ))}
-          </select>
-        </div>
-      )}
 
       {isOpen && (
         <div className="fixed inset-0 bg-black bg-opacity-30 z-40 flex justify-end">
