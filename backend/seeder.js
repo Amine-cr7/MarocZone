@@ -4,17 +4,18 @@ require('dotenv').config({ path: path.join(__dirname, '../.env') });
 const mongoose = require('mongoose');
 const fs = require('fs');
 const Category = require('./models/Category');
- 
+
 mongoose.connect(process.env.MONGO_URI);
 
-
-const electronics = JSON.parse(
-  fs.readFileSync(path.join(__dirname, './_data', 'electronics.json'), 'utf-8')
+// Read and parse the JSON file
+const electronicsData = JSON.parse(
+  fs.readFileSync(path.join(__dirname, './_data/electronics.json'), 'utf-8')
 );
 
 const importData = async () => {
   try {
-    await Category.create(electronics)
+    // Create a new Category document with the parsed data
+    await Category.create(electronicsData);
     console.log(`✅ ALL DATA IMPORTED`);
     process.exit();
   } catch (error) {
@@ -23,18 +24,19 @@ const importData = async () => {
   }
 };
 
-const deletedData = async () => {
+const deleteData = async () => {
   try {
     await Category.deleteMany();
     console.log(`🗑️ DELETED Data`);
     process.exit();
   } catch (error) {
     console.log(error);
+    process.exit(1);
   }
 };
 
 if (process.argv[2] === '-i') {
   importData();
 } else if (process.argv[2] === '-d') {
-  deletedData();
+  deleteData();
 }

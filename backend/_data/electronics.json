@@ -1006,6 +1006,126 @@
             "M7 5G 128GB"
           ]
         }
+      ],
+      "fields": [
+        {
+          "label": "Storage",
+          "name": "storage",
+          "type": "select",
+          "options": [
+            "32GB",
+            "64GB",
+            "128GB",
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "required": true
+        },
+        {
+          "label": "RAM",
+          "name": "ram",
+          "type": "select",
+          "options": [
+            "2GB",
+            "3GB",
+            "4GB",
+            "6GB",
+            "8GB",
+            "12GB",
+            "16GB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Color",
+          "name": "color",
+          "type": "select",
+          "options": [
+            "Black",
+            "White",
+            "Blue",
+            "Red",
+            "Green",
+            "Gold",
+            "Silver"
+          ],
+          "required": true
+        },
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "5.0\"",
+            "5.5\"",
+            "6.0\"",
+            "6.5\"",
+            "6.7\"",
+            "7.0\""
+          ],
+          "required": false
+        },
+        {
+          "label": "Battery",
+          "name": "battery",
+          "type": "text",
+          "options": [],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good",
+            "Used - Acceptable"
+          ],
+          "required": true
+        },
+        {
+          "label": "Warranty",
+          "name": "warranty",
+          "type": "select",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": false
+        },
+        {
+          "label": "Operating System",
+          "name": "os",
+          "type": "select",
+          "options": [
+            "Android",
+            "iOS",
+            "Other"
+          ],
+          "required": false
+        },
+        {
+          "label": "Camera",
+          "name": "camera",
+          "type": "text",
+          "options": [],
+          "required": false
+        },
+        {
+          "label": "Accessories Included",
+          "name": "accessoriesIncluded",
+          "type": "checkbox",
+          "options": [
+            "Charger",
+            "Earphones",
+            "Box",
+            "Case",
+            "Screen Protector"
+          ],
+          "required": false
+        }
       ]
     },
     {
@@ -1136,6 +1256,62 @@
           "models": [
             "Philips CD-i"
           ]
+        }
+      ],
+      "fields": [
+        {
+          "label": "Storage Capacity",
+          "name": "storage",
+          "type": "select",
+          "options": [
+            "500GB",
+            "1TB",
+            "2TB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Includes Controllers",
+          "name": "controllersIncluded",
+          "type": "select",
+          "options": [
+            "1 Controller",
+            "2 Controllers",
+            "More than 2"
+          ],
+          "required": false
+        },
+        {
+          "label": "Games Included",
+          "name": "gamesIncluded",
+          "type": "select",
+          "options": [
+            "No",
+            "Yes - 1 Game",
+            "Yes - Multiple Games"
+          ],
+          "required": false
+        },
+        {
+          "label": "Support 4K Gaming",
+          "name": "support4k",
+          "type": "select",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good"
+          ],
+          "required": true
         }
       ]
     },
@@ -2007,6 +2183,92 @@
             "PG24N"
           ]
         }
+      ],
+      "fields": [
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "32\"",
+            "43\"",
+            "50\"",
+            "55\"",
+            "65\"",
+            "75\"",
+            "85\""
+          ],
+          "required": true
+        },
+        {
+          "label": "Display Technology",
+          "name": "displayTechnology",
+          "type": "select",
+          "options": [
+            "LED",
+            "OLED",
+            "QLED",
+            "Mini-LED"
+          ],
+          "required": true
+        },
+        {
+          "label": "Resolution",
+          "name": "resolution",
+          "type": "select",
+          "options": [
+            "HD",
+            "Full HD",
+            "4K",
+            "8K"
+          ],
+          "required": true
+        },
+        {
+          "label": "Smart TV",
+          "name": "smartTv",
+          "type": "select",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "label": "HDR Support",
+          "name": "hdrSupport",
+          "type": "select",
+          "options": [
+            "HDR10",
+            "HDR10+",
+            "Dolby Vision",
+            "No HDR"
+          ],
+          "required": false
+        },
+        {
+          "label": "Number of HDMI Ports",
+          "name": "hdmiPorts",
+          "type": "select",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "More than 4"
+          ],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good"
+          ],
+          "required": true
+        }
       ]
     },
     {
@@ -2517,6 +2779,93 @@
             "Mac Pro Rack (2019)"
           ]
         }
+      ],
+      "fields": [
+        {
+          "label": "Processor",
+          "name": "processor",
+          "type": "select",
+          "options": [
+            "Intel Core i5",
+            "Intel Core i7",
+            "Intel Core i9",
+            "AMD Ryzen 5",
+            "AMD Ryzen 7",
+            "AMD Ryzen 9"
+          ],
+          "required": true
+        },
+        {
+          "label": "RAM",
+          "name": "ram",
+          "type": "select",
+          "options": [
+            "8GB",
+            "16GB",
+            "32GB",
+            "64GB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Storage Type",
+          "name": "storageType",
+          "type": "select",
+          "options": [
+            "SSD",
+            "HDD",
+            "SSD + HDD"
+          ],
+          "required": true
+        },
+        {
+          "label": "Storage Capacity",
+          "name": "storageCapacity",
+          "type": "select",
+          "options": [
+            "256GB",
+            "512GB",
+            "1TB",
+            "2TB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Graphics Card",
+          "name": "graphicsCard",
+          "type": "select",
+          "options": [
+            "Integrated",
+            "NVIDIA GTX",
+            "NVIDIA RTX",
+            "AMD Radeon"
+          ],
+          "required": false
+        },
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "13\"",
+            "14\"",
+            "15.6\"",
+            "16\"",
+            "17\""
+          ],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good"
+          ],
+          "required": true
+        }
       ]
     },
     {
@@ -2842,6 +3191,74 @@
             "OnePlus ECG Monitor",
             "OnePlus Wear OS Device"
           ]
+        }
+      ],
+      "fields": [
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "1.2\"",
+            "1.4\"",
+            "1.6\""
+          ],
+          "required": false
+        },
+        {
+          "label": "Connectivity",
+          "name": "connectivity",
+          "type": "select",
+          "options": [
+            "Bluetooth",
+            "Wi-Fi",
+            "Cellular (LTE)"
+          ],
+          "required": true
+        },
+        {
+          "label": "Health Tracking Features",
+          "name": "healthTracking",
+          "type": "checkbox",
+          "options": [
+            "Heart Rate Monitor",
+            "Sleep Tracking",
+            "Blood Oxygen Monitoring",
+            "ECG"
+          ],
+          "required": false
+        },
+        {
+          "label": "Water Resistance",
+          "name": "waterResistance",
+          "type": "select",
+          "options": [
+            "Yes - Up to 50m",
+            "Yes - Up to 100m",
+            "No"
+          ],
+          "required": false
+        },
+        {
+          "label": "Compatible With",
+          "name": "compatibleWith",
+          "type": "select",
+          "options": [
+            "iOS",
+            "Android",
+            "Both"
+          ],
+          "required": true
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used"
+          ],
+          "required": true
         }
       ]
     }
