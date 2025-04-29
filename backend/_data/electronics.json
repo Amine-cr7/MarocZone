@@ -1,0 +1,3266 @@
+{
+  "name": "Electronics",
+  "subcategories": [
+    {
+      "name": "Mobile Phones",
+      "brands": [
+        {
+          "name": "Apple",
+          "models": [
+            "iPhone 16 128GB",
+            "iPhone 16 256GB",
+            "iPhone 16 512GB",
+            "iPhone 16 Plus 128GB",
+            "iPhone 16 Plus 256GB",
+            "iPhone 16 Plus 512GB",
+            "iPhone 16 Pro 128GB",
+            "iPhone 16 Pro 256GB",
+            "iPhone 16 Pro 512GB",
+            "iPhone 16 Pro Max 128GB",
+            "iPhone 16 Pro Max 256GB",
+            "iPhone 16 Pro Max 512GB",
+            "iPhone 15 128GB",
+            "iPhone 15 256GB",
+            "iPhone 15 512GB",
+            "iPhone 15 Plus 128GB",
+            "iPhone 15 Plus 256GB",
+            "iPhone 15 Plus 512GB",
+            "iPhone 15 Pro 128GB",
+            "iPhone 15 Pro 256GB",
+            "iPhone 15 Pro 512GB",
+            "iPhone 15 Pro Max 128GB",
+            "iPhone 15 Pro Max 256GB",
+            "iPhone 15 Pro Max 512GB",
+            "iPhone 14 128GB",
+            "iPhone 14 256GB",
+            "iPhone 14 512GB",
+            "iPhone 14 Plus 128GB",
+            "iPhone 14 Plus 256GB",
+            "iPhone 14 Plus 512GB",
+            "iPhone 14 Pro 128GB",
+            "iPhone 14 Pro 256GB",
+            "iPhone 14 Pro 512GB",
+            "iPhone 14 Pro Max 128GB",
+            "iPhone 14 Pro Max 256GB",
+            "iPhone 14 Pro Max 512GB",
+            "iPhone 13 mini 128GB",
+            "iPhone 13 mini 256GB",
+            "iPhone 13 mini 512GB",
+            "iPhone 13 128GB",
+            "iPhone 13 256GB",
+            "iPhone 13 512GB",
+            "iPhone 13 Pro 128GB",
+            "iPhone 13 Pro 256GB",
+            "iPhone 13 Pro 512GB",
+            "iPhone 13 Pro Max 128GB",
+            "iPhone 13 Pro Max 256GB",
+            "iPhone 13 Pro Max 512GB",
+            "iPhone 12 mini 64GB",
+            "iPhone 12 mini 128GB",
+            "iPhone 12 mini 256GB",
+            "iPhone 12 64GB",
+            "iPhone 12 128GB",
+            "iPhone 12 256GB",
+            "iPhone 12 Pro 128GB",
+            "iPhone 12 Pro 256GB",
+            "iPhone 12 Pro 512GB",
+            "iPhone 12 Pro Max 128GB",
+            "iPhone 12 Pro Max 256GB",
+            "iPhone 12 Pro Max 512GB",
+            "iPhone 11 64GB",
+            "iPhone 11 128GB",
+            "iPhone 11 256GB",
+            "iPhone 11 Pro 64GB",
+            "iPhone 11 Pro 256GB",
+            "iPhone 11 Pro 512GB",
+            "iPhone 11 Pro Max 64GB",
+            "iPhone 11 Pro Max 256GB",
+            "iPhone 11 Pro Max 512GB",
+            "iPhone X 64GB",
+            "iPhone X 256GB",
+            "iPhone XS 64GB",
+            "iPhone XS 256GB",
+            "iPhone XS 512GB",
+            "iPhone XS Max 64GB",
+            "iPhone XS Max 256GB",
+            "iPhone XS Max 512GB",
+            "iPhone XR 64GB",
+            "iPhone XR 128GB",
+            "iPhone XR 256GB",
+            "iPad Air 10.9-inch 64GB",
+            "iPad Air 10.9-inch 256GB",
+            "iPad 10.2-inch 32GB",
+            "iPad 10.2-inch 128GB",
+            "iPad Mini 7.9-inch 64GB",
+            "iPad Mini 7.9-inch 256GB",
+            "iPad Pro 11-inch 128GB",
+            "iPad Pro 11-inch 256GB",
+            "iPad Pro 11-inch 512GB",
+            "iPad Pro 12.9-inch 128GB",
+            "iPad Pro 12.9-inch 256GB",
+            "iPad Pro 12.9-inch 512GB",
+            "iPad Pro 13-inch 128GB",
+            "iPad Pro 13-inch 256GB",
+            "iPad Pro 13-inch 512GB",
+            "iPad Pro 13-inch 1TB",
+            "iPad Pro 13-inch 2TB"
+          ]
+        },
+        {
+          "name": "Samsung",
+          "models": [
+            "Galaxy S24 Ultra 128GB",
+            "Galaxy S24 Ultra 256GB",
+            "Galaxy S24+ 128GB",
+            "Galaxy S24+ 256GB",
+            "Galaxy S24 128GB",
+            "Galaxy S24 256GB",
+            "Galaxy S23 Ultra 128GB",
+            "Galaxy S23 Ultra 256GB",
+            "Galaxy S23+ 128GB",
+            "Galaxy S23+ 256GB",
+            "Galaxy S23 128GB",
+            "Galaxy S23 256GB",
+            "Galaxy S22 Ultra 128GB",
+            "Galaxy S22 Ultra 256GB",
+            "Galaxy S22+ 128GB",
+            "Galaxy S22+ 256GB",
+            "Galaxy S22 128GB",
+            "Galaxy S22 256GB",
+            "Galaxy Z Fold 5 256GB",
+            "Galaxy Z Fold 5 512GB",
+            "Galaxy Z Flip 5 256GB",
+            "Galaxy Z Flip 5 512GB",
+            "Galaxy Z Fold 4 256GB",
+            "Galaxy Z Fold 4 512GB",
+            "Galaxy Z Flip 4 256GB",
+            "Galaxy Z Flip 4 512GB",
+            "Galaxy A54 128GB",
+            "Galaxy A54 256GB",
+            "Galaxy A34 128GB",
+            "Galaxy A34 256GB",
+            "Galaxy A24 128GB",
+            "Galaxy A24 256GB",
+            "Galaxy A14 128GB",
+            "Galaxy A14 256GB",
+            "Galaxy A04 64GB",
+            "Galaxy A04 128GB",
+            "Galaxy M54 128GB",
+            "Galaxy M54 256GB",
+            "Galaxy M34 128GB",
+            "Galaxy M34 256GB",
+            "Galaxy M14 128GB",
+            "Galaxy M14 256GB",
+            "Galaxy M04 64GB",
+            "Galaxy M04 128GB",
+            "Galaxy F54 128GB",
+            "Galaxy F54 256GB",
+            "Galaxy F34 128GB",
+            "Galaxy F34 256GB",
+            "Galaxy F14 128GB",
+            "Galaxy F14 256GB",
+            "Galaxy Note 20 Ultra 128GB",
+            "Galaxy Note 20 Ultra 256GB",
+            "Galaxy Note 20 128GB",
+            "Galaxy Note 20 256GB",
+            "Galaxy Note 10+ 256GB",
+            "Galaxy Note 10+ 512GB",
+            "Galaxy Note 10 256GB",
+            "Galaxy Note 10 128GB",
+            "Galaxy Xcover 6 Pro 128GB",
+            "Galaxy Xcover 5 64GB",
+            "Galaxy J8 64GB",
+            "Galaxy J7 Pro 64GB",
+            "Galaxy J6+ 64GB",
+            "Galaxy J4 16GB",
+            "Galaxy C9 Pro 64GB",
+            "Galaxy C7 Pro 64GB",
+            "Galaxy C5 32GB",
+            "Galaxy W22 5G 256GB",
+            "Galaxy W21 5G 256GB",
+            "Galaxy Tab S9 Ultra 256GB",
+            "Galaxy Tab S9+ 256GB",
+            "Galaxy Tab S9 128GB",
+            "Galaxy Tab S9 FE 128GB",
+            "Galaxy Tab S8 Ultra 256GB",
+            "Galaxy Tab S8+ 256GB",
+            "Galaxy Tab S8 128GB",
+            "Galaxy Tab A9+ 128GB",
+            "Galaxy Tab A9 64GB",
+            "Galaxy Tab A8 64GB",
+            "Galaxy Tab A7 Lite 32GB",
+            "Galaxy Tab Active 5 128GB",
+            "Galaxy Tab Active 4 Pro 128GB",
+            "Galaxy Tab Active 3 64GB",
+            "Galaxy Tab E 10.1 16GB",
+            "Galaxy Tab E 8.0 16GB",
+            "Galaxy Z Fold6 256GB",
+            "Galaxy Z Fold6 512GB",
+            "Galaxy Z Fold6 1TB"
+          ]
+        },
+        {
+          "name": "OnePlus",
+          "models": [
+            "OnePlus 12 256GB",
+            "OnePlus 12R 256GB",
+            "OnePlus 11 256GB",
+            "OnePlus 11R 256GB",
+            "OnePlus Nord 3 256GB",
+            "OnePlus Nord CE 3 128GB",
+            "OnePlus Nord CE 3 Lite 128GB",
+            "OnePlus Nord N30 5G 128GB",
+            "OnePlus Open 256GB",
+            "OnePlus 10 Pro 256GB",
+            "OnePlus 10T 256GB",
+            "OnePlus 9 Pro 256GB",
+            "OnePlus 9 128GB",
+            "OnePlus 11 Pro 256GB",
+            "OnePlus Nord 2T 128GB",
+            "OnePlus Nord 2 128GB",
+            "OnePlus Nord N200 64GB",
+            "OnePlus Nord N100 64GB",
+            "OnePlus 8T Cyberpunk 2077 Edition 256GB",
+            "OnePlus 9T 128GB",
+            "OnePlus 8T 256GB",
+            "OnePlus 10T 5G 256GB",
+            "OnePlus 9R 5G 128GB",
+            "OnePlus 8 Pro 256GB",
+            "OnePlus 8 128GB",
+            "OnePlus Nord CE 2 Lite 128GB",
+            "OnePlus Nord CE 2 128GB",
+            "OnePlus Nord 1 128GB",
+            "OnePlus Nord CE 5G 128GB",
+            "OnePlus Nord 2 5G 128GB",
+            "OnePlus Nord N100 5G 64GB",
+            "OnePlus Nord N10 5G 128GB",
+            "OnePlus 8R 128GB",
+            "OnePlus 7R 128GB",
+            "OnePlus 6T McLaren Edition 256GB",
+            "OnePlus 5T Star Wars Edition 128GB",
+            "OnePlus 13R 128GB",
+            "OnePlus 11T 128GB",
+            "OnePlus 10R 128GB",
+            "OnePlus 7 Pro 5G 256GB",
+            "OnePlus 6 Special Edition 128GB",
+            "OnePlus 5 Special Edition 128GB",
+            "OnePlus Nord X 128GB",
+            "OnePlus 8 Pro McLaren Edition 256GB",
+            "OnePlus 8T Cyberpunk Edition 256GB",
+            "OnePlus 7T Pro 5G McLaren Edition 256GB",
+            "OnePlus 15R 128GB",
+            "OnePlus 14+ 128GB",
+            "OnePlus 13 Pro 256GB",
+            "OnePlus 12T 5G 256GB",
+            "OnePlus Pad",
+            "OnePlus Pad 2",
+            "OnePlus Pad Pro"
+          ]
+        },
+        {
+          "name": "Vivo",
+          "models": [
+            "X200 128GB",
+            "X200 256GB",
+            "X200 Pro 256GB",
+            "X200 Pro 512GB",
+            "X200 Pro Mini 256GB",
+            "V40e 128GB",
+            "Y200 GT 128GB",
+            "T3 5G 128GB",
+            "Y100 5G 128GB",
+            "S18 Pro 256GB",
+            "V30 Pro 128GB",
+            "iQOO 12 256GB",
+            "Z3 64GB",
+            "V9 64GB",
+            "X9 Plus 128GB",
+            "Y81 32GB",
+            "X5Max 16GB",
+            "V5 Plus 64GB",
+            "Y95 64GB",
+            "V3 Max 32GB",
+            "X3S 16GB",
+            "Y66 32GB",
+            "V19 128GB",
+            "V19 256GB",
+            "V17 Pro 128GB",
+            "V17 Pro 256GB",
+            "Y12s 64GB",
+            "Y12s 128GB",
+            "S1 Pro 128GB",
+            "S1 Pro 256GB",
+            "Y11 32GB",
+            "Y11 64GB",
+            "V15 128GB",
+            "V15 256GB",
+            "X27 Pro 128GB",
+            "X27 Pro 256GB",
+            "Y30 128GB",
+            "Y30 64GB",
+            "Z1 Pro 64GB",
+            "Z1 Pro 128GB",
+            "X21 128GB",
+            "X21 64GB",
+            "V23e 128GB",
+            "V23e 256GB",
+            "Y33s 128GB",
+            "Y33s 64GB",
+            "X60 Pro 256GB",
+            "X60 Pro 512GB",
+            "V20 Pro 128GB",
+            "V20 Pro 256GB",
+            "Y75 5G 128GB",
+            "Y75 5G 256GB",
+            "Y53s 128GB",
+            "Y53s 64GB",
+            "V15 Pro 128GB",
+            "V15 Pro 256GB",
+            "X70 Pro 128GB",
+            "X70 Pro 256GB",
+            "T1 5G 128GB",
+            "T1 5G 256GB",
+            "X30 Pro 128GB",
+            "X30 Pro 256GB",
+            "V27 128GB",
+            "V27 256GB",
+            "V27 Pro 128GB",
+            "V27 Pro 256GB",
+            "V25 Pro 128GB",
+            "V25 Pro 256GB",
+            "X90 Pro 256GB",
+            "X90 Pro 512GB",
+            "Y100 128GB",
+            "Y100 256GB",
+            "T2 Series 128GB",
+            "T2 Series 256GB",
+            "V23 5G 128GB",
+            "V23 5G 256GB",
+            "X80 256GB",
+            "X80 512GB",
+            "Y21 128GB",
+            "Y21 64GB",
+            "Pad 128GB",
+            "Pad 2 256GB",
+            "Pad Air 128GB",
+            "Pad 3 128GB",
+            "Pad 3 Pro 256GB",
+            "Pad 4 Pro 256GB"
+          ]
+        },
+        {
+          "name": "iQOO",
+          "models": [
+            "Pad 128GB",
+            "Pad 2 256GB",
+            "Pad 2 Pro 256GB"
+          ]
+        },
+        {
+          "name": "Oppo",
+          "models": [
+            "Find N3 512GB",
+            "Find N3 Flip 256GB",
+            "Find X8 Pro 256GB",
+            "Find X8 256GB",
+            "Reno13 F 4G 256GB",
+            "Reno13 F 256GB",
+            "Reno13 Pro 512GB",
+            "Reno13 256GB",
+            "Reno12 F 4G 256GB",
+            "Reno12 F 256GB",
+            "Reno12 Pro 512GB",
+            "Reno12 256GB",
+            "Reno11 F 256GB",
+            "Reno11 Pro 512GB",
+            "A5 Pro 256GB",
+            "A5 Pro 512GB",
+            "A80 256GB",
+            "A3 4G 128GB",
+            "A3x 4G 128GB",
+            "A3x 4G 256GB",
+            "A3 128GB",
+            "A3x 128GB",
+            "A3x 256GB",
+            "A60 128GB",
+            "A60 256GB",
+            "K12 Plus 256GB",
+            "K12 Plus 512GB",
+            "F27 128GB",
+            "F27 256GB",
+            "F27 Pro+ 256GB",
+            "F27 Pro+ 512GB",
+            "F25 Pro 128GB",
+            "F25 Pro 256GB",
+            "Pad 3 128GB",
+            "Pad 3 256GB",
+            "Pad 3 Pro 256GB",
+            "Pad 3 Pro 512GB",
+            "Pad Neo 128GB",
+            "Pad Neo 256GB",
+            "Find X7 Ultra 256GB",
+            "Find X7 Ultra 512GB",
+            "Find X7 256GB",
+            "Find X7 512GB",
+            "Find X6 Pro 256GB",
+            "Find X6 Pro 512GB",
+            "Find X6 256GB",
+            "Find X6 512GB",
+            "Find X5 Pro 256GB",
+            "Find X5 Pro 512GB",
+            "Find X5 256GB",
+            "Find N2 Flip 256GB",
+            "Find N2 Flip 512GB",
+            "Find N2 256GB",
+            "Reno10 5G 128GB",
+            "Reno10 5G 256GB",
+            "Reno10 Pro 5G 256GB",
+            "Reno10 Pro+ 5G 256GB",
+            "Reno9 5G 128GB",
+            "Reno9 5G 256GB",
+            "Reno9 Pro 5G 256GB",
+            "Reno9 Pro+ 5G 256GB",
+            "Reno8 5G 128GB",
+            "Reno8 5G 256GB",
+            "Reno8 Pro 5G 256GB",
+            "Reno8 Pro+ 5G 256GB",
+            "Reno7 5G 128GB",
+            "Reno7 5G 256GB",
+            "Reno7 Pro 5G 256GB",
+            "Reno6 5G 128GB",
+            "Reno6 5G 256GB",
+            "Reno6 Pro 5G 128GB",
+            "Reno6 Pro 5G 256GB",
+            "Reno6 Pro+ 5G 256GB",
+            "Reno5 5G 128GB",
+            "Reno5 5G 256GB",
+            "Reno5 Pro 5G 128GB",
+            "Reno5 Pro 5G 256GB",
+            "Reno5 Pro+ 5G 256GB",
+            "Reno4 5G 128GB",
+            "Reno4 5G 256GB",
+            "Reno4 Pro 5G 256GB",
+            "Reno3 5G 128GB",
+            "Reno3 5G 256GB",
+            "Reno3 Pro 5G 256GB",
+            "A59 5G 128GB",
+            "A59 5G 256GB",
+            "A58 5G 256GB",
+            "A57 5G 128GB",
+            "A56 5G 128GB",
+            "A55 5G 128GB",
+            "A54 5G 128GB",
+            "A53 5G 128GB",
+            "A52 5G 128GB",
+            "A51 5G 128GB",
+            "A50 5G 128GB",
+            "A49 5G 128GB",
+            "A40 128GB",
+            "A40 256GB",
+            "K11x 128GB",
+            "K11x 256GB",
+            "K10x 128GB",
+            "K10x 256GB",
+            "K10 5G 128GB",
+            "K9x 128GB",
+            "K9x 256GB",
+            "K9 Pro 5G 128GB",
+            "K9 Pro 5G 256GB",
+            "K9 5G 128GB",
+            "K9 5G 256GB",
+            "K7x 128GB",
+            "K7 5G 128GB",
+            "K7 5G 256GB",
+            "K11 128GB",
+            "K11 256GB",
+            "K10 5G 256GB"
+          ]
+        },
+        {
+          "name": "Realme",
+          "models": [
+            "GT 7 Pro 128GB",
+            "GT 7 Pro 256GB",
+            "GT 6 128GB",
+            "GT 6 256GB",
+            "GT 6 512GB",
+            "GT 6T 128GB",
+            "GT 6T 256GB",
+            "14 Pro+ 5G 256GB",
+            "14 Pro+ 5G 512GB",
+            "14 Pro 5G 128GB",
+            "14 Pro 5G 256GB",
+            "14x 5G 128GB",
+            "14x 5G 256GB",
+            "13+ 5G 128GB",
+            "13+ 5G 256GB",
+            "13 5G 128GB",
+            "13 5G 256GB",
+            "13 Pro 5G 128GB",
+            "13 Pro 5G 256GB",
+            "13 Pro+ 5G 256GB",
+            "13 Pro+ 5G 512GB",
+            "P1 Speed 5G 128GB",
+            "P1 Speed 5G 256GB",
+            "P2 Pro 5G 256GB",
+            "P2 Pro 5G 512GB",
+            "P1 5G 128GB",
+            "P1 5G 256GB",
+            "P1 Pro 5G 128GB",
+            "P1 Pro 5G 256GB",
+            "Narzo 70 Turbo 5G 128GB",
+            "Narzo 70 Turbo 5G 256GB",
+            "Narzo N61 128GB",
+            "Narzo N63 128GB",
+            "Narzo N65 5G 128GB",
+            "Narzo 70 5G 128GB",
+            "C75 128GB",
+            "C75 256GB",
+            "C61 128GB",
+            "C67 128GB",
+            "C67 256GB",
+            "C65 128GB",
+            "C65 256GB",
+            "C63 128GB",
+            "C55 128GB",
+            "C55 256GB",
+            "Note 60x 128GB",
+            "Note 60 128GB",
+            "Note 60 256GB",
+            "Note 50 128GB",
+            "GT 7 128GB",
+            "GT 7 256GB",
+            "Neo 7 128GB",
+            "Neo 7 256GB",
+            "P2 Pro 5G 128GB",
+            "Pad 64GB",
+            "Pad 128GB",
+            "Pad 2 128GB",
+            "Pad 2 256GB",
+            "Pad 2 Lite 64GB",
+            "Pad 2 Lite 128GB",
+            "Pad X 64GB",
+            "Pad X 128GB",
+            "Pad Mini 32GB",
+            "Pad Mini 64GB",
+            "Pad Slim 64GB",
+            "Pad Slim 128GB",
+            "TechLife Pad Neo 64GB",
+            "TechLife Pad Neo 128GB"
+          ]
+        },
+        {
+          "name": "Xiaomi",
+          "models": [
+            "Xiaomi 15 Pro 256GB",
+            "Xiaomi 15 Pro 512GB",
+            "Xiaomi 15 Pro 1TB",
+            "Xiaomi 15 256GB",
+            "Xiaomi 15 512GB",
+            "Xiaomi 14T Pro 256GB",
+            "Xiaomi 14T Pro 512GB",
+            "Xiaomi 14T Pro 1TB",
+            "Xiaomi 14T 256GB",
+            "Xiaomi 14T 512GB",
+            "Xiaomi 14 Pro 256GB",
+            "Xiaomi 14 Pro 512GB",
+            "Xiaomi 14 256GB",
+            "Xiaomi 14 512GB",
+            "Redmi Note 14 Pro+ 5G 128GB",
+            "Redmi Note 14 Pro+ 5G 256GB",
+            "Redmi Note 14 Pro+ 5G 512GB",
+            "Redmi Note 14 Pro 5G 128GB",
+            "Redmi Note 14 Pro 5G 256GB",
+            "Redmi Note 14 Pro 4G 128GB",
+            "Redmi Note 14 Pro 4G 256GB",
+            "Redmi Note 14 5G 128GB",
+            "Redmi Note 14 5G 256GB",
+            "Redmi Note 14 4G 128GB",
+            "Redmi Note 14 4G 256GB",
+            "Redmi 14C 5G 64GB",
+            "Redmi 14C 5G 128GB"
+          ]
+        },
+        {
+          "name": "Lenovo",
+          "models": [
+            "Legion Y70 128GB",
+            "Legion Y70 256GB",
+            "Legion Y70 512GB",
+            "K14 Plus 64GB",
+            "K14 Plus 128GB",
+            "K13 Pro 128GB",
+            "K13 32GB",
+            "K13 Note 64GB",
+            "K10 Plus 64GB",
+            "A6 Note 32GB",
+            "K10 Note 64GB",
+            "K10 Note 128GB",
+            "Z6 Pro 128GB",
+            "Z6 Pro 256GB",
+            "Z5 Pro 64GB"
+          ]
+        },
+        {
+          "name": "Motorola",
+          "models": [
+            "Edge 50 Fusion 128GB",
+            "Edge 50 Fusion 256GB",
+            "Edge 50 Pro 128GB",
+            "Edge 50 Pro 256GB",
+            "Razr 128GB",
+            "Razr 256GB",
+            "G84 5G 128GB",
+            "G84 5G 256GB",
+            "Moto G Stylus 64GB",
+            "Moto G Stylus 128GB",
+            "One Vision 3 128GB",
+            "One Vision 3 256GB",
+            "Edge 50 Lite 128GB",
+            "Edge 50 Lite 256GB",
+            "Moto E40 Plus 64GB",
+            "Moto E40 Plus 128GB",
+            "Moto G Power 64GB",
+            "Moto G Power 128GB",
+            "Moto G Play 32GB",
+            "Moto G Play 64GB",
+            "Moto G75 5G 128GB",
+            "Moto G75 5G 256GB",
+            "Moto S50 128GB",
+            "Moto S50 256GB",
+            "Edge 50 Neo 256GB",
+            "Edge 50 Neo 512GB",
+            "Moto G55 128GB",
+            "Moto G55 256GB",
+            "Moto G35 128GB",
+            "Moto G35 256GB",
+            "Moto G45 128GB",
+            "Moto G45 256GB",
+            "Edge 50 256GB",
+            "Edge 50 512GB",
+            "Razr 50 Ultra 512GB",
+            "Razr 50 256GB",
+            "Moto G85 128GB",
+            "Moto G85 256GB",
+            "S50 Neo 256GB",
+            "S50 Neo 512GB",
+            "Moto E14 64GB",
+            "Moto E14 128GB",
+            "Edge 256GB",
+            "Edge 512GB",
+            "Moto X50 Ultra 512GB",
+            "Moto G Stylus 5G 256GB",
+            "Moto G Stylus 5G 512GB",
+            "Edge 50 Ultra 512GB",
+            "Edge 30 Fusion 128GB",
+            "Edge 30 Fusion 256GB",
+            "Edge 30 Neo 128GB",
+            "Edge 30 Neo 256GB",
+            "Moto G82 5G 128GB",
+            "Moto G82 5G 256GB",
+            "Moto G62 5G 128GB",
+            "Moto G62 5G 256GB",
+            "Moto G42 128GB",
+            "Moto G32 128GB",
+            "Moto E32s 64GB",
+            "Moto E22i 32GB",
+            "Moto E22 64GB",
+            "Moto G22 64GB"
+          ]
+        },
+        {
+          "name": "Huawei",
+          "models": [
+            "P50",
+            "P50 Pro",
+            "P50 Pocket",
+            "Mate 40E",
+            "Mate X2",
+            "Nova 9",
+            "Nova 9 Pro",
+            "P50E",
+            "Mate Xs 2",
+            "Mate 50",
+            "Mate 50 Pro",
+            "Nova 10",
+            "Nova 10 Pro",
+            "Nova 10 SE",
+            "P60",
+            "P60 Pro",
+            "P60 Art",
+            "Mate X3",
+            "Mate 60",
+            "Mate 60 Pro",
+            "Mate 60 Pro+",
+            "Nova 11",
+            "Nova 11 Pro",
+            "Nova 11 Ultra",
+            "Pura 70",
+            "Pura 70 Pro",
+            "Pura 70 Pro+",
+            "Pura 70 Ultra",
+            "Mate 70",
+            "Mate 70 Pro",
+            "Mate 70 Pro+",
+            "Mate X6",
+            "Nova 12",
+            "Nova 12 Pro",
+            "Mate XT 256GB",
+            "Mate XT 512GB",
+            "Nova 13 256GB",
+            "Nova 13 512GB",
+            "Nova 13 Pro 256GB",
+            "Nova 13 Pro 512GB",
+            "MatePad Pro 12.2 512GB",
+            "MatePad Pro 13.2 512GB"
+          ]
+        },
+        {
+          "name": "Nokia",
+          "models": [
+            "G42 5G 128GB",
+            "G20 64GB",
+            "G20 128GB",
+            "C32 64GB",
+            "C32 128GB",
+            "G21 64GB",
+            "G21 128GB",
+            "C22 64GB",
+            "C22 128GB",
+            "G400 128GB",
+            "T21"
+          ]
+        },
+        {
+          "name": "Sony",
+          "models": [
+            "Xperia 1 IV 256GB",
+            "Xperia 5 IV 128GB",
+            "Xperia 10 IV 128GB",
+            "Xperia 1 V 256GB",
+            "Xperia 5 V 128GB",
+            "Xperia 10 V 128GB",
+            "Xperia 1 VI 256GB",
+            "Xperia 5 VI 128GB",
+            "Xperia 10 VI 128GB"
+          ]
+        },
+        {
+          "name": "Google",
+          "models": [
+            "Pixel 3a 64GB",
+            "Pixel 3a XL 64GB",
+            "Pixel 4 64GB",
+            "Pixel 4 XL 64GB",
+            "Pixel 4a 128GB",
+            "Pixel 4a 5G 128GB",
+            "Pixel 5 128GB",
+            "Pixel 5a 128GB",
+            "Pixel 6 128GB",
+            "Pixel 6 Pro 256GB",
+            "Pixel 6a 128GB",
+            "Pixel 7 128GB",
+            "Pixel 7 Pro 256GB",
+            "Pixel 7a 128GB",
+            "Pixel 8 128GB",
+            "Pixel 8 Pro 256GB",
+            "Pixel 8a 128GB",
+            "Pixel 9 128GB",
+            "Pixel 9 Pro 256GB",
+            "Pixel 9 Pro XL 512GB",
+            "Pixel 9 Pro Fold 512GB"
+          ]
+        },
+        {
+          "name": "Tecno",
+          "models": [
+            "Spark Go 1S 64GB",
+            "Megapad 11 256GB",
+            "Pop 9 4G 64GB",
+            "Megapad 128GB",
+            "Camon 30S 256GB",
+            "Spark 30C 5G 128GB",
+            "Spark 30 5G 128GB",
+            "Pop 9 64GB",
+            "Spark 30 Pro 256GB",
+            "Spark 30 128GB",
+            "Phantom V Fold2 512GB",
+            "Phantom V Flip2 256GB",
+            "Pova 6 Neo 5G 256GB",
+            "Spark 30C 128GB",
+            "Spark Go 1 64GB",
+            "Camon 30S Pro 512GB",
+            "Spark 20P 128GB",
+            "Spark 20 Pro 5G 256GB",
+            "Pova 6 Neo 256GB",
+            "Camon 30 Premier 512GB",
+            "Camon 30 Pro 512GB",
+            "Camon 30 5G 256GB",
+            "Camon 30 128GB",
+            "Pova 6 Pro 512GB",
+            "Spark 20 Pro+ 256GB",
+            "Spark 20 Pro 128GB",
+            "Spark 20 128GB",
+            "Spark 20C 128GB",
+            "Spark Go 2024 64GB",
+            "Pop 8 64GB",
+            "Camon 20s Pro 5G 512GB",
+            "Camon 20s Pro 256GB",
+            "Camon 20s 256GB",
+            "Camon 20 Premier 512GB",
+            "Camon 20 Pro 5G 256GB",
+            "Camon 20 Pro 128GB",
+            "Camon 20 128GB",
+            "Pova 5G 512GB",
+            "Pova 5 256GB"
+          ]
+        },
+        {
+          "name": "Infinix",
+          "models": [
+            "Xpad",
+            "Xpad 5G",
+            "Xpad Lite",
+            "Xpad Pro",
+            "Hot 50",
+            "Hot 50i",
+            "Hot 50 5G",
+            "Hot 50 Pro",
+            "Hot 50 Pro+",
+            "GT 20 Pro",
+            "Note 40X 5G",
+            "Note 40S",
+            "Note 40 5G",
+            "Note 40 Pro 5G",
+            "Note 40 Racing Edition",
+            "Hot 40",
+            "Hot 40i",
+            "Hot 40 Pro",
+            "Zero 40",
+            "Zero 40 5G",
+            "Zero Flip",
+            "Note 40",
+            "Note 40 Pro",
+            "Hot 30 128GB",
+            "Hot 30i 128GB",
+            "Hot 30i NFC 128GB",
+            "Hot 30 Play 128GB",
+            "Hot 30 5G 128GB",
+            "Zero 30 256GB",
+            "Zero 30 5G 256GB",
+            "GT 10 Pro 256GB",
+            "Hot 12 128GB",
+            "Hot 12 Play 128GB",
+            "Hot 12 Pro 128GB",
+            "Hot 12i 64GB",
+            "Hot 20 128GB",
+            "Hot 20 Play 128GB",
+            "Hot 20s 128GB",
+            "Hot 20 5G 128GB",
+            "Hot 20i 64GB",
+            "Hot 10T 128GB",
+            "Hot 10S 128GB",
+            "Hot 10S NFC 128GB",
+            "Hot 10 Lite 64GB",
+            "Hot 10 Play 64GB",
+            "Hot 11 128GB",
+            "Hot 11 Play 128GB",
+            "Hot 11s 128GB",
+            "Smart HD 32GB",
+            "Note 8i 128GB",
+            "Note 8 128GB",
+            "Zero 8i 128GB",
+            "Hot 10 128GB",
+            "Zero 8 128GB",
+            "Smart 5 64GB"
+          ]
+        },
+        {
+          "name": "Honor",
+          "models": [
+            "9X Lite",
+            "30",
+            "30 Pro",
+            "30 Pro+",
+            "30S",
+            "X10",
+            "X10 Max",
+            "Play 4",
+            "Play 4 Pro",
+            "10X Lite",
+            "V40",
+            "50",
+            "50 Pro",
+            "50 SE",
+            "X20",
+            "X20 SE",
+            "Play 5",
+            "Play 5T",
+            "Magic3",
+            "Magic3 Pro",
+            "Magic3 Pro+",
+            "60",
+            "60 Pro",
+            "60 SE",
+            "X30",
+            "X30i",
+            "X30 Max",
+            "Play 6",
+            "Play 6T",
+            "Magic4",
+            "Magic4 Pro",
+            "Magic4 Ultimate",
+            "Magic V",
+            "70",
+            "70 Pro",
+            "70 Pro+",
+            "X40",
+            "X40i",
+            "Play 7",
+            "Play 7T",
+            "Magic5",
+            "Magic5 Pro",
+            "Magic5 Ultimate",
+            "Magic Vs",
+            "80",
+            "80 Pro",
+            "80 SE",
+            "X50",
+            "X50i",
+            "Play 8",
+            "Play 8T",
+            "Magic6",
+            "Magic6 Pro",
+            "Magic6 Ultimate",
+            "Magic V2",
+            "90",
+            "90 Pro",
+            "90 SE",
+            "X60",
+            "X60i",
+            "Play 9",
+            "Play 9T",
+            "Magic7",
+            "Magic7 Pro",
+            "Magic7 Ultimate",
+            "Magic V3",
+            "Pad 6",
+            "Pad X6",
+            "Pad 7",
+            "Tablet V7",
+            "Tablet V7 Pro",
+            "Pad 8",
+            "Pad X8",
+            "Pad X8 Lite",
+            "Pad V8",
+            "Pad V8 Pro",
+            "Pad 9",
+            "Pad 9 Pro",
+            "Pad X9",
+            "Pad X8 Pro",
+            "MagicPad 13",
+            "MagicPad 2",
+            "Pad X8a",
+            "Pad X8a Kids Edition",
+            "Pad X9 Pro",
+            "Pad V9",
+            "Pad GT Pro",
+            "Pad X10",
+            "Pad X10 Pro",
+            "MagicPad 3",
+            "Pad V10"
+          ]
+        },
+        {
+          "name": "POCO",
+          "models": [
+            "F2 Pro 128GB",
+            "M2 Pro 64GB",
+            "X3 NFC 128GB",
+            "M3 64GB",
+            "F3 128GB",
+            "X3 Pro 128GB",
+            "M3 Pro 5G 64GB",
+            "F3 GT 128GB",
+            "X3 GT 128GB",
+            "M4 Pro 5G 128GB",
+            "F4 128GB",
+            "F4 GT 128GB",
+            "X4 Pro 5G 128GB",
+            "M4 Pro 128GB",
+            "M5 128GB",
+            "M5s 128GB",
+            "F5 128GB",
+            "F5 Pro 256GB",
+            "X5 128GB",
+            "X5 Pro 128GB",
+            "M6 64GB",
+            "M6 Pro 128GB",
+            "X6 128GB",
+            "X6 Pro 256GB",
+            "F6 128GB",
+            "F6 Pro 256GB",
+            "C65 64GB",
+            "X7 128GB",
+            "X7 Pro 256GB",
+            "M7 5G 128GB"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "label": "Storage",
+          "name": "storage",
+          "type": "select",
+          "options": [
+            "32GB",
+            "64GB",
+            "128GB",
+            "256GB",
+            "512GB",
+            "1TB"
+          ],
+          "required": true
+        },
+        {
+          "label": "RAM",
+          "name": "ram",
+          "type": "select",
+          "options": [
+            "2GB",
+            "3GB",
+            "4GB",
+            "6GB",
+            "8GB",
+            "12GB",
+            "16GB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Color",
+          "name": "color",
+          "type": "select",
+          "options": [
+            "Black",
+            "White",
+            "Blue",
+            "Red",
+            "Green",
+            "Gold",
+            "Silver"
+          ],
+          "required": true
+        },
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "5.0\"",
+            "5.5\"",
+            "6.0\"",
+            "6.5\"",
+            "6.7\"",
+            "7.0\""
+          ],
+          "required": false
+        },
+        {
+          "label": "Battery",
+          "name": "battery",
+          "type": "text",
+          "options": [],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good",
+            "Used - Acceptable"
+          ],
+          "required": true
+        },
+        {
+          "label": "Warranty",
+          "name": "warranty",
+          "type": "select",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": false
+        },
+        {
+          "label": "Operating System",
+          "name": "os",
+          "type": "select",
+          "options": [
+            "Android",
+            "iOS",
+            "Other"
+          ],
+          "required": false
+        },
+        {
+          "label": "Camera",
+          "name": "camera",
+          "type": "text",
+          "options": [],
+          "required": false
+        },
+        {
+          "label": "Accessories Included",
+          "name": "accessoriesIncluded",
+          "type": "checkbox",
+          "options": [
+            "Charger",
+            "Earphones",
+            "Box",
+            "Case",
+            "Screen Protector"
+          ],
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "Gaming Consoles",
+      "brands": [
+        {
+          "name": "Sony",
+          "models": [
+            "PlayStation 2",
+            "PlayStation 4",
+            "PlayStation",
+            "PlayStation 3",
+            "PlayStation Portable",
+            "PlayStation 5",
+            "PlayStation Vita"
+          ]
+        },
+        {
+          "name": "Nintendo",
+          "models": [
+            "Nintendo DS",
+            "Nintendo Switch",
+            "Game Boy",
+            "Game Boy Color",
+            "Wii",
+            "Game Boy Advance",
+            "Nintendo 3DS",
+            "NES/Famicom",
+            "SNES/Super Famicom",
+            "Game & Watch",
+            "Nintendo 64",
+            "GameCube",
+            "Wii U",
+            "Super NES Classic Edition",
+            "Famicom Disk System",
+            "NES Classic Edition",
+            "Color TV-Game"
+          ]
+        },
+        {
+          "name": "Microsoft",
+          "models": [
+            "Xbox 360",
+            "Xbox One",
+            "Xbox",
+            "Xbox Series X/S"
+          ]
+        },
+        {
+          "name": "Sega",
+          "models": [
+            "Sega Genesis/Mega Drive",
+            "Sega Master System",
+            "Sega Game Gear",
+            "Sega Saturn",
+            "Dreamcast",
+            "Sega Pico",
+            "Sega CD"
+          ]
+        },
+        {
+          "name": "Atari",
+          "models": [
+            "Atari 2600",
+            "Atari 7800",
+            "Atari Lynx",
+            "Atari 5200"
+          ]
+        },
+        {
+          "name": "NEC/Hudson Soft[note 6]",
+          "models": [
+            "PC Engine/TurboGrafx-16"
+          ]
+        },
+        {
+          "name": "Tectoy",
+          "models": [
+            "Master System(Brazilian variants)",
+            "Mega Drive(Brazilian variants)"
+          ]
+        },
+        {
+          "name": "Micro Genius",
+          "models": [
+            "Dendy(Famiclone)"
+          ]
+        },
+        {
+          "name": "Bandai",
+          "models": [
+            "WonderSwan"
+          ]
+        },
+        {
+          "name": "Mattel",
+          "models": [
+            "Intellivision"
+          ]
+        },
+        {
+          "name": "Nokia",
+          "models": [
+            "N-Gage"
+          ]
+        },
+        {
+          "name": "Coleco",
+          "models": [
+            "ColecoVision",
+            "Telstar"
+          ]
+        },
+        {
+          "name": "Magnavox/Philips",
+          "models": [
+            "Magnavox Odyssey"
+          ]
+        },
+        {
+          "name": "NEC",
+          "models": [
+            "PC Engine CD-ROM"
+          ]
+        },
+        {
+          "name": "Philips",
+          "models": [
+            "Philips CD-i"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "label": "Storage Capacity",
+          "name": "storage",
+          "type": "select",
+          "options": [
+            "500GB",
+            "1TB",
+            "2TB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Includes Controllers",
+          "name": "controllersIncluded",
+          "type": "select",
+          "options": [
+            "1 Controller",
+            "2 Controllers",
+            "More than 2"
+          ],
+          "required": false
+        },
+        {
+          "label": "Games Included",
+          "name": "gamesIncluded",
+          "type": "select",
+          "options": [
+            "No",
+            "Yes - 1 Game",
+            "Yes - Multiple Games"
+          ],
+          "required": false
+        },
+        {
+          "label": "Support 4K Gaming",
+          "name": "support4k",
+          "type": "select",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "TVs",
+      "brands": [
+        {
+          "name": "Mi",
+          "models": [
+            "L40M8-5AIN",
+            "L43M7-A2IN",
+            "L55M8-A2IN",
+            "L43M8-5XIN",
+            "L43M7-EAIN",
+            "L32M5-AL",
+            "L55M7-A2IN",
+            "L40M6-EI",
+            "L50M5-5AIN/ L50M5-5AIN_V1",
+            "L43M6-EI",
+            "L40M7-EAIN",
+            "L55M6-ES",
+            "L55M5-5XIN",
+            "L32M6-EI"
+          ]
+        },
+        {
+          "name": "SONY",
+          "models": [
+            "KD - 43X74K",
+            "KD-55X74K",
+            "KD-43X64L",
+            "KD-43X70L",
+            "KD-65X82L",
+            "KD-85X80L",
+            "KD-65X75K",
+            "KD-50X75L",
+            "KD-50X80L",
+            "KD-55X9000H",
+            "KD-32W830K",
+            "KD-65A9F",
+            "KD-75X82L",
+            "KDL-32W6103",
+            "XR-55X90K",
+            "XR-77A80L",
+            "KD-55X85J",
+            "KD-55X80K",
+            "KD75X80K",
+            "XR-75X90K",
+            "XR-65A80K IN5",
+            "KD-85X85K",
+            "KD-55X75K",
+            "XR-65X90J",
+            "XR-55X90L",
+            "XR-65X90L",
+            "KD-32W830",
+            "KD-43W880K"
+          ]
+        },
+        {
+          "name": "SAMSUNG",
+          "models": [
+            "UA55CUE70AKLXL",
+            "UA55CUE60AKLXL",
+            "UA43T5450AKXXL",
+            "UA43AUE65AKXXL",
+            "UA32T4340AKXXL / UA32T4340BKXXL",
+            "UA32T4010ARXXL",
+            "QA65LS03BAKLXL",
+            "QA55QE1CAKLXL",
+            "UA50CUE60AKLXL",
+            "QA65LS03TAKXXL",
+            "UA65CUE70AKLXL",
+            "QA55Q60AAKLXL",
+            "QA55QN90AAKLXL",
+            "QA43LS03AAKLXL",
+            "QA55Q60RAKXXL",
+            "(UA65AU8000",
+            "UA43AU7500",
+            "UA65NU7470UXXL / UA65NU7470ULXL",
+            "QA65Q80BAKLXL",
+            "QA65QN85CAKLXL",
+            "UA55AU8000",
+            "65MU6470",
+            "UA75NU8000KXXL",
+            "Qa65q60rakxxl",
+            "QA65QN800CKXXL",
+            "UA65BU8570ULXL",
+            "QA50LS03AAKLXL",
+            "UA65AU8000",
+            "UA55BU8000KLXL",
+            "QA65QN90BAKLXL",
+            "UA75BU8000KXXL",
+            "QA55LS01TAKXXL",
+            "UA65CU7650KLXL",
+            "UA32TE40FAKBXL",
+            "UA49NU7100KXXL/UA49NU7100KLXL",
+            "QA55QN85AAKLXL",
+            "49NU8000",
+            "QA55Q70BAKLXL",
+            "QA43Q60AAKLXL",
+            "QA55Q80BAKLXL",
+            "UA32T4360AKXXL",
+            "QA55QN95BAKLXL",
+            "55NU7470",
+            "UA65AU9070",
+            "QA65Q70BAKLXL",
+            "QA55Q80AAKLXL",
+            "UN43TU8000FXZA",
+            "QA65QN95BAKLXL",
+            "QA55Q60TAKXXL",
+            "QA65Q60TAKXXL",
+            "UA65AU7500",
+            "UA50AU7700",
+            "QA65QN85AAKLXL",
+            "QA50QN90CAKLXL",
+            "UA55BU8570ULXL",
+            "UA43AU7600",
+            "QA55Q60BAKLXL",
+            "UA43BU8000KLXL",
+            "UA43T5500AKXXL",
+            "UA43T5310AKXXL",
+            "UA50AU7500",
+            "UA55AU7700",
+            "QA75QN800CKXXL",
+            "QA50QN90BAKLXL",
+            "UA32T4600AKXXL",
+            "UA43AU7600KXXL",
+            "UA43AU7700",
+            "UA43CU8000",
+            "UA43T5410AKXXL",
+            "UA43CU7700",
+            "UA32T4360",
+            "75BU8000",
+            "UA32N4100ARXXL / UA32N4100ARLXL",
+            "UA32M4010DRLXL",
+            "Galaxy F13",
+            "Galaxy F04",
+            "Galaxy F14 5G",
+            "UA55AUE65AKXXL",
+            "QA50Q60AAKLXL"
+          ]
+        },
+        {
+          "name": "MOTOROLA",
+          "models": [
+            "32HDGDMBSXP",
+            "43UHDGDMBSXP",
+            "65UHDGQMBSGQ",
+            "40FHDGDMBSXP",
+            "50UHDGDMBSXP",
+            "43FHDGDMBSXP",
+            "65UHDGDMBSXP",
+            "86UHDADMBS5E",
+            "50UHDADMRS7P",
+            "55UHDGDMBSXP"
+          ]
+        },
+        {
+          "name": "Hisense",
+          "models": [
+            "50E7K",
+            "50A7H",
+            "43A6K",
+            "55A6K",
+            "55U7H",
+            "50A6H",
+            "50A6K",
+            "65U6K",
+            "65A7K",
+            "65E7K",
+            "43A4G",
+            "70A71F",
+            "65U6G",
+            "75U80G"
+          ]
+        },
+        {
+          "name": "Vu",
+          "models": [
+            "50GloLED",
+            "43GA-Android",
+            "43_GA-3 Yrs",
+            "43GloLED",
+            "32UA",
+            "65PM",
+            "50PM",
+            "50GloLED-3 Yrs",
+            "43GA",
+            "65GloLED-3 Yrs"
+          ]
+        },
+        {
+          "name": "iFFALCON",
+          "models": [
+            "iFF43Q73",
+            "55K31",
+            "iFF50Q73",
+            "iFF40S53",
+            "32F2A",
+            "55H82"
+          ]
+        },
+        {
+          "name": "Acer",
+          "models": [
+            "AR55GR2851UDFL",
+            "AR43GR2841FDFL",
+            "AR50GR2851UDFL",
+            "AR32NSV53HDFL",
+            "AR55GR2851VQD",
+            "AR55GR2851UDPRO",
+            "AR50GR2851UDPRO",
+            "AR40AR2841FDFL",
+            "AR43GR2851UDFL",
+            "AR32GR2841VQD",
+            "AR43GT2851UDFL",
+            "AR32AR2841HDFL",
+            "AR32GR2841HDFL",
+            "AR65AR2851QD",
+            "AR55AP2851UDFL"
+          ]
+        },
+        {
+          "name": "realme",
+          "models": [
+            "RMV2004",
+            "TV 32",
+            "RMV2001 SLED TV 55"
+          ]
+        },
+        {
+          "name": "LG",
+          "models": [
+            "32LM565BPTA",
+            "32LQ643BPTA",
+            "55UR7500PSC",
+            "43NANO73SQA",
+            "50UR7500PSC",
+            "55UQ7550PSF",
+            "65UQ8020PSB",
+            "OLED55A2PSA",
+            "32LM636BPTB",
+            "65UQ7500PSF",
+            "OLED48A2PSA",
+            "OLED65A3PSA",
+            "55QNED80SRA",
+            "75QNED80SRA",
+            "55UP7720PTY",
+            "OLED65G2PSA",
+            "65UR7500PSC",
+            "OLED55C2PSC",
+            "OLED55B2PSA",
+            "32LQ640BPTA",
+            "OLED55G2PSA",
+            "55UQ9000PSD",
+            "55LJ550T",
+            "43UJ752T",
+            "55NANO80SQA",
+            "32LQ6360PSA",
+            "OLED55C8PTA",
+            "70UQ8040PSB",
+            "OLED55A3PSA",
+            "OLED65C1PTZ",
+            "65UR7550PSC",
+            "43NANO73TPZ",
+            "55SK8500PTA",
+            "43UP7500PTZ",
+            "55UP8000PTZ",
+            "OLED55B8PTA",
+            "OLED48A1PTZ",
+            "32LM563",
+            "43LM5600PTC",
+            "OLED55B1PTZ",
+            "65NANO80TNA",
+            "OLED48C1PTZ",
+            "65UP8000PTZ",
+            "43UM7790PTA",
+            "OLED65BXPTA",
+            "OLED65C2XSC",
+            "43UQ8040PSB",
+            "OLED65G1PTZ",
+            "49NANO80TNA",
+            "75UP8000PTZ",
+            "OLED65C9PTA",
+            "OLED65E8PTA",
+            "OLED55G1PTZ",
+            "75NANO91TNA",
+            "75UN8000PTB",
+            "55UN7190PTA",
+            "43UQ7550PSF",
+            "43UP7550PTZ",
+            "65NANO86TNA",
+            "32LM576BPTC",
+            "55NANO75TPZ",
+            "48LX1QPSA",
+            "75SM9400PTA",
+            "50UP7550PTZ.ATR",
+            "43UR7550PSC",
+            "55UR7550PSC",
+            "65NANO83TPZ",
+            "OLED65C2PSC",
+            "50UM7700PTA"
+          ]
+        },
+        {
+          "name": "OnePlus",
+          "models": [
+            "65UC1A00",
+            "32HA0A00",
+            "40FA1A00/40FA1A00_V1"
+          ]
+        },
+        {
+          "name": "Thomson",
+          "models": [
+            "55OPMAXGT9030",
+            "40RT1033",
+            "Q43H1110",
+            "24Alpha001",
+            "Q65H1100",
+            "Q55H1001",
+            "Q50H1000",
+            "32TM3290",
+            "65OPMAX9033",
+            "50PATH1010BL",
+            "50OPMAX9077",
+            "55OPMAX9055",
+            "43PATH4545BL",
+            "65 OATHPRO 2020",
+            "43Alpha005BL",
+            "42PATH2121",
+            "43OPMAXGT9010",
+            "40PATH7777",
+            "50OPMAXGT9020"
+          ]
+        },
+        {
+          "name": "KODAK",
+          "models": [
+            "50CAPROGT5012",
+            "65CAPRO5099",
+            "32HDX7XPRO",
+            "55MT5022",
+            "75MT5044",
+            "43UHDX7XPROBL",
+            "55CAPROGT5014",
+            "55CA0909",
+            "32HDX900s",
+            "65CA0101",
+            "43CA2022",
+            "75CA9099",
+            "32HDX900S BT",
+            "43FHDX7XPRO"
+          ]
+        },
+        {
+          "name": "MarQ",
+          "models": [
+            "32HDNDQEE1B",
+            "32HDNDMSVAB",
+            "32HDGDQBSXP",
+            "24HDNDQPPAB",
+            "43FHDCDQEE1B"
+          ]
+        },
+        {
+          "name": "TOSHIBA",
+          "models": [
+            "55M550LP",
+            "43C350MP",
+            "50C350MP",
+            "43C350LP",
+            "65M650MP",
+            "55M650MP",
+            "75C350MP",
+            "50U5050",
+            "85Z670MP",
+            "43V35KP",
+            "65M550MP"
+          ]
+        },
+        {
+          "name": "Dyanora",
+          "models": [
+            "DY-LD24H0N",
+            "DY-LD24H4S",
+            "DY-LD32H4S",
+            "DY-LD32H1S",
+            "DYLD-43F1S",
+            "DY-LD43U4S"
+          ]
+        },
+        {
+          "name": "XElectron",
+          "models": [
+            "24STV",
+            "32STV",
+            "32XETV"
+          ]
+        },
+        {
+          "name": "Blaupunkt",
+          "models": [
+            "43QD7050",
+            "75QD7040",
+            "24Sigma707",
+            "50QD7010",
+            "65CSA7030",
+            "55CSA7090",
+            "40Sigma703BL",
+            "43CSA7070",
+            "42CSA7707",
+            "43CSA7121",
+            "32CSA7101"
+          ]
+        },
+        {
+          "name": "TCL",
+          "models": [
+            "50T6G",
+            "65P635",
+            "32S5400",
+            "32S5403A",
+            "55P635 Pro",
+            "65P635 Pro",
+            "50P635 Pro",
+            "65C645",
+            "32S6500S",
+            "43P725",
+            "50C635",
+            "55C635",
+            "32D311",
+            "50C715",
+            "43T6G",
+            "85P745"
+          ]
+        },
+        {
+          "name": "SENS",
+          "models": [
+            "SENS32WASHD",
+            "SENS50WASUHD",
+            "SENS55WGSQLED",
+            "SENS55WASUHD",
+            "SENS43WGSFHD",
+            "SENS50WGSUHD",
+            "SENS43WASFHD"
+          ]
+        },
+        {
+          "name": "Sansui",
+          "models": [
+            "JSW55ASUHD",
+            "JSW43ASUHD",
+            "JSWY32CSHD",
+            "JSY32ASHD",
+            "JSW65ASUHDFF",
+            "JSW50GSUHD",
+            "JSW65GSQLED",
+            "JSW70GSUHDFF",
+            "JSW70ASUHDFF"
+          ]
+        },
+        {
+          "name": "Coocaa",
+          "models": [
+            "55S3U-Pro",
+            "43Z72",
+            "55S6G Pro",
+            "65Y72",
+            "43S6G Pro"
+          ]
+        },
+        {
+          "name": "Compaq",
+          "models": [
+            "CQ4300FHDAB",
+            "CQV55AX1UD",
+            "CQ40APFD"
+          ]
+        },
+        {
+          "name": "InnoQ",
+          "models": [
+            "IN40-BSDLX",
+            "IN40-BSPRO",
+            "IN32-FSPRO",
+            "IN43-FSBDLX"
+          ]
+        },
+        {
+          "name": "Infinix",
+          "models": [
+            "50X3",
+            "43W1 Q",
+            "65W1 QLED",
+            "32Y1"
+          ]
+        },
+        {
+          "name": "Xiaomi",
+          "models": [
+            "O55M7-Z2IN"
+          ]
+        },
+        {
+          "name": "ONIDA",
+          "models": [
+            "32HIT",
+            "55UIV"
+          ]
+        },
+        {
+          "name": "BeethoSOL",
+          "models": [
+            "ATVBG24HDEK",
+            "LEDATBG32HDEK",
+            "LEDSTVBG3284HD27-DN",
+            "LEDSTVBG3273HD27-DN",
+            "LEDATVBG2483HD17-TP"
+          ]
+        },
+        {
+          "name": "Foxsky",
+          "models": [
+            "43FS-VS",
+            "32FSN",
+            "55FS-VS"
+          ]
+        },
+        {
+          "name": "NU",
+          "models": [
+            "LED43FWA1"
+          ]
+        },
+        {
+          "name": "CANDY",
+          "models": [
+            "CA43U50LED",
+            "CA50U50LED",
+            "CA32C9G",
+            "CA65U50LED",
+            "CA6560CQLED"
+          ]
+        },
+        {
+          "name": "SKYTRON",
+          "models": [
+            "S43FHSC",
+            "S43W2UHFW",
+            "S32NFH"
+          ]
+        },
+        {
+          "name": "Lloyd",
+          "models": [
+            "43QS850E",
+            "55QS850E",
+            "32HS550E",
+            "55US850C",
+            "55QX900D",
+            "32HS451C",
+            "75QX900D",
+            "43FS550C",
+            "32HS551E",
+            "32HS301C",
+            "65QX900D"
+          ]
+        },
+        {
+          "name": "Panasonic",
+          "models": [
+            "TH-65LX850DX",
+            "TH-43MS660DX",
+            "TH-65MX850DX",
+            "TH-65LZ950DX",
+            "TH-75MX740DX",
+            "TH-32JS650DX",
+            "TH-55LX750DX",
+            "TH-55LZ950DX",
+            "TH-32MS550DX",
+            "TH-32LS670DX",
+            "TH-42JS650DX",
+            "TH-55FX600D",
+            "TH-55LX700DX",
+            "TH-55MX750DX",
+            "TH-65LX700DX",
+            "TH-65MX710DX",
+            "TH-43MX700DX",
+            "TH-40LS670DX"
+          ]
+        },
+        {
+          "name": "Reliance",
+          "models": [
+            "RE32MP3972"
+          ]
+        },
+        {
+          "name": "BPL",
+          "models": [
+            "43F-A4301",
+            "32H-A4300",
+            "32H-A4301",
+            "65U-A4310"
+          ]
+        },
+        {
+          "name": "Haier",
+          "models": [
+            "6.50E+10",
+            "LE32W4000",
+            "50P7GT",
+            "L55EG",
+            "LE32K7700GA",
+            "LE43K7700UGA",
+            "LE43K6600UGA",
+            "LE32K6600GA",
+            "LE42A6500GA",
+            "55P7GT",
+            "LE50K7700HQGA"
+          ]
+        },
+        {
+          "name": "ZEBRONICS",
+          "models": [
+            "Zeb-43P1"
+          ]
+        },
+        {
+          "name": "T-Series",
+          "models": [
+            "32TWO 300H",
+            "TX24K",
+            "TS80C-A",
+            "43TWO400F",
+            "43TWO400U",
+            "Smart 43 Movie Plus- BL VC",
+            "S3201-BL"
+          ]
+        },
+        {
+          "name": "RGL",
+          "models": [
+            "RGL4001",
+            "RGL4002"
+          ]
+        },
+        {
+          "name": "REDMI",
+          "models": [
+            "L32R8-FVIN",
+            "L43R7-7AIN"
+          ]
+        },
+        {
+          "name": "JVC",
+          "models": [
+            "LT-75NQ7115CGX",
+            "LT-65NQ7115CGX",
+            "LT-65NQ7115C",
+            "LT-58NQ7135C",
+            "LT-58NQ7135CGX"
+          ]
+        },
+        {
+          "name": "Aiwa",
+          "models": [
+            "A32HDX1",
+            "AS32HDX1"
+          ]
+        },
+        {
+          "name": "Candes",
+          "models": [
+            "F32N001",
+            "CTPL43EF1SU4K"
+          ]
+        },
+        {
+          "name": "DETEL",
+          "models": [
+            "DI43SFA",
+            "DI55SKA"
+          ]
+        },
+        {
+          "name": "iMEE",
+          "models": [
+            "43\" Elite Series Smart Pro Framless LED TV-Silver",
+            "43\" Elite Series Smart Pro Framless LED TV-Pearl White",
+            "43\" Elite Series Smart Pro Framless LED TV-Gold",
+            "SIGNATURE-65SFLVC",
+            "SUPREME-43SFLCS-Steel",
+            "ELITE-43SFL-White",
+            "ELITE-43SFL-Silver",
+            "ELITE-32SFL-Silver"
+          ]
+        },
+        {
+          "name": "CORNEA",
+          "models": [
+            "86CORFLS05",
+            "75CORFLS05",
+            "43CORFLS05",
+            "50CORFLS05",
+            "32CORFLSNB05",
+            "SmartTV-86"
+          ]
+        },
+        {
+          "name": "LIMEBERRY",
+          "models": [
+            "65MU11SSSB5GV",
+            "LB43MF10BSPS4GV",
+            "SP50QU11SSPS5GV",
+            "LB55MU11BSNS5GV",
+            "LB49OU11SSPS5GV",
+            "LB50MU11BSNS5GV",
+            "LB65OU11SSPS5GV",
+            "43PF09BSNS4GV",
+            "SP65QU11SSPS5GV"
+          ]
+        },
+        {
+          "name": "INVANTER",
+          "models": [
+            "IN55UHD4K",
+            "IN32SFLGP",
+            "Nova Series",
+            "Elite Series",
+            "IN43SFLGP"
+          ]
+        },
+        {
+          "name": "Hyundai",
+          "models": [
+            "SMTHY32HDB52VRTYW",
+            "SMTHY32HDBE1"
+          ]
+        },
+        {
+          "name": "Cellecor",
+          "models": [
+            "E43V",
+            "E32V"
+          ]
+        },
+        {
+          "name": "smart",
+          "models": [
+            "SHD9A-4KULTRA0",
+            "50INSMART-07",
+            "50INSMART-04",
+            "50INSMART-06",
+            "50INSMART-10",
+            "50INSMART-05",
+            "50INSMART-09",
+            "50INSMART-12"
+          ]
+        },
+        {
+          "name": "STARSHINE",
+          "models": [
+            "ATPL-5500"
+          ]
+        },
+        {
+          "name": "Salora",
+          "models": [
+            "SLV 4501SU"
+          ]
+        },
+        {
+          "name": "Panwood",
+          "models": [
+            "PNWDL55MR",
+            "PNWDL50MR"
+          ]
+        },
+        {
+          "name": "VG",
+          "models": [
+            "VG43FCB1SYHZ44E",
+            "VG32HAB1SYHZ43E",
+            "VG32HC441E"
+          ]
+        },
+        {
+          "name": "AGE",
+          "models": [
+            "PRO 65 UHD VC",
+            "INDU 43 VC 4G"
+          ]
+        },
+        {
+          "name": "IMPEX",
+          "models": [
+            "Grande 55"
+          ]
+        },
+        {
+          "name": "TRUSENSE",
+          "models": [
+            "TS 5000",
+            "TS 4343"
+          ]
+        },
+        {
+          "name": "Feltron",
+          "models": [
+            "FT-4309(S)"
+          ]
+        },
+        {
+          "name": "V-SKY",
+          "models": [
+            "Smart Android Series (32EK260)"
+          ]
+        },
+        {
+          "name": "Gangnam",
+          "models": [
+            "LEDATGG32HDEKK"
+          ]
+        },
+        {
+          "name": "Samtonic",
+          "models": [
+            "ST 2403N",
+            "ST-4301SF"
+          ]
+        },
+        {
+          "name": "itel",
+          "models": [
+            "A2410IE"
+          ]
+        },
+        {
+          "name": "EGOTEL",
+          "models": [
+            "ET3211S"
+          ]
+        },
+        {
+          "name": "OPPO",
+          "models": [
+            "Reno 11 Pro 5G"
+          ]
+        },
+        {
+          "name": "Apple",
+          "models": [
+            "iPhone 14",
+            "iPhone 15"
+          ]
+        },
+        {
+          "name": "vivo",
+          "models": [
+            "T2x 5G"
+          ]
+        },
+        {
+          "name": "Power",
+          "models": [
+            "PG24N"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "32\"",
+            "43\"",
+            "50\"",
+            "55\"",
+            "65\"",
+            "75\"",
+            "85\""
+          ],
+          "required": true
+        },
+        {
+          "label": "Display Technology",
+          "name": "displayTechnology",
+          "type": "select",
+          "options": [
+            "LED",
+            "OLED",
+            "QLED",
+            "Mini-LED"
+          ],
+          "required": true
+        },
+        {
+          "label": "Resolution",
+          "name": "resolution",
+          "type": "select",
+          "options": [
+            "HD",
+            "Full HD",
+            "4K",
+            "8K"
+          ],
+          "required": true
+        },
+        {
+          "label": "Smart TV",
+          "name": "smartTv",
+          "type": "select",
+          "options": [
+            "Yes",
+            "No"
+          ],
+          "required": true
+        },
+        {
+          "label": "HDR Support",
+          "name": "hdrSupport",
+          "type": "select",
+          "options": [
+            "HDR10",
+            "HDR10+",
+            "Dolby Vision",
+            "No HDR"
+          ],
+          "required": false
+        },
+        {
+          "label": "Number of HDMI Ports",
+          "name": "hdmiPorts",
+          "type": "select",
+          "options": [
+            "2",
+            "3",
+            "4",
+            "More than 4"
+          ],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Laptops & Computers",
+      "brands": [
+        {
+          "name": "Lenovo",
+          "models": [
+            "A6-9225",
+            "Ideapad",
+            "APU",
+            "Missing",
+            "v15",
+            "IdeaPad",
+            "ThinkPad",
+            "V15",
+            "Celeron",
+            "Thinkbook",
+            "Legion",
+            "ThinkBook",
+            "Yoga",
+            "X390",
+            "Thinpad",
+            "B50-70",
+            "Intel",
+            "Ryzen",
+            "IDEAPAD",
+            "Lenovo",
+            "Thinkpad"
+          ]
+        },
+        {
+          "name": "Avita",
+          "models": [
+            "PURA",
+            "Cosmos",
+            "Liber"
+          ]
+        },
+        {
+          "name": "HP",
+          "models": [
+            "APU",
+            "Athlon",
+            "x360",
+            "Celeron",
+            "15q",
+            "250-G6",
+            "Missing",
+            "Pavilion",
+            "14s",
+            "15s",
+            "Notebook",
+            "DA",
+            "14a",
+            "Chromebook",
+            "Omen",
+            "Spectre",
+            "Envy",
+            "HP",
+            "430",
+            "250",
+            "OMEN",
+            "15",
+            "Pentium",
+            "Ryzen",
+            "15-ec1105AX"
+          ]
+        },
+        {
+          "name": "acer",
+          "models": [
+            "Aspire",
+            "Nitro",
+            "Chromebook",
+            "Missing",
+            "Travelmate",
+            "Predator",
+            "Spin",
+            "Swift",
+            "Intel",
+            "ConceptD",
+            "Dual",
+            "Extensa"
+          ]
+        },
+        {
+          "name": "ASUS",
+          "models": [
+            "ExpertBook",
+            "VivoBook",
+            "EeeBook",
+            "Celeron",
+            "Missing",
+            "Commercial",
+            "Chromebook",
+            "Vivo",
+            "ROG",
+            "VivoBook14",
+            "TUF",
+            "ASUS",
+            "ZenBook",
+            "Zenbook",
+            "Pro",
+            "Intel",
+            "F17",
+            "Zephyrus",
+            "Pentium",
+            "Asus",
+            "Ryzen",
+            "APU",
+            "AMD",
+            "Rog"
+          ]
+        },
+        {
+          "name": "DELL",
+          "models": [
+            "Vostro",
+            "Inspiron",
+            "Missing",
+            "INSPIRON",
+            "3000",
+            "Insprion",
+            "XPS",
+            "G15",
+            "DELL",
+            "Inpiron",
+            "GAMING",
+            "3511",
+            "G3",
+            "G7",
+            "Ryzen",
+            "G5"
+          ]
+        },
+        {
+          "name": "RedmiBook",
+          "models": [
+            "15",
+            "Pro"
+          ]
+        },
+        {
+          "name": "realme",
+          "models": [
+            "Book",
+            "Book(Slim)"
+          ]
+        },
+        {
+          "name": "Infinix",
+          "models": [
+            "INBook",
+            "X1"
+          ]
+        },
+        {
+          "name": "MSI",
+          "models": [
+            "Missing",
+            "Katana",
+            "GF63",
+            "Modern",
+            "Prestige",
+            "Sword",
+            "GS",
+            "GE76",
+            "GP65",
+            "GP76",
+            "GS66",
+            "GF65",
+            "Stealth",
+            "Summit",
+            "Pulse",
+            "WF65",
+            "Creator",
+            "Bravo",
+            "Alpha",
+            "Delta"
+          ]
+        },
+        {
+          "name": "lenovo",
+          "models": [
+            "Ideapad",
+            "Yoga"
+          ]
+        },
+        {
+          "name": "MICROSOFT",
+          "models": [
+            "Surface"
+          ]
+        },
+        {
+          "name": "Smartron",
+          "models": [
+            "t.book"
+          ]
+        },
+        {
+          "name": "LG",
+          "models": [
+            "Gram"
+          ]
+        },
+        {
+          "name": "Nokia",
+          "models": [
+            "PureBook"
+          ]
+        },
+        {
+          "name": "APPLE",
+          "models": [
+            "MacBook"
+          ]
+        },
+        {
+          "name": "Vaio",
+          "models": [
+            "SE",
+            "E"
+          ]
+        },
+        {
+          "name": "Mi",
+          "models": [
+            "Notebook"
+          ]
+        },
+        {
+          "name": "ALIENWARE",
+          "models": [
+            "Missing"
+          ]
+        },
+        {
+          "name": "iball",
+          "models": [
+            "CompBook"
+          ]
+        },
+        {
+          "name": "SAMSUNG",
+          "models": [
+            "Galaxy"
+          ]
+        },
+        {
+          "name": "Alienware",
+          "models": [
+            "Aurora R16 Gaming Desktop",
+            "Aurora R15 Liquid Cooled Edition",
+            "Aurora R14 Ryzen Edition",
+            "Aurora R13 Lunar Light",
+            "Aurora R12 VR Ready",
+            "Legend X Gaming Tower",
+            "Area-51 Threadripper Edition",
+            "Area-51 R5 Liquid Cooled"
+          ]
+        },
+        {
+          "name": "HP",
+          "models": [
+            "Omen 45L GT22-0010",
+            "Omen 40L GT21-0010",
+            "Pavilion Gaming TG01-2000",
+            "EliteDesk 880 G6 Tower",
+            "Z8 G4 Workstation",
+            "ProDesk 600 G9",
+            "Envy TE02-1000",
+            "Victus 15L Gaming"
+          ]
+        },
+        {
+          "name": "Dell",
+          "models": [
+            "XPS 8960 Special Edition",
+            "Precision 7865 Tower",
+            "OptiPlex 7000 Tower",
+            "Alienware Aurora R16",
+            "Vostro 5880 Business Desktop",
+            "Inspiron 3910 Tower",
+            "Precision 5820 Xeon Edition",
+            "G5 Gaming Desktop"
+          ]
+        },
+        {
+          "name": "ASUS",
+          "models": [
+            "ROG Strix G16CHR",
+            "ROG Strix G22CX",
+            "ProArt Station PD500TE",
+            "ExpertCenter D7 Tower",
+            "TUF Gaming GT501",
+            "ROG Huracan G21",
+            "ASUS Pro B550",
+            "VivoMini VC65-C1"
+          ]
+        },
+        {
+          "name": "Lenovo",
+          "models": [
+            "Legion Tower 7i Gen 8",
+            "ThinkStation P620",
+            "IdeaCentre T5 Gaming",
+            "ThinkCentre M90a Pro",
+            "Legion Tower 5i Gen 7",
+            "ThinkStation P360 Ultra",
+            "IdeaCentre AIO 5i",
+            "Legion C7 Gaming"
+          ]
+        },
+        {
+          "name": "Acer",
+          "models": [
+            "Predator Orion 7000",
+            "Nitro N50-640",
+            "Aspire TC-1760",
+            "Veriton X2665G",
+            "Predator Orion 3000",
+            "Aspire GX-785",
+            "Acer Chromebox CXI4",
+            "Acer Power S2680"
+          ]
+        },
+        {
+          "name": "MSI",
+          "models": [
+            "MEG Trident X2",
+            "MPG Trident AS",
+            "MAG Infinite S3",
+            "PRO DP21 Business",
+            "Aegis RS 13th Gen",
+            "Codex R 12th Gen",
+            "MAG Codex X5",
+            "Nightblade MI2"
+          ]
+        },
+        {
+          "name": "Corsair",
+          "models": [
+            "Vengeance i8100",
+            "One Pro i200",
+            "One i160 Compact",
+            "Vengeance a7200",
+            "Corsair 9000D",
+            "Vengeance RGB Pro",
+            "Corsair 7000X",
+            "One a100 Mini"
+          ]
+        },
+        {
+          "name": "CyberPowerPC",
+          "models": [
+            "Gamer Xtreme VR",
+            "Gamer Supreme Liquid Cool",
+            "Gamer Ultra 64GB Edition",
+            "Gamer Infinity 8000",
+            "Gamer Xtreme RGB",
+            "Gamer Supreme AMD",
+            "Gamer Master 4000",
+            "Gamer Xtreme 3000"
+          ]
+        },
+        {
+          "name": "iBUYPOWER",
+          "models": [
+            "Trace 7 MR 250i",
+            "Element MR 215i",
+            "Snowblind S 250i",
+            "Gaming RDY SLHBG218",
+            "Revolt 3 i7BG",
+            "Y60 RGB Gaming",
+            "Trace 5 MR 184i",
+            "Element 9260"
+          ]
+        },
+        {
+          "name": "Origin PC",
+          "models": [
+            "Neuron Gaming Desktop",
+            "Millennium Workstation",
+            "Corsair One a200",
+            "Genesis Performance",
+            "Neuron Liquid Cooled",
+            "Big O 13th Gen",
+            "Chronos Mini",
+            "Neuron AMD Edition"
+          ]
+        },
+        {
+          "name": "Maingear",
+          "models": [
+            "Vybe Stage 4",
+            "Turbo Custom Liquid",
+            "F131 Workstation",
+            "Rush Super Stock",
+            "Vybe RGB Edition",
+            "Turbo X99",
+            "Vybe Compact",
+            "F131-X AMD"
+          ]
+        },
+        {
+          "name": "Digital Storm",
+          "models": [
+            "Aventum X",
+            "Bolt X",
+            "Lumos RGB",
+            "Velox Liquid",
+            "Aventum 3",
+            "Bolt Pro",
+            "Lumos Mini",
+            "Velox XE"
+          ]
+        },
+        {
+          "name": "Falcon Northwest",
+          "models": [
+            "Talon AMD Edition",
+            "Tiki Custom Liquid",
+            "Mach V Intel",
+            "Talon RGB",
+            "Tiki Mini Pro",
+            "Mach V Threadripper",
+            "Talon Xtreme",
+            "Tiki Compact"
+          ]
+        },
+        {
+          "name": "Puget Systems",
+          "models": [
+            "Serenity Workstation",
+            "Custom Liquid Threadripper",
+            "Echo Mini",
+            "Serenity Xeon",
+            "Custom Liquid Pro",
+            "Echo Compact",
+            "Serenity AMD",
+            "Custom Liquid RGB"
+          ]
+        },
+        {
+          "name": "Velocity Micro",
+          "models": [
+            "Raptor Z95",
+            "Edge Z55",
+            "ProMagix HD60",
+            "Raptor Xtreme",
+            "Edge Mini",
+            "ProMagix Workstation",
+            "Raptor Liquid",
+            "Edge Z75"
+          ]
+        },
+        {
+          "name": "HP (Business)",
+          "models": [
+            "Z6 G5 Workstation",
+            "EliteDesk 800 G9 Tower",
+            "ProDesk 400 G9",
+            "Z8 Fury G5",
+            "EliteOne 800 G9",
+            "Z4 G5 Workstation",
+            "ProDesk 600 G8",
+            "EliteDesk 880 G9"
+          ]
+        },
+        {
+          "name": "Dell (Business)",
+          "models": [
+            "Precision 7960 Tower",
+            "OptiPlex 7080 Tower",
+            "Precision 5860 Xeon",
+            "OptiPlex Plus 7010",
+            "Precision 3460 SFF",
+            "OptiPlex 5000 Tower",
+            "Precision 7865",
+            "OptiPlex 3000 Tower"
+          ]
+        },
+        {
+          "name": "Lenovo (Business)",
+          "models": [
+            "ThinkStation P620 AMD",
+            "ThinkCentre M90n Nano",
+            "ThinkStation P360 Ultra",
+            "ThinkCentre M80q Gen 4",
+            "ThinkStation PX Workstation",
+            "ThinkCentre M70q Tiny",
+            "ThinkStation P520c",
+            "ThinkCentre M75q Gen 2"
+          ]
+        },
+        {
+          "name": "Apple",
+          "models": [
+            "Mac Studio (M2 Max)",
+            "Mac Studio (M2 Ultra)",
+            "Mac Pro (2019)",
+            "Mac mini (M2 Pro)",
+            "Mac mini (M2)",
+            "Mac Studio (M1 Max)",
+            "Mac Studio (M1 Ultra)",
+            "Mac Pro Rack (2019)"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "label": "Processor",
+          "name": "processor",
+          "type": "select",
+          "options": [
+            "Intel Core i5",
+            "Intel Core i7",
+            "Intel Core i9",
+            "AMD Ryzen 5",
+            "AMD Ryzen 7",
+            "AMD Ryzen 9"
+          ],
+          "required": true
+        },
+        {
+          "label": "RAM",
+          "name": "ram",
+          "type": "select",
+          "options": [
+            "8GB",
+            "16GB",
+            "32GB",
+            "64GB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Storage Type",
+          "name": "storageType",
+          "type": "select",
+          "options": [
+            "SSD",
+            "HDD",
+            "SSD + HDD"
+          ],
+          "required": true
+        },
+        {
+          "label": "Storage Capacity",
+          "name": "storageCapacity",
+          "type": "select",
+          "options": [
+            "256GB",
+            "512GB",
+            "1TB",
+            "2TB"
+          ],
+          "required": true
+        },
+        {
+          "label": "Graphics Card",
+          "name": "graphicsCard",
+          "type": "select",
+          "options": [
+            "Integrated",
+            "NVIDIA GTX",
+            "NVIDIA RTX",
+            "AMD Radeon"
+          ],
+          "required": false
+        },
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "13\"",
+            "14\"",
+            "15.6\"",
+            "16\"",
+            "17\""
+          ],
+          "required": false
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used - Like New",
+            "Used - Good"
+          ],
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "Wearable Devices",
+      "brands": [
+        {
+          "name": "Apple",
+          "models": [
+            "Apple Watch Series 9 (GPS + Cellular)",
+            "Apple Watch Series 9 (GPS)",
+            "Apple Watch Ultra 2",
+            "Apple Watch SE (2nd Gen)",
+            "Apple Watch Series 8",
+            "Apple Watch Hermès",
+            "Apple Watch Nike+",
+            "Apple Watch Studio (Custom)"
+          ]
+        },
+        {
+          "name": "Samsung",
+          "models": [
+            "Galaxy Watch6 Classic",
+            "Galaxy Watch6",
+            "Galaxy Watch5 Pro",
+            "Galaxy Watch5",
+            "Galaxy Watch4 Classic",
+            "Galaxy Watch Active2",
+            "Galaxy Fit3",
+            "Galaxy Ring (Upcoming)"
+          ]
+        },
+        {
+          "name": "Fitbit",
+          "models": [
+            "Fitbit Sense 2",
+            "Fitbit Versa 4",
+            "Fitbit Charge 6",
+            "Fitbit Luxe",
+            "Fitbit Inspire 3",
+            "Fitbit Ace 3 (Kids)",
+            "Fitbit Ionic (Discontinued)",
+            "Fitbit Aria Air Smart Scale"
+          ]
+        },
+        {
+          "name": "Garmin",
+          "models": [
+            "Garmin Epix Pro (Gen 2)",
+            "Garmin Fenix 7X Pro",
+            "Garmin Venu 3",
+            "Garmin Forerunner 965",
+            "Garmin Instinct 2X Solar",
+            "Garmin Lily 2",
+            "Garmin Vivosmart 5",
+            "Garmin Approach S70 (Golf)"
+          ]
+        },
+        {
+          "name": "Google",
+          "models": [
+            "Pixel Watch 2",
+            "Pixel Watch (1st Gen)",
+            "Google Glass Enterprise Edition 2",
+            "Fitbit by Google Sense 2"
+          ]
+        },
+        {
+          "name": "Huawei",
+          "models": [
+            "Huawei Watch GT 4",
+            "Huawei Watch Ultimate",
+            "Huawei Watch Buds",
+            "Huawei Band 8",
+            "Huawei Watch Fit 2",
+            "Huawei Watch D (Blood Pressure)",
+            "Huawei Vision Glass",
+            "Huawei Kids Watch 5X"
+          ]
+        },
+        {
+          "name": "Xiaomi",
+          "models": [
+            "Xiaomi Watch 2 Pro",
+            "Xiaomi Watch S3",
+            "Xiaomi Band 8 Pro",
+            "Xiaomi Smart Band 8",
+            "Xiaomi Watch S1 Active",
+            "Xiaomi CyberDog (Robotic)",
+            "Xiaomi Smart Glasses",
+            "Xiaomi Kids Watch"
+          ]
+        },
+        {
+          "name": "Amazfit",
+          "models": [
+            "Amazfit GTR 4",
+            "Amazfit GTS 4",
+            "Amazfit Bip 5",
+            "Amazfit T-Rex Ultra",
+            "Amazfit Falcon",
+            "Amazfit Cheetah Pro",
+            "Amazfit Band 7",
+            "Amazfit Powerbuds Pro"
+          ]
+        },
+        {
+          "name": "Withings",
+          "models": [
+            "Withings ScanWatch 2",
+            "Withings ScanWatch Horizon",
+            "Withings Body Scan",
+            "Withings BPM Core",
+            "Withings Sleep Analyzer",
+            "Withings Steel HR Sport",
+            "Withings Move ECG",
+            "Withings Thermo Smart Thermometer"
+          ]
+        },
+        {
+          "name": "Fossil",
+          "models": [
+            "Fossil Gen 6 Wellness Edition",
+            "Fossil Gen 6 Hybrid",
+            "Fossil Carlyle HR",
+            "Fossil Julianna HR",
+            "Fossil Collider HR",
+            "Fossil Nate HR",
+            "Fossil Garrett HR",
+            "Fossil Smartwatch for Women"
+          ]
+        },
+        {
+          "name": "Suunto",
+          "models": [
+            "Suunto 9 Peak Pro",
+            "Suunto Race",
+            "Suunto Vertical",
+            "Suunto 7",
+            "Suunto 5 Peak",
+            "Suunto Wing",
+            "Suunto Spartan Sport",
+            "Suunto Smart Sensor"
+          ]
+        },
+        {
+          "name": "Polar",
+          "models": [
+            "Polar Vantage V3",
+            "Polar Pacer Pro",
+            "Polar Ignite 3",
+            "Polar Grit X Pro",
+            "Polar Unite",
+            "Polar Verity Sense",
+            "Polar H10 Heart Rate Sensor",
+            "Polar OH1 Optical HR"
+          ]
+        },
+        {
+          "name": "Oura",
+          "models": [
+            "Oura Ring (Gen 3)",
+            "Oura Ring Horizon",
+            "Oura Ring Heritage",
+            "Oura Ring Balance",
+            "Oura Ring Stealth",
+            "Oura Ring Gold",
+            "Oura Ring Silver",
+            "Oura Ring Rose Gold"
+          ]
+        },
+        {
+          "name": "Whoop",
+          "models": [
+            "Whoop 4.0",
+            "Whoop Body (Compression Wear)",
+            "Whoop Swim",
+            "Whoop Pro (Athlete Edition)",
+            "Whoop Recovery Kit",
+            "Whoop Strength Trainer",
+            "Whoop Sleep Coach",
+            "Whoop Performance Bundle"
+          ]
+        },
+        {
+          "name": "Bose",
+          "models": [
+            "Bose Frames Tempo",
+            "Bose Frames Alto",
+            "Bose Frames Soprano",
+            "Bose Frames Tenor",
+            "Bose SoundControl Hearing Aids",
+            "Bose Sleepbuds II",
+            "Bose Sport Open Earbuds",
+            "Bose AR Glasses (Concept)"
+          ]
+        },
+        {
+          "name": "Ray-Ban",
+          "models": [
+            "Ray-Ban Meta Smart Glasses",
+            "Ray-Ban Stories",
+            "Ray-Ban Wayfarer Smart",
+            "Ray-Ban Round Smart",
+            "Ray-Ban Meteor Smart",
+            "Ray-Ban Clubmaster Smart",
+            "Ray-Ban Smart Glasses Polarized",
+            "Ray-Ban Smart Sunglasses"
+          ]
+        },
+        {
+          "name": "Meta",
+          "models": [
+            "Meta Quest 3",
+            "Meta Quest Pro",
+            "Meta Ray-Ban Stories",
+            "Meta Portal Glasses",
+            "Meta Wristband (Concept)",
+            "Meta EMG Input Band",
+            "Meta Haptic Gloves",
+            "Meta AR Glasses (Project Nazare)"
+          ]
+        },
+        {
+          "name": "Sony",
+          "models": [
+            "Sony Wena Wrist Pro",
+            "Sony SmartWatch 3",
+            "Sony SmartBand Talk",
+            "Sony SmartEyeglass",
+            "Sony Xperia Eye",
+            "Sony Xperia Ear Duo",
+            "Sony Motion Tracking Wearable",
+            "Sony PlayStation VR2"
+          ]
+        },
+        {
+          "name": "Garmin (Marine)",
+          "models": [
+            "Garmin Quatix 7",
+            "Garmin MARQ Captain",
+            "Garmin Descent Mk3",
+            "Garmin Instinct Dive",
+            "Garmin D2 Mach 1 (Aviation)",
+            "Garmin Tactix 7 (Military)",
+            "Garmin Enduro 2 (Ultra Running)",
+            "Garmin Approach S70 (Golf)"
+          ]
+        },
+        {
+          "name": "Specialized",
+          "models": [
+            "Specialized ANGi Crash Sensor",
+            "Specialized Recon 2.0 (Cycling)",
+            "Specialized S-Works Exos Shoes",
+            "Specialized AirNet Helmet System",
+            "Specialized Trail Guardian",
+            "Specialized Body Geometry Fit",
+            "Specialized Turbo Connect Display",
+            "Specialized Mission Control App"
+          ]
+        },
+        {
+          "name": "Casio",
+          "models": [
+            "Casio G-Shock Move",
+            "Casio Pro Trek Smart",
+            "Casio G-Shock GBD-H2000",
+            "Casio G-Squad GBD-200",
+            "Casio Edifice EQB-2000",
+            "Casio Baby-G BGD-5600",
+            "Casio Oceanus Smart",
+            "Casio G-Shock Rangeman GW-9400"
+          ]
+        },
+        {
+          "name": "Noise",
+          "models": [
+            "Noise ColorFit Pro 5",
+            "Noise Twist Round",
+            "Noise ColorFit Ultra 3",
+            "Noise ColorFit Icon 2",
+            "Noise ColorFit Pulse Grand",
+            "NoiseFit Halo",
+            "Noise ColorFit Brio",
+            "Noise ColorFit Quad Call"
+          ]
+        },
+        {
+          "name": "BoAt",
+          "models": [
+            "boAt Wave Sigma",
+            "boAt Wave Arc",
+            "boAt Wave Call 2",
+            "boAt Wave Electra",
+            "boAt Wave Neo",
+            "boAt Wave Stellar",
+            "boAt Wave Crest",
+            "boAt Wave Ultima"
+          ]
+        },
+        {
+          "name": "Realme",
+          "models": [
+            "Realme Watch 3 Pro",
+            "Realme Watch 3",
+            "Realme Band 2",
+            "Realme TechLife Watch",
+            "Realme Link",
+            "Realme Smart Scale",
+            "Realme Buds Wearable",
+            "Realme Smart Cam Neckband"
+          ]
+        },
+        {
+          "name": "OnePlus",
+          "models": [
+            "OnePlus Watch 2",
+            "OnePlus Watch (1st Gen)",
+            "OnePlus Band",
+            "OnePlus Health App",
+            "OnePlus Smart Neckband",
+            "OnePlus Fitness Tracker",
+            "OnePlus ECG Monitor",
+            "OnePlus Wear OS Device"
+          ]
+        }
+      ],
+      "fields": [
+        {
+          "label": "Screen Size",
+          "name": "screenSize",
+          "type": "select",
+          "options": [
+            "1.2\"",
+            "1.4\"",
+            "1.6\""
+          ],
+          "required": false
+        },
+        {
+          "label": "Connectivity",
+          "name": "connectivity",
+          "type": "select",
+          "options": [
+            "Bluetooth",
+            "Wi-Fi",
+            "Cellular (LTE)"
+          ],
+          "required": true
+        },
+        {
+          "label": "Health Tracking Features",
+          "name": "healthTracking",
+          "type": "checkbox",
+          "options": [
+            "Heart Rate Monitor",
+            "Sleep Tracking",
+            "Blood Oxygen Monitoring",
+            "ECG"
+          ],
+          "required": false
+        },
+        {
+          "label": "Water Resistance",
+          "name": "waterResistance",
+          "type": "select",
+          "options": [
+            "Yes - Up to 50m",
+            "Yes - Up to 100m",
+            "No"
+          ],
+          "required": false
+        },
+        {
+          "label": "Compatible With",
+          "name": "compatibleWith",
+          "type": "select",
+          "options": [
+            "iOS",
+            "Android",
+            "Both"
+          ],
+          "required": true
+        },
+        {
+          "label": "Condition",
+          "name": "condition",
+          "type": "select",
+          "options": [
+            "New",
+            "Used"
+          ],
+          "required": true
+        }
+      ]
+    }
+  ]
+}

@@ -34,8 +34,20 @@ export default function Home() {
               <h5 className="card-title">{ad.title}</h5>
               <h5 className="card-title"> test {ad._id}</h5>
               <p className="card-text">{ad.description}</p>
-              <p className="card-text">Price: ${ad.price}</p>
               <p className="card-text">Location: {ad.location}</p>
+              <p className="card-text">Price: ${ad.price}</p>
+              {ad.details ? (
+                <div className="card-text">
+                  <ul>
+                    {Object.entries(ad.details).map(([key, value]) => (
+                      <li key={key}><strong>{key}:</strong> {value}</li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <div className="card-text"><em>No details available</em></div>
+              )}
+
               <p className="card-text">Views: {ad.views}</p>
               <Link
                 to={`/ads/${ad._id}`}
@@ -46,6 +58,14 @@ export default function Home() {
             </div>
           </div>
         ))}
+      </div>
+      <div>
+        <Link
+          to={`/add`}
+          className='btn btn-primary w-100 stretched-link'
+        >
+          Create ADS
+        </Link>
       </div>
     </>
   )

@@ -10,11 +10,23 @@ const getAdById = async(id) => {
     const response = await axios.get(`${API_URL}/${id}`)
     return response.data
 }
+const createAd = async (adData , token) => {
+    const config = {
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      };
+      const response = await axios.post(API_URL, adData, config);
+      return response.data;
+}
+
 
 
 
 const adsService = {
     getAllads,
-    getAdById
+    getAdById,
+    createAd
 }
 export default adsService 

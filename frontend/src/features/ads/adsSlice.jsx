@@ -30,6 +30,20 @@ export const getAdById = createAsyncThunk('ads/getOne', async (id, thunkApi) => 
     }
 })
 
+export const createAd = createAsyncThunk(
+    'ad/create',
+    async (adData , thunkApi) => {
+        try {
+            const token = thunkApi.getState().auth.user?.jwtToken;
+            if (!token) throw new Error("Missing authentication token!");
+            return await adsService.createAd(adData, token);
+        } catch (error) {
+            const message = error.response?.data?.message || error.message;
+            return thunkApi.rejectWithValue(message);
+        }
+    }
+)
+
 export const adsSlice = createSlice({
     name: 'ads',
     initialState,
@@ -68,6 +82,20 @@ export const adsSlice = createSlice({
                 state.message = action.payload
                 state.isError = true
                 state.isSuccess = false
+            })
+            // create ad
+            .addCase(createAd.pending, (state) => {
+                state.isLoading = true
+            })
+            .addCase(createAd.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.ads.ads.push(action.payload);
+                state.isError = false;
+            })
+            .addCase(createAd.rejected, (state, action) => {
+                state.isLoading = false
+                state.message = action.payload
+                state.isError = true
             })
     }
 })

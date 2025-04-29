@@ -6,29 +6,22 @@ const ErrorResponse = require('../utils/ErrorResponse');
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 
-const createAd = asynchandler(async (req, res, next) => {
-    const ads = Array.isArray(req.body) ? req.body : [req.body];
-
-    for (let ad of ads) {
-        const { title, description, price, category, user, location } = ad;
-        if (!title || !description || !price || !category || !user || !location) {
-            return next(
-                new ErrorResponse("All fields (title, description, price, category, user, location) are required.", 400)
-            );
-        }
+const createAd = asynchandler(async (req, res,next) => {
+    const { title, description, price, category, user, location } = req.body;
+    if (!title || !description || !price || !category || !user || !location) {
+        return next(
+            new ErrorResponse("All fields (title, description, price, category, user, location) are required.", 400)
+        );
     }
-
-    const newAds = await Ad.insertMany(ads);
+    const newAd = await Ad.create(req.body);
     res.status(201).json({
-        message: 'Ads created successfully',
-        ads: newAds
-    });
-});
-
+        message: 'Ad created successfully',
+        ad: newAd
+    })
+})
 
 const getAllAds = asynchandler(async (req, res, next) => {
     const allAds = await Ad.find()
-        .populate('category', 'name')
         .populate('user', 'FullName email phone');
     if (!allAds || allAds.length === 0) {
         return res.status(404).json({
@@ -46,7 +39,6 @@ const getAllAds = asynchandler(async (req, res, next) => {
 const getAdById = asynchandler(async (req, res) => {
     const id = req.params.id
     const AdById = await Ad.findOne({ _id: id })
-        .populate('category', 'name')
         .populate('user', 'FullName email')
     if (!AdById) {
         return res.status(404).json({
