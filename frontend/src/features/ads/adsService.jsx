@@ -10,17 +10,16 @@ const getAdById = async(id) => {
     const response = await axios.get(`${API_URL}/${id}`)
     return response.data
 }
-const createAd = async (adData , token) => {
+const createAd = async (adData, token) => {
     const config = {
         headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json'
+            Authorization: `Bearer ${token}`,
+            'Content-Type': 'multipart/form-data' 
         }
-      };
-      const response = await axios.post(API_URL, adData, config);
-      return response.data;
+    };
+    const response = await axios.post(API_URL, adData, config);
+    return response.data;
 }
-
 
 
 

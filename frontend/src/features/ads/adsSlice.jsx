@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import adsService from "./adsService"
+import axios from "axios"
 
 const initialState = {
     ads: [],
-    ad : null,
+    ad: null,
     isError: false,
     isSuccess: false,
     isLoading: false,
@@ -30,19 +31,24 @@ export const getAdById = createAsyncThunk('ads/getOne', async (id, thunkApi) => 
     }
 })
 
-export const createAd = createAsyncThunk(
-    'ad/create',
-    async (adData , thunkApi) => {
-        try {
-            const token = thunkApi.getState().auth.user?.jwtToken;
-            if (!token) throw new Error("Missing authentication token!");
-            return await adsService.createAd(adData, token);
-        } catch (error) {
-            const message = error.response?.data?.message || error.message;
-            return thunkApi.rejectWithValue(message);
-        }
+export const createAd = createAsyncThunk('ads/createAd', async (formData, thunkAPI) => {
+    const state = thunkAPI.getState();
+    const token = state.auth.user?.data?.token || '';
+
+    try {
+        const response = await axios.post('/api/ads', formData, {
+            headers: {
+                Authorization: `Bearer ${token}`,
+                'Content-Type': 'multipart/form-data'
+            }
+        });
+
+        return response.data;
+    } catch (error) {
+        return thunkAPI.rejectWithValue(error.response?.data?.message || 'Error');
     }
-)
+});
+
 
 export const adsSlice = createSlice({
     name: 'ads',
@@ -89,7 +95,7 @@ export const adsSlice = createSlice({
             })
             .addCase(createAd.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.ads.ads.push(action.payload);
+                state.ads.push(action.payload);
                 state.isError = false;
             })
             .addCase(createAd.rejected, (state, action) => {

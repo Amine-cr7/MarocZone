@@ -51,12 +51,22 @@ const loginUser = asynchandler(async (req, res, next) => {
   if (!passMatch) {
     return next(new ErrorResponse("Incorrect password. Please try again.", 400));
   }
+  // res.status(200).json({
+  //   _id: user._id,
+  //   FullName: user.FullName,
+  //   email: user.email,
+  //   token: generateToken(user._id)
+  // });
   res.status(200).json({
-    _id: user._id,
-    FullName: user.FullName,
-    email: user.email,
-    jwtToken: generateToken(user._id)
+    success: true,
+    data: {
+      id: user._id,
+      FullName: user.FullName,
+      email: user.email,
+      token: generateToken(user._id) // ✅ استخدم "token" بدل "jwtToken"
+    }
   });
+  
 })
 
 const UpdateUserDetails = asynchandler(async (req, res, next) => {
