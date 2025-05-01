@@ -81,7 +81,8 @@ console.log('User from localStorage:', userId);
         adData.append('user', userId);
         adData.append('brand', selectedBrand);
         adData.append('model', selectedModel);
-        adData.append('subcategory', selectedSubcategory._id);
+        adData.append('category', selectedSubcategory.category); 
+        console.log(adData)
         
         if (formData.images) {
             adData.append('images', formData.images);
@@ -90,6 +91,7 @@ console.log('User from localStorage:', userId);
         Object.entries(dynamicFormData).forEach(([key, value]) => {
             adData.append(`details[${key}]`, value);
         });
+      
 
         await dispatch(createAd(adData)).unwrap();
         toast.success('Ad created successfully!');
@@ -103,7 +105,7 @@ console.log('User from localStorage:', userId);
   return (
     <div className="p-8 space-y-6">
       {step < 4 ? (
-        <form onSubmit={step === 3 ? handleSubmit : (e) => e.preventDefault()}>
+        <form onSubmit={ (e) => e.preventDefault()}>
           {step === 1 && (
             <div className="space-y-4">
               <div className='form-group'>
@@ -200,8 +202,9 @@ console.log('User from localStorage:', userId);
               </button>
             ) : (
               <button
-                type="submit"
+                type='button'
                 className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+                onClick={handleSubmit}
               >
                 Submit Ad
               </button>

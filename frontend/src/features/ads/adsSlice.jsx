@@ -3,7 +3,7 @@ import adsService from "./adsService"
 import axios from "axios"
 
 const initialState = {
-    ads: [],
+    ads: { ads:[]},
     ad: null,
     isError: false,
     isSuccess: false,
@@ -95,7 +95,7 @@ export const adsSlice = createSlice({
             })
             .addCase(createAd.fulfilled, (state, action) => {
                 state.isLoading = false;
-                state.ads.push(action.payload);
+                state.ads.ads.push(action.payload);
                 state.isError = false;
             })
             .addCase(createAd.rejected, (state, action) => {
