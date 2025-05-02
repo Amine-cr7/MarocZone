@@ -1,17 +1,16 @@
 import React, { useState } from 'react';
 
-export default function BrandModelSelect({ subcategory, setSelectedModel }) {
+export default function BrandModelSelect({ subcategory, setSelectedModel,setSelectedBrand}) {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedLabel, setSelectedLabel] = useState('Sélectionner une marque');
   const [activeBrand, setActiveBrand] = useState(null);
-
   const handleModelSelect = (model) => {
     setSelectedModel(model);
     setSelectedLabel(model);
     setIsOpen(false);
     setActiveBrand(null);
   };
-
+  
   if (!subcategory || !subcategory.brands) {
     return <div className="text-gray-500">Aucune marque disponible pour cette sous-catégorie.</div>;
   }
@@ -53,8 +52,10 @@ export default function BrandModelSelect({ subcategory, setSelectedModel }) {
                   <li key={idx} className="p-3 hover:bg-gray-100 cursor-pointer flex justify-between items-center rounded"
                     onClick={() => {
                       if (brand.models && brand.models.length > 0) {
+                        setSelectedBrand(brand.name)
                         setActiveBrand(idx);
                       } else {
+                        
                         handleModelSelect(brand.name);
                       }
                     }}
@@ -83,6 +84,7 @@ export default function BrandModelSelect({ subcategory, setSelectedModel }) {
           </div>
         </div>
       )}
+      
     </div>
   );
 }

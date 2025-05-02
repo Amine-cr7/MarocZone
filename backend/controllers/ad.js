@@ -6,13 +6,15 @@ const ErrorResponse = require('../utils/ErrorResponse');
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 
-const createAd = asynchandler(async (req, res,next) => {
-    const { title, description, price, category, user, location } = req.body;
-    if (!title || !description || !price || !category || !user || !location) {
+const createAd = asynchandler(async (req, res, next) => {
+    const { title, description, price, phone, brand, model, subCat, user, location } = req.body;
+
+    if (!title || !description || !price || !phone || !subCat || !user || !location) {
         return next(
-            new ErrorResponse("All fields (title, description, price, category, user, location) are required.", 400)
+            new ErrorResponse("All fields (title, description, price, subCat, user, location) are required.", 400)
         );
     }
+
     const newAd = await Ad.create(req.body);
     res.status(201).json({
         message: 'Ad created successfully',
@@ -47,10 +49,10 @@ const getAdById = asynchandler(async (req, res) => {
             message: 'ad not found',
         })
     }
-    
-    AdById.views = (AdById.views || 0) + 1; 
+
+    AdById.views = (AdById.views || 0) + 1;
     await AdById.save();
-    
+
 
     res.status(200).json({
         message: 'Retrieved ads',
@@ -84,7 +86,7 @@ const deleteAd = asynchandler(async (req, res) => {
     await Ad.findByIdAndDelete(id);
     res.status(202).json({
         message: 'Deleted successfully',
-        deletedAd: ad 
+        deletedAd: ad
     });
 });
 

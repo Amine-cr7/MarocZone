@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export default function DynamicFormFields({ subcategory, onSubmit }) {
+export default function DynamicFormFields({ subcategory, onSubmit,step,setStep }) {
   const [formData, setFormData] = useState(() => {
     const initialData = {};
     subcategory.fields.forEach(field => {
@@ -13,9 +13,9 @@ export default function DynamicFormFields({ subcategory, onSubmit }) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSubmit(formData); // send data to parent
+  const handleContinue = () => {
+    setStep(step + 1);
+    onSubmit(formData)
   };
 
   if (!subcategory.fields) {
@@ -23,7 +23,7 @@ export default function DynamicFormFields({ subcategory, onSubmit }) {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <div  className="space-y-6">
       {subcategory.fields.map((field, idx) => (
         <div key={idx}>
           <label className="block text-gray-700 mb-1 font-medium">{field.label}</label>
@@ -54,9 +54,12 @@ export default function DynamicFormFields({ subcategory, onSubmit }) {
         </div>
       ))}
 
-      <button type="submit" className="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
-        Envoyer
+      <button
+        onClick={handleContinue}
+        className="w-full bg-blue-600 text-white py-2 rounded-xl hover:bg-blue-700 transition"
+      >
+        Continue
       </button>
-    </form>
+    </div>
   );
 }

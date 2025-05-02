@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Header from "./components/Header";
 import { ToastContainer } from 'react-toastify'
 import CreateAd from "./pages/CreateAd";
+import PrivateRoute from "./components/PrivateRoute";
 function App() {
 
   return (
@@ -15,7 +16,11 @@ function App() {
 
         <Header />
         <Routes>
-          <Route path="/add" element={<CreateAd />} />
+          <Route path="/add" element={
+            <PrivateRoute>
+              <CreateAd/>
+            </PrivateRoute>
+          } />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>

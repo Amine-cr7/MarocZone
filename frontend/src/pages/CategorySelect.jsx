@@ -16,7 +16,6 @@ export default function CategorySelect({ setSelectedSubcategory }) {
   }, [dispatch]);
 
   const handleSelectSubcategory = (subcategoryObj) => {
-    console.log(subcategoryObj)
     setSelectedCategory(subcategoryObj.name);
     setSelectedSubcategory(subcategoryObj);
     setIsOpen(false);
