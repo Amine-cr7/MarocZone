@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import { ToastContainer } from 'react-toastify'
 import CreateAd from "./pages/CreateAd";
 import PrivateRoute from "./components/PrivateRoute";
+import Home from "./pages/Home";
+import AdDetails from "./pages/AdDetails";
 function App() {
 
   return (
@@ -16,6 +18,8 @@ function App() {
 
         <Header />
         <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/ads/:_id" element={<AdDetails />} />
           <Route path="/add" element={
             <PrivateRoute>
               <CreateAd/>
