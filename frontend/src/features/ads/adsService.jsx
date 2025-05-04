@@ -4,6 +4,7 @@ const API_URL = '/api/ads/';
 
 const getAllads = async () => {
     const response = await axios.get(API_URL)
+    console.log(response.data)
     return response.data
 }
 const uploadPhotos = async (id, photos, token) => {

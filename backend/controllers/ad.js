@@ -24,7 +24,6 @@ const createAd = asynchandler(async (req, res, next) => {
 
 const getAllAds = asynchandler(async (req, res, next) => {
     const allAds = await Ad.find()
-        .populate('category', 'name')
         .populate('user', 'FullName email phone');
     if (!allAds || allAds.length === 0) {
         return res.status(404).json({
@@ -32,17 +31,13 @@ const getAllAds = asynchandler(async (req, res, next) => {
             ads: []
         });
     }
-    res.status(200).json({
-        message: 'Retrieved all ads',
-        ads: allAds
-    });
+    res.status(200).json(allAds);
 });
 
 
 const getAdById = asynchandler(async (req, res) => {
     const id = req.params.id
     const AdById = await Ad.findOne({ _id: id })
-        .populate('category', 'name')
         .populate('user', 'FullName email')
     if (!AdById) {
         return res.status(404).json({
@@ -54,10 +49,7 @@ const getAdById = asynchandler(async (req, res) => {
     await AdById.save();
 
 
-    res.status(200).json({
-        message: 'Retrieved ads',
-        ads: AdById
-    })
+    res.status(200).json(AdById)
 })
 const updateAd = asynchandler(async (req, res) => {
     const id = req.params.id

@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { uploadPhotos } from '../features/ads/adsSlice';
+import { useNavigate } from 'react-router-dom';
 
 export default function AddImage() {
     const { ad } = useSelector(state => state.ads);
     const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [images, setImages] = useState([]);
 
     const handleFileChange = (e) => {
@@ -23,6 +25,7 @@ export default function AddImage() {
             formData.append('files', images[i]); // 👈️ backend katsenna 'files'
         }
         dispatch(uploadPhotos({ id: ad._id, photos: formData }));
+        navigate("/")
     };
 
     return (

@@ -15,7 +15,7 @@ export const getAllads = createAsyncThunk('ads/getAll', async (_, thunkApi) => {
     try {
         return await adsService.getAllads()
     } catch (error) {
-        const message = (error.response && error.response.data && error.response.data.error)
+        const message = (error.message && error.response.data && error.response.data.message)
             || error.message || error.toString()
         return thunkApi.rejectWithValue(message)
     }
@@ -25,7 +25,7 @@ export const getAdById = createAsyncThunk('ads/getOne', async (id, thunkApi) => 
     try {
         return await adsService.getAdById(id)
     } catch (error) {
-        const message = (error.response && error.response.data && error.response.data.error)
+        const message = (error.message && error.response.data && error.response.data.message)
             || error.message || error.toString()
         return thunkApi.rejectWithValue(message)
     }
@@ -34,8 +34,8 @@ export const getAdById = createAsyncThunk('ads/getOne', async (id, thunkApi) => 
 export const createAd = createAsyncThunk('ads/create', async (adsData, thunkApi) => {
     try {
         const token = thunkApi.getState().auth.user.jwtToken;
-       return await adsService.createAd(adsData,token)
-        
+        return await adsService.createAd(adsData, token)
+
     } catch (error) {
         const message = (error.message && error.response.data && error.response.data.message)
             || error.message || error.toString()
@@ -49,7 +49,7 @@ export const createAd = createAsyncThunk('ads/create', async (adsData, thunkApi)
 export const uploadPhotos = createAsyncThunk('ads/photo', async ({ id, photos }, thunkApi) => {
     try {
         const token = thunkApi.getState().auth.user.jwtToken;
-       return await adsService.uploadPhotos(id,photos,token)
+        return await adsService.uploadPhotos(id, photos, token)
     } catch (error) {
         const message = (error.message && error.response.data && error.response.data.message)
             || error.message || error.toString()
@@ -104,7 +104,7 @@ export const adsSlice = createSlice({
             .addCase(createAd.fulfilled, (state, action) => {
                 state.isLoading = false;
                 state.ad = action.payload.ad
-                state.ads.push(action.payload);
+                state.ads.push(action.payload.ad);
                 state.isError = false;
             })
             .addCase(createAd.rejected, (state, action) => {
