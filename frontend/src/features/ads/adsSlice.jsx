@@ -1,6 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import adsService from "./adsService"
-import axios from "axios"
+
 
 const initialState = {
     ads: [],
@@ -34,8 +34,8 @@ export const getAdById = createAsyncThunk('ads/getOne', async (id, thunkApi) => 
 export const createAd = createAsyncThunk('ads/create', async (adsData, thunkApi) => {
     try {
         const token = thunkApi.getState().auth.user.jwtToken;
-       return await adsService.createAd(adsData,token)
-        
+        return await adsService.createAd(adsData, token)
+
     } catch (error) {
         const message = (error.message && error.response.data && error.response.data.message)
             || error.message || error.toString()
@@ -49,13 +49,24 @@ export const createAd = createAsyncThunk('ads/create', async (adsData, thunkApi)
 export const uploadPhotos = createAsyncThunk('ads/photo', async ({ id, photos }, thunkApi) => {
     try {
         const token = thunkApi.getState().auth.user.jwtToken;
-       return await adsService.uploadPhotos(id,photos,token)
+        return await adsService.uploadPhotos(id, photos, token)
     } catch (error) {
         const message = (error.message && error.response.data && error.response.data.message)
             || error.message || error.toString()
         return thunkApi.rejectWithValue(message)
     }
 })
+
+export const getAdsbyUser = createAsyncThunk('ads/getallads-belongt-to-user', async (id, thunkApi) => {
+    try {
+        return await adsService.getAdsbyUser(id)
+    } catch (error) {
+        const message = (error.response && error.response.data && error.response.data.error)
+            || error.message || error.toString()
+        return thunkApi.rejectWithValue(message)
+    }
+})
+
 
 
 export const adsSlice = createSlice({
@@ -111,6 +122,22 @@ export const adsSlice = createSlice({
                 state.isLoading = false
                 state.message = action.payload
                 state.isError = true
+            })
+            // get all ads belongt to user
+            .addCase(getAdsbyUser.pending, (state) => {
+                state.isLoading = true
+            })
+            .addCase(getAdsbyUser.fulfilled, (state, action) => {
+                state.isLoading = false
+                state.ads = action.payload
+                state.isError = false
+                state.isSuccess = true
+            })
+            .addCase(getAdsbyUser.rejected, (state, action) => {
+                state.isLoading = false
+                state.message = action.payload
+                state.isError = true
+                state.isSuccess = false
             })
     }
 })

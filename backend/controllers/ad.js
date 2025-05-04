@@ -24,6 +24,7 @@ const createAd = asynchandler(async (req, res, next) => {
 
 const getAllAds = asynchandler(async (req, res, next) => {
     const allAds = await Ad.find()
+
         .populate('user', 'FullName email phone');
     if (!allAds || allAds.length === 0) {
         return res.status(404).json({
@@ -31,16 +32,17 @@ const getAllAds = asynchandler(async (req, res, next) => {
             ads: []
         });
     }
-    res.status(200).json({
-        message: 'Retrieved all ads',
-        ads: allAds
-    });
+    res.status(200).json(allAds);
+
+
+
 });
 
 
 const getAdById = asynchandler(async (req, res) => {
     const id = req.params.id
     const AdById = await Ad.findOne({ _id: id })
+
         .populate('user', 'FullName email')
     if (!AdById) {
         return res.status(404).json({
@@ -52,10 +54,10 @@ const getAdById = asynchandler(async (req, res) => {
     await AdById.save();
 
 
-    res.status(200).json({
-        message: 'Retrieved ads',
-        ads: AdById
-    })
+    res.status(200).json(AdById)
+
+
+
 })
 const updateAd = asynchandler(async (req, res) => {
     const id = req.params.id
@@ -144,6 +146,22 @@ const uploadPhotosAd = asynchandler(async (req, res, next) => {
         data: uploadedFileNames
     });
 });
+const getAdsByUser = asynchandler(async(req,res) => {
+    const UserId = req.params.id
+    const Ads = await Ad.find({user : UserId})
+    .populate('user', 'FullName') 
+
+    if(!Ads || Ads.length === 0){
+        return res.status(404).json({
+            message: 'No ads found for this User',
+        });
+    }
+
+    res.status(201).json({
+        message: 'Ad found for this user',
+        Ads
+    })
+})
 
 
 
@@ -154,4 +172,5 @@ module.exports = {
     updateAd,
     deleteAd,
     uploadPhotosAd,
+    getAdsByUser
 }

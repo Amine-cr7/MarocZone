@@ -11,8 +11,7 @@ export default function Home() {
     dispatch(getAllads())
   }, [dispatch])
 
-  const adsList = ads.ads || []
-  console.log(adsList)
+
 
   return (
     <>
@@ -27,10 +26,10 @@ export default function Home() {
       </div>
       {isLoading && <div>Loading...</div>}
       {isError && <div>Error: {message}</div>}
-      {isSuccess && adsList.length === 0 && <div>No ads available.</div>}
+      {isSuccess && ads.length === 0 && <div>No ads available.</div>}
 
       <div>
-        {adsList.map(ad => (
+        {ads.map(ad => (
           <div key={ad._id} className="card" style={{ width: '18rem' }}>
             <img
               src={`http://localhost:5000/uploads/${ad.images[0]}`}

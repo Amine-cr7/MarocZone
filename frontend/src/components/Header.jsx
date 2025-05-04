@@ -7,12 +7,14 @@ import { reset, logout } from '../features/auth/authSlice'
 export default function Header() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { user } = useSelector(state => state.auth)
+    const user = useSelector(state => state.auth.user)
+    console.log(user)
     const onLogout = () => {
         dispatch(logout())
         dispatch(reset())
         navigate('/')
     }
+
     return (
         <header className='header'>
             <div className="logo">
@@ -33,10 +35,19 @@ export default function Header() {
                         </li>
                     </>
                 ) : (
-                <li>
-                    <button className='btn' onClick={onLogout}><FaSignOutAlt/> Logout</button>
-                </li>
-            )}
+                    <>
+                        <li>
+                            <button className='btn' onClick={onLogout}>
+                                <FaSignOutAlt /> Logout
+                            </button>
+                        </li>
+                        <li>
+                            <Link to={`/user/${user.id}`}>
+                                View ads by user
+                            </Link>
+                        </li>
+                    </>
+                )}
             </ul>
         </header>
     )

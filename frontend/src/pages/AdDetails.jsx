@@ -12,8 +12,6 @@ const AdDetails = () => {
     dispatch(getAdById(_id));
   }, [dispatch, _id]);
 
-  const adDetails = ad.ads || {};
-
   if (isLoading) {
     return <div>Loading...</div>;
   }
@@ -28,18 +26,18 @@ const AdDetails = () => {
 
   return (
     <div>
-      {adDetails.images?.length > 0 && (
+      {ad.images?.length > 0 && (
         <img
-          src={`http://localhost:5000/uploads/${adDetails.images[0]}`}
+          src={`http://localhost:5000/uploads/${ad.images[0]}`}
           className="card-img-top"
-          alt={adDetails.title}
+          alt={ad.title}
         />
       )}
-      <h1>{adDetails.title}</h1>
-      <p>{adDetails.description}</p>
-      <p>Price: ${adDetails.price}</p>
-      <p>Location: {adDetails.location}</p>
-      <p>Views: {adDetails.views}</p>
+      <h1>{ad.title}</h1>
+      <p>{ad.description}</p>
+      <p>Price: ${ad.price}</p>
+      <p>Location: {ad.location}</p>
+      <p>Views: {ad.views}</p>
     </div>
   );
 };

@@ -29,6 +29,10 @@ const createAd = async (adData, token) => {
     const response = await axios.post(API_URL, adData, config);
     return response.data;
 }
+const getAdsbyUser = async(id) => {
+    const response = await axios.get(`${API_URL}user/${id}`)
+    return response.data
+}
 
 
 
@@ -36,6 +40,7 @@ const adsService = {
     getAllads,
     getAdById,
     uploadPhotos,
-    createAd
+    createAd,
+    getAdsbyUser
 }
 export default adsService 
