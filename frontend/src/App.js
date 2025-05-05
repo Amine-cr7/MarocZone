@@ -23,7 +23,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path="/ads/:_id" element={<AdDetails />} />
-          <Route path="/user/:id" element={<UserAds />} />
+          <Route path="/ads/user" element={<UserAds />} />
           <Route path="/add" element={
             <PrivateRoute>
               <CreateAd />

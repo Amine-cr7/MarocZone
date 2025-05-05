@@ -7,8 +7,7 @@ import { reset, logout } from '../features/auth/authSlice'
 export default function Header() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const user = useSelector(state => state.auth.user)
-    
+    const {user} = useSelector(state => state.auth)
     const onLogout = () => {
         dispatch(logout())
         dispatch(reset())
@@ -42,7 +41,7 @@ export default function Header() {
                             </button>
                         </li>
                         <li>
-                            <Link to={`/user/${user.id}`}>
+                            <Link to={`/ads/user`}>
                                 View ads by user
                             </Link>
                         </li>

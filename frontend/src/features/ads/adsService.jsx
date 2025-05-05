@@ -38,8 +38,8 @@ const updateAd = async (_id , updatedAd, token) => {
     const response = await axios.put(`${API_URL}${_id}`, updatedAd, config);
     return response.data;
 }
-const getAdsbyUser = async(id) => {
-    const response = await axios.get(`${API_URL}user/${id}`)
+const getAdsbyUser = async() => {
+    const response = await axios.get(`${API_URL}user`)
     return response.data
 }
 

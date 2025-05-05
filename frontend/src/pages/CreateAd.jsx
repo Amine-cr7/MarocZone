@@ -9,9 +9,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createAd } from '../features/ads/adsSlice';
 import AddImage from './AddImage';
 
-export default function CreateAd() {
-  const { user } = useSelector(state => state.auth)
-  
+export default function CreateAd() {  
   const [selectedSubcategory, setSelectedSubcategory] = useState(null);
   const [selectedModel, setSelectedModel] = useState(null);
   const [selectedBrand, setSelectedBrand] = useState(null)
@@ -29,7 +27,6 @@ export default function CreateAd() {
       subCat: selectedSubcategory.name,
       model: selectedModel,
       brand: selectedBrand,
-      user: user.id,
     }));
   };
 

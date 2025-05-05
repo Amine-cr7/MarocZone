@@ -5,6 +5,7 @@ import adsService from "./adsService"
 const initialState = {
     ads: [],
     ad: {},
+    userAds:[],
     isError: false,
     isSuccess: false,
     isLoading: false,
@@ -69,9 +70,9 @@ export const uploadPhotos = createAsyncThunk('ads/photo', async ({ id, photos },
     }
 })
 
-export const getAdsbyUser = createAsyncThunk('ads/getallads-belongt-to-user', async (id, thunkApi) => {
+export const getAdsbyUser = createAsyncThunk('ads/getallads-belongt-to-user', async (_, thunkApi) => {
     try {
-        return await adsService.getAdsbyUser(id)
+        return await adsService.getAdsbyUser()
     } catch (error) {
         const message = (error.response && error.response.data && error.response.data.error)
             || error.message || error.toString()
@@ -159,7 +160,7 @@ export const adsSlice = createSlice({
             })
             .addCase(getAdsbyUser.fulfilled, (state, action) => {
                 state.isLoading = false
-                state.ads = action.payload
+                state.userAds = action.payload
                 state.isError = false
                 state.isSuccess = true
             })

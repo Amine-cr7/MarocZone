@@ -15,7 +15,7 @@ export default function UpdateAd() {
 
   const { user } = useSelector(state => state.auth);
   const { ad, isLoading, isError, message } = useSelector(state => state.ads);
-
+  console.log("9arar 7asim :  ",ad)
 
 
   const [step, setStep] = useState(1);
