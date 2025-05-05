@@ -29,6 +29,15 @@ const createAd = async (adData, token) => {
     const response = await axios.post(API_URL, adData, config);
     return response.data;
 }
+const updateAd = async (_id , updatedAd, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    };
+    const response = await axios.put(`${API_URL}${_id}`, updatedAd, config);
+    return response.data;
+}
 const getAdsbyUser = async(id) => {
     const response = await axios.get(`${API_URL}user/${id}`)
     return response.data
@@ -41,6 +50,7 @@ const adsService = {
     getAdById,
     uploadPhotos,
     createAd,
+    updateAd,
     getAdsbyUser
 }
 export default adsService 

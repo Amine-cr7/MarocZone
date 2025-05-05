@@ -43,6 +43,18 @@ export const createAd = createAsyncThunk('ads/create', async (adsData, thunkApi)
     }
 })
 
+export const updateAd = createAsyncThunk('ad/update', async ({ _id, adsData }, thunkApi) => {
+    try {
+        const token = thunkApi.getState().auth.user.jwtToken;
+        return await adsService.updateAd(_id, adsData, token);
+    } catch (error) {
+        const message = (error.response && error.response.data && error.response.data.message)
+            || error.message || error.toString();
+        return thunkApi.rejectWithValue(message);
+    }
+});
+
+
 
 
 
@@ -123,6 +135,24 @@ export const adsSlice = createSlice({
                 state.message = action.payload
                 state.isError = true
             })
+            // update ad
+            .addCase(updateAd.pending, (state) => {
+                state.isLoading = true;
+            })
+            .addCase(updateAd.fulfilled, (state, action) => {
+                state.isLoading = false;
+                state.isSuccess = true;
+                state.isError = false;
+                state.ads = state.ads.map(ad =>
+                    ad._id === action.payload._id ? action.payload : ad
+                );
+            })
+            .addCase(updateAd.rejected, (state, action) => {
+                state.isLoading = false;
+                state.message = action.payload;
+                state.isError = true;
+                state.isSuccess = false;
+            })
             // get all ads belongt to user
             .addCase(getAdsbyUser.pending, (state) => {
                 state.isLoading = true
@@ -139,7 +169,7 @@ export const adsSlice = createSlice({
                 state.isError = true
                 state.isSuccess = false
             })
-    }
+}
 })
 
 export const { reset } = adsSlice.actions

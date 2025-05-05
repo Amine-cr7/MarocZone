@@ -6,18 +6,17 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const dispatch = useDispatch()
   const { ads, isLoading, isError, isSuccess, message } = useSelector(state => state.ads)
+  const user = useSelector(state => state.auth.user)
 
   useEffect(() => {
     dispatch(getAllads())
   }, [dispatch])
 
-
-
   return (
     <>
       <div>Home</div>
       <div>
-      <Link
+        <Link
           to={`/add`}
           className='btn btn-primary w-100 stretched-link'
         >
@@ -62,6 +61,13 @@ export default function Home() {
               >
                 View Details
               </Link>
+               {
+               user && user.id ===  ad.user._id  ? (
+                <Link to={`/update/${ad._id}`} className="btn btn-secondary w-100 stretched-link">
+                  Edit Ad
+                </Link>
+              ) : <h5> nothing </h5>}
+
             </div>
           </div>
         ))}

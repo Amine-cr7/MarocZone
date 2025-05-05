@@ -2,12 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getCategories } from '../features/category/catSlice';
 
-export default function CategorySelect({ setSelectedSubcategory }) {
+export default function CategorySelect({ setSelectedSubcategory , initialCategory  }) {
   const dispatch = useDispatch();
   const { categories, loading } = useSelector(state => state.categories);
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState("Sélectionner une sous-catégorie");
+
+  useEffect(() => {
+    if (initialCategory) {
+      setSelectedCategory(initialCategory);
+    }
+  }, [initialCategory]);
 
   const [activeParent, setActiveParent] = useState(null);
 

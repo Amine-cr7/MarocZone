@@ -1,10 +1,20 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const GeneralInfo = ({ getUserData, step, setStep }) => {
+const GeneralInfo = ({ getUserData, step, setStep, initialData }) => {
+
   const [formData, setFormData] = useState({
-    location: '',
-    phone: '',
+    location: initialData?.location || '',
+    phone: initialData?.phone || '',
   });
+
+  useEffect(() => {
+    if (initialData) {
+      setFormData({
+        location: initialData.location || '',
+        phone: initialData.phone || '',
+      });
+    }
+  }, [initialData]);
 
   const handleChange = (e) => {
     setFormData({ 
@@ -17,6 +27,7 @@ const GeneralInfo = ({ getUserData, step, setStep }) => {
     setStep(step + 1);
     getUserData(formData);
   };
+  
 
   return (
     <div className="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow space-y-5">

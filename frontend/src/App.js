@@ -9,6 +9,7 @@ import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import AdDetails from "./pages/AdDetails";
 import UserAds from "./pages/UserAds";
+import UpdateAd from "./pages/UpdateAd";
 function App() {
 
   return (
@@ -18,16 +19,25 @@ function App() {
       <div className=" container">
         <Header />
         <Routes>
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
-        <Route path="/ads/:_id" element={<AdDetails />} />
-        <Route path="/user/:id" element={<UserAds />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/ads/:_id" element={<AdDetails />} />
+          <Route path="/user/:id" element={<UserAds />} />
           <Route path="/add" element={
             <PrivateRoute>
-              <CreateAd/>
+              <CreateAd />
             </PrivateRoute>
           } />
+          <Route
+            path="/update/:_id"
+            element={
+              <PrivateRoute>
+                <UpdateAd />
+              </PrivateRoute>
+            }
+          />
+
         </Routes>
         <ToastContainer />
       </div>
