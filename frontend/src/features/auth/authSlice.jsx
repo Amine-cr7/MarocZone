@@ -15,7 +15,7 @@ export const register = createAsyncThunk('auth/register',async (user,thunkApi) =
     try{
         return await authService.register(user)
     }catch(error){
-    
+        
         const message = (error.message && error.response.data && error.response.data.error)
         || error.message || error.toString()
          return thunkApi.rejectWithValue(message)
@@ -26,7 +26,7 @@ export const login = createAsyncThunk('auth/login',async (user,thunkApi) => {
     try{
         return await authService.login(user)
     }catch(error){
-        const message = (error.message && error.response.data && error.response.data.message)
+        const message = (error.message && error.response.data && error.response.data.error)
         || error.message || "Registration error"
          return thunkApi.rejectWithValue(message)
     }

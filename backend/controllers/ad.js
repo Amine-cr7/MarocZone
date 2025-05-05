@@ -7,15 +7,18 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 
 const createAd = asynchandler(async (req, res, next) => {
-    const { title, description, price, phone, brand, model, subCat, user, location } = req.body;
-
-    if (!title || !description || !price || !phone || !subCat || !user || !location) {
+    const { title, description, price, phone, brand, model, subCat, location } = req.body;
+    console.log(req.user)
+    if (!title || !description || !price || !phone || !subCat  || !location) {
         return next(
-            new ErrorResponse("All fields (title, description, price, subCat, user, location) are required.", 400)
+            new ErrorResponse("All fields (title, description, price, subCat, location) are required.", 400)
         );
     }
 
-    const newAd = await Ad.create(req.body);
+    const newAd = await Ad.create({
+        ...req.body,
+        user: req.user.id
+      });
     res.status(201).json({
         message: 'Ad created successfully',
         ad: newAd

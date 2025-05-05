@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { uploadPhotos } from '../features/ads/adsSlice';
+import { uploadPhotos } from '../../features/ads/adsSlice';
 import { useNavigate } from 'react-router-dom';
 
 export default function AddImage() {

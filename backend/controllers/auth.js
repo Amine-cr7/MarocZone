@@ -12,10 +12,15 @@ const registerUser = asynchandler(async (req, res, next) => {
   if (!FullName || !email || !password || !phone) {
     return next(new ErrorResponse("All fields (FullName,city,adresse,phone, email, password) are required.", 400));
   }
-  const checkUser = await User.findOne({ email });
-  if (checkUser) {
+  const checkEmail = await User.findOne({ email });
+  if (checkEmail) {
     return next(new ErrorResponse("This email is already associated with an account.", 400));
   }
+  const checkphone = await User.findOne({ phone });
+  if (checkphone) {
+    return next(new ErrorResponse("This phone is already associated with an account.", 400));
+  }
+  
   const salt = await bcrypt.genSalt(10);
   const hashedPassword = await bcrypt.hash(password, salt);
 
