@@ -4,6 +4,7 @@ import catService from "./catService"
 
 const initialState = {
     categories: [],
+    subcategory:[],
     isError: '',
     isSuccess: '',
     isLoading: '',
@@ -28,6 +29,9 @@ export const catSlice = createSlice({
     initialState,
     reducers: {
         reset: (state) => initialState,
+        setSelectedSubcategory:(state,action) => {
+            state.subcategory = action.payload
+        }
     },
     extraReducers:(builder) => {
         builder
@@ -52,6 +56,6 @@ export const catSlice = createSlice({
     }
 })
 
-export const { reset } = catSlice.actions
+export const { reset ,setSelectedSubcategory} = catSlice.actions
 
 export default catSlice.reducer

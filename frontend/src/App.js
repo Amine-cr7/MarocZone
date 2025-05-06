@@ -5,23 +5,33 @@ import Login from "./pages/Login";
 import Header from "./components/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import CreateAd from "./pages/CreateAd/CreateAd";
+import CreateAd from "./pages/CreateAd";
 import PrivateRoute from "./components/PrivateRoute";
 import Home from "./pages/Home";
 import AdDetails from "./pages/AdDetails";
+import UserAds from "./pages/UserAds";
 
 function App() {
   return (
     <BrowserRouter>
       <Header />
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/ads/:_id" element={<AdDetails />} />
         <Route
-          path="/add"
+          path="/ads/add"
           element={
             <PrivateRoute>
               <CreateAd />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/ads/user"
+          element={
+            <PrivateRoute>
+              <UserAds />
             </PrivateRoute>
           }
         />

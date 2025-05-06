@@ -15,14 +15,14 @@ export default function Home() {
 
   return (
     <>
-      <div>Home</div>
+      <div className='mt-5'>Home</div>
       <div>
-      <Link
-          to={`/add`}
+      {/* <Link
+          to={`/ads/add`}
           className='btn btn-primary w-100 stretched-link'
         >
           Create ADS
-        </Link>
+        </Link> */}
       </div>
       {isLoading && <div>Loading...</div>}
       {isError && <div>Error: {message}</div>}

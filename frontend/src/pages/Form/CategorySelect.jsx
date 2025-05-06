@@ -1,27 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getCategories } from '../../features/category/catSlice';
+import { getCategories, setSelectedSubcategory } from '../../features/category/catSlice';
+import { setFormData } from '../../features/ads/adsSlice';
 
-export default function CategorySelect({ setSelectedSubcategory, oldCat, catErr }) {
+export default function CategorySelect() {
   const dispatch = useDispatch();
   const { categories, loading } = useSelector(state => state.categories);
+  const { form } = useSelector(state => state.ads);
 
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedSubcatLabel, setSelectedSubcatLabel] = useState(oldCat ? oldCat.name : "Select SubCategory");
+  const [selectedSubcatLabel, setSelectedSubcatLabel] = useState(form.subCat ? form.subCat : "Select SubCategory");
   const [selectedParentIndex, setSelectedParentIndex] = useState(null);
+  const [error, setError] = useState('');
 
   useEffect(() => {
     dispatch(getCategories());
   }, [dispatch]);
 
   const handleSelectSubcategory = (subcategory) => {
-    setSelectedSubcatLabel(oldCat ? oldCat.name : subcategory.name);
-    setSelectedSubcategory(oldCat ? oldCat : subcategory);
+    setSelectedSubcatLabel(subcategory.name);
+    dispatch(setSelectedSubcategory(subcategory));
+    dispatch(setFormData({ subCat: subcategory.name }));
     setIsOpen(false);
     setSelectedParentIndex(null);
+    setError(''); // clear error when selected
   };
 
   const handleClose = () => {
+    if (!form.subCat) {
+      setError('Please select a subcategory.');
+    } else {
+      setError('');
+    }
     setIsOpen(false);
     setSelectedParentIndex(null);
   };
@@ -33,7 +43,7 @@ export default function CategorySelect({ setSelectedSubcategory, oldCat, catErr 
       <div>
         <div
           className={`rounded-lg p-3 bg-white cursor-pointer shadow-sm flex justify-between items-center hover:shadow-md transition-all duration-200 
-          ${catErr ? 'border-red-500' : 'border-orange-300'} border`}
+          border ${error ? 'border-red-500' : 'border-orange-300'}`}
           onClick={() => categories.length > 0 && setIsOpen(true)}
         >
           <span className={`font-medium ${selectedSubcatLabel === 'Select SubCategory' ? 'text-gray-400' : 'text-gray-800'}`}>
@@ -43,8 +53,8 @@ export default function CategorySelect({ setSelectedSubcategory, oldCat, catErr 
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </div>
-        {catErr && (
-          <p className="text-red-500 text-sm mt-1">Please select a subcategory.</p>
+        {error && (
+          <p className="mt-2 text-sm text-red-500">{error}</p>
         )}
       </div>
 

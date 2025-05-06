@@ -1,70 +1,51 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFormData, setStep } from '../../features/ads/adsSlice';
 
-const GeneralInfo = ({ getUserData, step, setStep, selectedSubcategory, finalData ,setCatErr}) => {
-  const [formData, setFormData] = useState({
-    location: '',
-    phone: '',
-  });
+const GeneralInfo = () => {
+  const dispatch = useDispatch();
 
+  const { form, step } = useSelector(state => state.ads);
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
-
-  // Pre-fill form if finalData exists
-  useEffect(() => {
-    if (finalData) {
-      setFormData({
-        location: finalData.location || '',
-        phone: finalData.phone || '',
-      });
-    }
-  }, [finalData]);
-
-  // Validation logic
+console.log(form)
+  // Validation
   const validate = () => {
     const newErrors = {};
-    if (!formData.location.trim()) {
+    if (!form.location.trim()) {
       newErrors.location = 'Location is required.';
     }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required.';
-    } else if (!/^\+?[0-9\s\-]{7,15}$/.test(formData.phone.trim())) {
-      newErrors.phone = 'Enter a valid phone number.';
+    if(!form.subCat){
+      newErrors.subCat = true
     }
-
-    if (!selectedSubcategory) {
-      newErrors.category = 'Please select a category.';
+    if (!form.phone.trim()) {
+      newErrors.phone = 'Phone number is required.';
+    } else if (!/^(?:\+212\s?|0)(5|6|7)\d{8}$/.test(form.phone.trim())) {
+      newErrors.phone = 'Enter a valid phone number.';
     }
 
     return newErrors;
   };
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    dispatch(setFormData({ [name]: value }));
   };
 
-  // Track field focus loss to show inline errors
   const handleBlur = (e) => {
     const { name } = e.target;
     setTouched(prev => ({ ...prev, [name]: true }));
     setErrors(validate());
   };
 
-  // Handle form submission
   const handleContinue = () => {
     const validationErrors = validate();
     setErrors(validationErrors);
     setTouched({ location: true, phone: true });
-    if (!selectedSubcategory) {
-      setCatErr(true);
-    } else {
-      setCatErr(false);
-    }
+
     if (Object.keys(validationErrors).length === 0) {
-      getUserData(formData);
-      setStep(step + 1);
+      
+      dispatch(setStep(step + 1));
     }
   };
 
@@ -79,7 +60,7 @@ const GeneralInfo = ({ getUserData, step, setStep, selectedSubcategory, finalDat
           type="text"
           id="location"
           name="location"
-          value={formData.location}
+          value={form.location}
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="Enter your city or area"
@@ -99,7 +80,7 @@ const GeneralInfo = ({ getUserData, step, setStep, selectedSubcategory, finalDat
           type="tel"
           id="phone"
           name="phone"
-          value={formData.phone}
+          value={form.phone}
           onChange={handleChange}
           onBlur={handleBlur}
           placeholder="e.g., +1 234 567 890"
@@ -109,8 +90,6 @@ const GeneralInfo = ({ getUserData, step, setStep, selectedSubcategory, finalDat
           <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
         )}
       </div>
-
-      
 
       {/* Continue Button */}
       <button

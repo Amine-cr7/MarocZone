@@ -9,7 +9,7 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 const createAd = asynchandler(async (req, res, next) => {
     const { title, description, price, phone, brand, model, subCat, location } = req.body;
     console.log(req.user)
-    if (!title || !description || !price || !phone || !subCat  || !location) {
+    if (!title || !description || !price || !phone || !subCat || !location) {
         return next(
             new ErrorResponse("All fields (title, description, price, subCat, location) are required.", 400)
         );
@@ -18,7 +18,7 @@ const createAd = asynchandler(async (req, res, next) => {
     const newAd = await Ad.create({
         ...req.body,
         user: req.user.id
-      });
+    });
     res.status(201).json({
         message: 'Ad created successfully',
         ad: newAd
@@ -26,7 +26,7 @@ const createAd = asynchandler(async (req, res, next) => {
 })
 
 const getAllAds = asynchandler(async (req, res, next) => {
-    const allAds = await Ad.find()
+    const allAds = await Ad.find({status:'published'})
         .populate('user', 'FullName email phone');
     if (!allAds || allAds.length === 0) {
         return res.status(404).json({
@@ -133,8 +133,9 @@ const uploadPhotosAd = asynchandler(async (req, res, next) => {
 
     // Example: Save array of file names to ad model
     ad.images = uploadedFileNames; // Make sure your model supports this
+    ad.status = 'published'; 
     await ad.save();
-
+    console.log(ad)
     res.status(200).json({
         success: true,
         message: 'Images uploaded successfully',
@@ -142,12 +143,25 @@ const uploadPhotosAd = asynchandler(async (req, res, next) => {
     });
 });
 
+const getAdsByUser = asynchandler(async (req, res, next) => {
+    const ads = await Ad.find({ user: req.user.id ,status:"published"})
+        .populate('user', 'FullName')
+
+    if (!ads || ads.length === 0) {
+        return res.status(404).json({
+            message: 'No ads found for this User',
+        });
+    }
+    res.status(201).json(ads)
+})
+
 
 
 module.exports = {
     createAd,
     getAllAds,
     getAdById,
+    getAdsByUser,
     updateAd,
     deleteAd,
     uploadPhotosAd,

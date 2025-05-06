@@ -1,14 +1,28 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import adsService from "./adsService"
-import axios from "axios"
+
+
 
 const initialState = {
     ads: [],
     ad: {},
+    myAds: [],
     isError: false,
     isSuccess: false,
     isLoading: false,
-    message: ''
+    message: '',
+    form: {
+        location: '',
+        phone: '',
+        price:'',
+        description:'',
+        title:'',
+        model:'',
+        brand:'',
+        subCat:'',
+        details:{}
+    },
+    step: 1,
 }
 
 export const getAllads = createAsyncThunk('ads/getAll', async (_, thunkApi) => {
@@ -20,6 +34,18 @@ export const getAllads = createAsyncThunk('ads/getAll', async (_, thunkApi) => {
         return thunkApi.rejectWithValue(message)
     }
 })
+
+export const getAdByUser = createAsyncThunk('ads/getAdsByUser', async (_, thunkApi) => {
+    try {
+        const token = thunkApi.getState().auth.user.jwtToken;
+        return await adsService.getAdByUser(token)
+    } catch (error) {
+        const message = (error.message && error.response.data && error.response.data.message)
+            || error.message || error.toString()
+        return thunkApi.rejectWithValue(message)
+    }
+})
+
 
 export const getAdById = createAsyncThunk('ads/getOne', async (id, thunkApi) => {
     try {
@@ -62,20 +88,44 @@ export const adsSlice = createSlice({
     name: 'ads',
     initialState,
     reducers: {
-        reset: () => initialState
+        reset: () => initialState,
+        setStep: (state, action) => {
+            state.step = action.payload;
+        },
+        setFormData: (state, action) => {
+            state.form = { ...state.form, ...action.payload };
+        },
     },
     extraReducers: (builder) => {
         builder
+            // get All
             .addCase(getAllads.pending, (state) => {
                 state.isLoading = true
             })
             .addCase(getAllads.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.ads = action.payload
+                
                 state.isError = false
                 state.isSuccess = true
             })
             .addCase(getAllads.rejected, (state, action) => {
+                state.isLoading = false
+                state.message = action.payload
+                state.isError = true
+                state.isSuccess = false
+            })
+            // Get Ads By User
+            .addCase(getAdByUser.pending, (state) => {
+                state.isLoading = true
+            })
+            .addCase(getAdByUser.fulfilled, (state, action) => {
+                state.isLoading = false
+                state.myAds = action.payload
+                state.isError = false
+                state.isSuccess = true
+            })
+            .addCase(getAdByUser.rejected, (state, action) => {
                 state.isLoading = false
                 state.message = action.payload
                 state.isError = true
@@ -105,6 +155,7 @@ export const adsSlice = createSlice({
                 state.isLoading = false;
                 state.ad = action.payload.ad
                 state.ads.push(action.payload.ad);
+                
                 state.isError = false;
             })
             .addCase(createAd.rejected, (state, action) => {
@@ -112,9 +163,13 @@ export const adsSlice = createSlice({
                 state.message = action.payload
                 state.isError = true
             })
+            .addCase(uploadPhotos.fulfilled, (state, action) => {
+                state.step = 1
+                state.form = {}
+            })
     }
 })
 
-export const { reset } = adsSlice.actions
+export const { reset, setFormData, setStep } = adsSlice.actions
 
 export default adsSlice.reducer
