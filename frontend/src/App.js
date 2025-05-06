@@ -7,6 +7,9 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CreateAd from "./pages/CreateAd";
 import PrivateRoute from "./components/PrivateRoute";
+import UserAds from "./pages/UserAds";
+import Home from "./pages/Home";
+import AdDetails from "./pages/AdDetails";
 function App() {
   return (
     <BrowserRouter>
@@ -14,13 +17,20 @@ function App() {
 
         <Header />
         <Routes>
-          <Route path="/add" element={
+          <Route path="/ads/add" element={
+            <PrivateRoute>
+              <CreateAd />
+            </PrivateRoute>
+          } />
+          <Route path="/ads/myads" element={
             <PrivateRoute>
               <UserAds />
             </PrivateRoute>
           } />
+          <Route path="/ads/:_id" element={<AdDetails/>} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
         </Routes>
         <ToastContainer />
       </div>

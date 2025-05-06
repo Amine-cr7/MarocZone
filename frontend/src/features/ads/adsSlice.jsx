@@ -115,7 +115,6 @@ export const adsSlice = createSlice({
             .addCase(getAllads.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.ads = action.payload
-                
                 state.isError = false
                 state.isSuccess = true
             })

@@ -52,6 +52,7 @@ const adsService = {
     getAllads,
     getAdById,
     uploadPhotos,
-    createAd
+    createAd,
+    getAdByUser
 }
 export default adsService 

@@ -2,8 +2,6 @@ const express = require('express')
 
 const router = express.Router()
 
-const {setCategory,getAdsByCategory, getCategories } = require('../controllers/category')
-const { protect ,authorize} = require('../middlewares/authMiddleware')
+const {setCategory, getCategories } = require('../controllers/category')
 router.route('/').get(getCategories).post(setCategory)
-router.route('/:id/ads').get(getAdsByCategory)
 module.exports = router

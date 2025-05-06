@@ -8,7 +8,6 @@ dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 const createAd = asynchandler(async (req, res, next) => {
     const { title, description, price, phone, brand, model, subCat, location } = req.body;
-    console.log(req.user)
     if (!title || !description || !price || !phone || !subCat || !location) {
         return next(
             new ErrorResponse("All fields (title, description, price, subCat, location) are required.", 400)
@@ -26,26 +25,20 @@ const createAd = asynchandler(async (req, res, next) => {
 })
 
 const getAllAds = asynchandler(async (req, res, next) => {
-    const allAds = await Ad.find()
-        .populate('category', 'name')
-        .populate('user', 'FullName email phone');
+    const allAds = await Ad.find({status:"published"})
     if (!allAds || allAds.length === 0) {
         return res.status(404).json({
             message: 'No ads found',
             ads: []
         });
     }
-    res.status(200).json({
-        message: 'Retrieved all ads',
-        ads: allAds
-    });
+    res.status(200).json(allAds);
 });
 
 
 const getAdById = asynchandler(async (req, res) => {
     const id = req.params.id
     const AdById = await Ad.findOne({ _id: id })
-        .populate('category', 'name')
         .populate('user', 'FullName email')
     if (!AdById) {
         return res.status(404).json({
@@ -57,10 +50,7 @@ const getAdById = asynchandler(async (req, res) => {
     await AdById.save();
 
 
-    res.status(200).json({
-        message: 'Retrieved ads',
-        ads: AdById
-    })
+    res.status(200).json(AdById)
 })
 const updateAd = asynchandler(async (req, res) => {
     const id = req.params.id
@@ -150,6 +140,18 @@ const uploadPhotosAd = asynchandler(async (req, res, next) => {
         data: uploadedFileNames
     });
 });
+const getAdsByUser = asynchandler(async(req,res) => {
+    const ads = await Ad.find({user : req.user.id,status:"published"})
+    .populate('user', 'FullName') 
+
+    if(!ads || ads.length === 0){
+        return res.status(404).json({
+            message: 'No ads found for this User',
+        });
+    }
+
+    res.status(201).json(ads)
+})
 
 
 
@@ -161,5 +163,4 @@ module.exports = {
     updateAd,
     deleteAd,
     uploadPhotosAd,
-    getAdsByUser
 }

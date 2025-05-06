@@ -15,23 +15,8 @@ const setCategory = asynchandler(async (req, res, next) => {
 })
 
 
-const getAdsByCategory = asynchandler(async(req,res) => {
-    const CatID = req.params.id
-    const Ads = await Ad.find({category : CatID})
-    .populate('category', 'name') 
 
-    if(!Ads || Ads.length === 0){
-        return res.status(404).json({
-            message: 'No ads found for this category',
-        });
-    }
-
-    res.status(201).json({
-        message: 'Ad created successfully',
-        adsByCat : Ads
-    })
-})
 
 module.exports = {
-    getCategories,setCategory,getAdsByCategory
+    getCategories,setCategory
 }
