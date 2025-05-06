@@ -7,38 +7,24 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import CreateAd from "./pages/CreateAd";
 import PrivateRoute from "./components/PrivateRoute";
-import Home from "./pages/Home";
-import AdDetails from "./pages/AdDetails";
-import UserAds from "./pages/UserAds";
-
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
+      <div className=" container">
 
-        <Route path="/" element={<Home />} />
-        <Route path="/ads/:_id" element={<AdDetails />} />
-        <Route
-          path="/ads/add"
-          element={
-            <PrivateRoute>
-              <CreateAd />
-            </PrivateRoute>
-          }
-        />
-        <Route
-          path="/ads/user"
-          element={
+        <Header />
+        <Routes>
+          <Route path="/add" element={
             <PrivateRoute>
               <UserAds />
             </PrivateRoute>
-          }
-        />
-        <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
-      </Routes>
-      <ToastContainer />
+          } />
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+        <ToastContainer />
+      </div>
+
     </BrowserRouter>
   );
 }

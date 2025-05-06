@@ -1,0 +1,8036 @@
+[
+  {
+    "name": "Vehicle",
+    "subcategories": [
+      {
+        "name": "Car",
+        "brands": [
+          {
+            "name": "Audi",
+            "models": [
+              "Q3",
+              "SQ5",
+              "A7",
+              "A6",
+              "A4",
+              "Q7",
+              "Q8",
+              "RS 5",
+              "R8",
+              "Q5",
+              "S5",
+              "A4 allroad",
+              "e-tron",
+              "RS 3",
+              "A5",
+              "S3",
+              "S4",
+              "TT",
+              "A3 Sportback e-tron",
+              "S7",
+              "S6",
+              "S8",
+              "RS 7",
+              "A5 Sport",
+              "allroad",
+              "RS 4",
+              "A8",
+              "S4 (2005.5)",
+              "A3",
+              "Cabriolet",
+              "90",
+              "Quattro",
+              "100",
+              "80",
+              "A6 allroad",
+              "A4 (2005.5)",
+              "RS 6"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Corvette",
+              "Colorado Crew Cab",
+              "Silverado 2500 HD Crew Cab",
+              "Malibu",
+              "Silverado 3500 HD Crew Cab",
+              "Camaro",
+              "Traverse",
+              "Equinox",
+              "Spark",
+              "Silverado 1500 Crew Cab",
+              "Bolt EV",
+              "Tahoe",
+              "Impala",
+              "Trax",
+              "Cruze",
+              "Express 2500 Cargo",
+              "Colorado Extended Cab",
+              "Express 2500 Passenger",
+              "Express 3500 Passenger",
+              "Silverado 2500 HD Double Cab",
+              "Silverado 1500 Regular Cab",
+              "Express 3500 Cargo",
+              "Silverado 1500 LD Double Cab",
+              "Silverado 2500 HD Regular Cab",
+              "Silverado 1500 Double Cab",
+              "Sonic",
+              "Volt",
+              "Suburban 3500HD",
+              "City Express",
+              "Silverado 3500 HD Double Cab",
+              "Silverado 3500 HD Regular Cab",
+              "SS",
+              "Cruze Limited",
+              "Blazer",
+              "Suburban",
+              "Spark EV",
+              "Captiva Sport",
+              "Express 1500 Cargo",
+              "Express 1500 Passenger",
+              "Suburban 1500",
+              "Avalanche",
+              "Silverado 2500 HD Extended Cab",
+              "Silverado 3500 HD Extended Cab",
+              "Silverado 1500 Extended Cab",
+              "Suburban 2500",
+              "Colorado Regular Cab",
+              "Aveo",
+              "HHR",
+              "Cobalt",
+              "TrailBlazer",
+              "Malibu (Classic)",
+              "Uplander Cargo",
+              "Uplander Passenger",
+              "Silverado (Classic) 3500 Extended Cab",
+              "Silverado (Classic) 2500 HD Crew Cab",
+              "Silverado (Classic) 1500 Crew Cab",
+              "Silverado (Classic) 1500 Regular Cab",
+              "Silverado (Classic) 1500 Extended Cab",
+              "Silverado (Classic) 1500 HD Crew Cab",
+              "Silverado (Classic) 3500 Crew Cab",
+              "Monte Carlo",
+              "Silverado (Classic) 3500 Regular Cab",
+              "Silverado (Classic) 2500 HD Regular Cab",
+              "Silverado (Classic) 2500 HD Extended Cab",
+              "Avalanche 2500",
+              "Avalanche 1500",
+              "SSR",
+              "Silverado 3500 Crew Cab",
+              "Silverado 3500 Extended Cab",
+              "Silverado 3500 Regular Cab",
+              "Silverado 1500 HD Crew Cab",
+              "Astro Cargo",
+              "Classic",
+              "Astro Passenger",
+              "Impala Limited",
+              "Malibu Limited",
+              "Venture Cargo",
+              "Silverado 2500 Extended Cab",
+              "S10 Crew Cab",
+              "Silverado 2500 Crew Cab",
+              "Silverado 2500 Regular Cab",
+              "Tracker",
+              "S10 Extended Cab",
+              "S10 Regular Cab",
+              "Prizm",
+              "Metro",
+              "Lumina",
+              "2500 HD Regular Cab",
+              "2500 Crew Cab",
+              "2500 HD Extended Cab",
+              "3500 Crew Cab",
+              "3500 Extended Cab",
+              "3500 Regular Cab",
+              "Tahoe (New)",
+              "1500 Extended Cab",
+              "2500 Regular Cab",
+              "G-Series 1500",
+              "1500 Regular Cab",
+              "2500 Extended Cab",
+              "G-Series 3500",
+              "G-Series 2500",
+              "Beretta",
+              "G-Series G30",
+              "Lumina Passenger",
+              "Sportvan G30",
+              "Corsica",
+              "Lumina Cargo",
+              "Caprice Classic",
+              "3500 HD Extended Cab",
+              "G-Series G20",
+              "G-Series G10",
+              "3500 HD Regular Cab",
+              "Sportvan G20",
+              "S10 Blazer",
+              "Lumina APV",
+              "Sportvan G10",
+              "APV Cargo",
+              "Caprice",
+              "Trailblazer",
+              "Cavalier",
+              "Venture Passenger"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "XT6",
+              "Escalade ESV",
+              "XT5",
+              "XT4",
+              "CT6-V",
+              "Escalade",
+              "CT5",
+              "CTS-V",
+              "CT6",
+              "CTS",
+              "XTS",
+              "ATS-V",
+              "ATS",
+              "ELR",
+              "DTS",
+              "STS",
+              "XLR",
+              "DeVille",
+              "Seville",
+              "Eldorado",
+              "Catera",
+              "Fleetwood",
+              "Allante",
+              "Sixty Special",
+              "Brougham",
+              "CT4",
+              "SRX",
+              "Escalade EXT"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "TLX",
+              "RLX",
+              "MDX",
+              "RDX",
+              "MDX Sport Hybrid",
+              "NSX",
+              "ILX",
+              "RLX Sport Hybrid",
+              "TSX",
+              "TL",
+              "ZDX",
+              "RL",
+              "CL",
+              "RSX",
+              "Integra",
+              "SLX",
+              "Legend",
+              "Vigor"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "X3",
+              "3 Series",
+              "7 Series",
+              "X7",
+              "X5",
+              "4 Series",
+              "2 Series",
+              "M5",
+              "i8",
+              "5 Series",
+              "i3",
+              "6 Series",
+              "8 Series",
+              "M6",
+              "X2",
+              "M4",
+              "X6 M",
+              "X1",
+              "M2",
+              "Z4",
+              "M3",
+              "X5 M",
+              "1 Series",
+              "Z4 M",
+              "Alpina B7",
+              "Z8",
+              "Z3",
+              "M",
+              "X4",
+              "X6"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Voyager",
+              "Pacifica",
+              "Pacifica Hybrid",
+              "300",
+              "200",
+              "PT Cruiser",
+              "Aspen",
+              "Town & Country",
+              "Crossfire",
+              "Sebring",
+              "300M",
+              "Concorde",
+              "Prowler",
+              "LHS",
+              "Cirrus",
+              "New Yorker",
+              "Grand Voyager",
+              "LeBaron",
+              "Fifth Ave",
+              "Imperial"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "EcoSport",
+              "Fusion",
+              "Edge",
+              "Escape",
+              "Mustang",
+              "F150 SuperCrew Cab",
+              "Expedition",
+              "Ranger SuperCab",
+              "Expedition MAX",
+              "Ranger SuperCrew",
+              "Explorer",
+              "F150 Super Cab",
+              "F250 Super Duty Regular Cab",
+              "F450 Super Duty Crew Cab",
+              "F150 Regular Cab",
+              "Fiesta",
+              "F350 Super Duty Crew Cab",
+              "F250 Super Duty Crew Cab",
+              "F350 Super Duty Super Cab",
+              "Flex",
+              "Transit Connect Cargo",
+              "Transit 150 Wagon",
+              "Transit 350 Van",
+              "F250 Super Duty Super Cab",
+              "Transit 250 Van",
+              "Transit 350 Wagon",
+              "Transit Connect Passenger",
+              "Taurus",
+              "C-MAX Hybrid",
+              "F350 Super Duty Regular Cab",
+              "Focus",
+              "Transit 350 HD Van",
+              "C-MAX Energi",
+              "Expedition EL",
+              "Focus ST",
+              "E350 Super Duty Cargo",
+              "E150 Passenger",
+              "E150 Cargo",
+              "E250 Cargo",
+              "E350 Super Duty Passenger",
+              "Crown Victoria",
+              "Ranger Super Cab",
+              "Ranger Regular Cab",
+              "E150 Super Duty Passenger",
+              "Explorer Sport Trac",
+              "Taurus X",
+              "E250 Super Duty Cargo",
+              "E150 Super Duty Cargo",
+              "Freestar Cargo",
+              "Five Hundred",
+              "Freestar Passenger",
+              "Freestyle",
+              "GT",
+              "Excursion",
+              "Thunderbird",
+              "F150 (Heritage) Super Cab",
+              "F150 (Heritage) Regular Cab",
+              "Explorer Sport",
+              "Windstar Cargo",
+              "ZX2",
+              "Windstar Passenger",
+              "Econoline E250 Cargo",
+              "Econoline E350 Super Duty Passenger",
+              "Econoline E150 Cargo",
+              "Econoline E150 Passenger",
+              "Econoline E350 Super Duty Cargo",
+              "Escort",
+              "Contour",
+              "Econoline E350 Cargo",
+              "F250 Regular Cab",
+              "F250 Super Cab",
+              "Club Wagon",
+              "Aerostar Passenger",
+              "Aspire",
+              "Aerostar Cargo",
+              "Probe",
+              "F350 Crew Cab",
+              "F350 Regular Cab",
+              "F250 Crew Cab",
+              "F350 Super Cab",
+              "Bronco",
+              "Tempo",
+              "Transit 150 Van",
+              "Fusion Energi",
+              "Transit Connect Cargo Van",
+              "Festiva",
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Encore",
+              "Envision",
+              "Regal Sportback",
+              "Regal TourX",
+              "Cascada",
+              "LaCrosse",
+              "Regal",
+              "Verano",
+              "Lucerne",
+              "Terraza",
+              "Rendezvous",
+              "Park Avenue",
+              "Century",
+              "Skylark",
+              "Rainier",
+              "Roadmaster",
+              "LeSabre",
+              "Riviera",
+              "Encore GX",
+              "Enclave"
+            ]
+          },
+          {
+            "name": "INFINITI",
+            "models": [
+              "QX80",
+              "QX50",
+              "QX60",
+              "Q60",
+              "Q50",
+              "Q70",
+              "QX30",
+              "QX70",
+              "Q40",
+              "QX",
+              "EX",
+              "G",
+              "JX",
+              "FX",
+              "Q",
+              "M",
+              "I",
+              "J"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain",
+              "Sierra 1500 Crew Cab",
+              "Sierra 3500 HD Crew Cab",
+              "Sierra 2500 HD Crew Cab",
+              "Yukon",
+              "Acadia",
+              "Yukon XL",
+              "Canyon Crew Cab",
+              "Sierra 1500 Double Cab",
+              "Sierra 2500 HD Double Cab",
+              "Sierra 1500 Limited Double Cab",
+              "Sierra 2500 HD Regular Cab",
+              "Canyon Extended Cab",
+              "Sierra 1500 Regular Cab",
+              "Savana 2500 Passenger",
+              "Savana 3500 Passenger",
+              "Savana 3500 Cargo",
+              "Savana 2500 Cargo",
+              "Sierra 3500 HD Double Cab",
+              "Sierra 3500 HD Regular Cab",
+              "Savana 1500 Cargo",
+              "Savana 1500 Passenger",
+              "Acadia Limited",
+              "Yukon XL 1500",
+              "Yukon XL 2500",
+              "Sierra 2500 HD Extended Cab",
+              "Canyon Regular Cab",
+              "Envoy",
+              "Sierra (Classic) 1500 HD Crew Cab",
+              "Sierra (Classic) 3500 Crew Cab",
+              "Sierra (Classic) 1500 Crew Cab",
+              "Sierra (Classic) 1500 Extended Cab",
+              "Sierra (Classic) 2500 HD Crew Cab",
+              "Sierra (Classic) 1500 Regular Cab",
+              "Sierra (Classic) 3500 Extended Cab",
+              "Sierra (Classic) 3500 Regular Cab",
+              "Sierra (Classic) 2500 HD Extended Cab",
+              "Sierra (Classic) 2500 HD Regular Cab",
+              "Envoy XL",
+              "Sierra 3500 Crew Cab",
+              "Sierra 1500 HD Crew Cab",
+              "Sierra 3500 Extended Cab",
+              "Sierra 3500 Regular Cab",
+              "Envoy XUV",
+              "Safari Cargo",
+              "Safari Passenger",
+              "Sierra 2500 Regular Cab",
+              "Sonoma Crew Cab",
+              "Sierra 2500 Crew Cab",
+              "Sierra 2500 Extended Cab",
+              "Sonoma Extended Cab",
+              "Sonoma Regular Cab",
+              "Jimmy",
+              "Yukon Denali",
+              "Sierra (Classic) 2500 Crew Cab",
+              "2500 Crew Cab",
+              "3500 Regular Cab",
+              "1500 Club Coupe",
+              "3500 Extended Cab",
+              "2500 HD Regular Cab",
+              "2500 HD Extended Cab",
+              "3500 Crew Cab",
+              "Suburban 2500",
+              "Suburban 1500",
+              "2500 Club Coupe",
+              "2500 Regular Cab",
+              "1500 Regular Cab",
+              "3500 Club Coupe",
+              "Sonoma Club Coupe Cab",
+              "2500 HD Club Coupe",
+              "Rally Wagon G3500",
+              "Vandura G3500",
+              "Rally Wagon G2500",
+              "Vandura G2500",
+              "Vandura G1500",
+              "Rally Wagon 2500",
+              "Rally Wagon 3500",
+              "Vandura 1500",
+              "Vandura 3500",
+              "Vandura 2500",
+              "Rally Wagon 1500",
+              "Sonoma Club Cab",
+              "Hummer EV",
+              "Sierra 1500 Extended Cab",
+              "Sierra 3500 HD Extended Cab"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Insight",
+              "Civic",
+              "Odyssey",
+              "Accord Hybrid",
+              "Ridgeline",
+              "Passport",
+              "Accord",
+              "Pilot",
+              "CR-V",
+              "HR-V",
+              "Clarity Electric",
+              "Civic Type R",
+              "Clarity Fuel Cell",
+              "Clarity Plug-in Hybrid",
+              "Fit",
+              "CR-Z",
+              "Crosstour",
+              "Accord Crosstour",
+              "Element",
+              "S2000",
+              "Prelude",
+              "del Sol",
+              "CR-V Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona Electric",
+              "Santa Fe",
+              "Sonata",
+              "Veloster",
+              "NEXO",
+              "Venue",
+              "Elantra GT",
+              "Kona",
+              "Palisade",
+              "Accent",
+              "Ioniq Electric",
+              "Elantra",
+              "Ioniq Plug-in Hybrid",
+              "Tucson",
+              "Sonata Plug-in Hybrid",
+              "Sonata Hybrid",
+              "Azera",
+              "Ioniq Hybrid",
+              "Santa Fe XL",
+              "Santa Fe Sport",
+              "Genesis",
+              "Tucson Fuel Cell",
+              "Genesis Coupe",
+              "Equus",
+              "Veracruz",
+              "Entourage",
+              "XG300",
+              "Scoupe",
+              "Excel",
+              "XG350",
+              "Tiburon"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Gladiator",
+              "Compass",
+              "Cherokee",
+              "Grand Cherokee",
+              "Wrangler Unlimited",
+              "Liberty",
+              "Renegade",
+              "Wrangler",
+              "Patriot",
+              "Commander",
+              "Comanche Regular Cab",
+              "Grand Wagoneer",
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Genesis",
+            "models": [
+              "G80",
+              "G70",
+              "G90",
+              "GV80"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Challenger",
+              "Durango",
+              "Charger",
+              "Journey",
+              "Grand Caravan Passenger",
+              "Viper",
+              "Dart",
+              "Avenger",
+              "Grand Caravan Cargo",
+              "Caliber",
+              "Nitro",
+              "Ram 1500 Quad Cab",
+              "Ram 2500 Regular Cab",
+              "Ram 1500 Crew Cab",
+              "Dakota Extended Cab",
+              "Dakota Crew Cab",
+              "Ram 1500 Regular Cab",
+              "Ram 2500 Mega Cab",
+              "Ram 3500 Crew Cab",
+              "Ram 2500 Crew Cab",
+              "Ram 3500 Mega Cab",
+              "Ram 3500 Regular Cab",
+              "Ram 3500 Quad Cab",
+              "Ram 2500 Quad Cab",
+              "Sprinter 2500 Cargo",
+              "Sprinter 2500 Passenger",
+              "Magnum",
+              "Ram 1500 Mega Cab",
+              "Caravan Cargo",
+              "Dakota Quad Cab",
+              "Dakota Club Cab",
+              "Stratus",
+              "Neon",
+              "Dakota Regular Cab",
+              "Intrepid",
+              "Ram Van 1500",
+              "Ram Van 2500",
+              "Ram Van 3500",
+              "Ram Wagon 2500",
+              "Ram Wagon 1500",
+              "Ram Wagon 3500",
+              "Ram 1500 Club Cab",
+              "Ram 2500 Club Cab",
+              "Ram 3500 Club Cab",
+              "Stealth",
+              "Spirit",
+              "Ram Van B250",
+              "Ram Wagon B350",
+              "Colt",
+              "Ram Van B150",
+              "Ram Wagon B150",
+              "Ram Van B350",
+              "Shadow",
+              "Ram Wagon B250",
+              "D350 Club Cab",
+              "D250 Club Cab",
+              "D150 Club Cab",
+              "D350 Regular Cab",
+              "D150 Regular Cab",
+              "D250 Regular Cab",
+              "Dynasty",
+              "Ram 50 Regular Cab",
+              "Daytona",
+              "Ramcharger",
+              "Monaco",
+              "Caravan Passenger",
+              "Sprinter 3500 Cargo"
+            ]
+          },
+          {
+            "name": "Jaguar",
+            "models": [
+              "E-PACE",
+              "I-PACE",
+              "F-PACE",
+              "F-TYPE",
+              "XJ",
+              "XF",
+              "X-Type",
+              "XE",
+              "S-Type",
+              "XK"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sedona",
+              "Sorento",
+              "Rio",
+              "Optima",
+              "Sportage",
+              "Optima Hybrid",
+              "Telluride",
+              "Optima Plug-in Hybrid",
+              "Forte",
+              "Soul",
+              "Stinger",
+              "Niro",
+              "Niro Plug-in Hybrid",
+              "Cadenza",
+              "K900",
+              "Niro EV",
+              "Soul EV",
+              "Forte5",
+              "Forte Koup",
+              "Rondo",
+              "Amanti",
+              "Spectra",
+              "Borrego",
+              "Optima (2006.5)",
+              "Sephia",
+              "Seltos",
+              "K5"
+            ]
+          },
+          {
+            "name": "Land Rover",
+            "models": [
+              "Discovery Sport",
+              "Range Rover Evoque",
+              "Range Rover Sport",
+              "Range Rover",
+              "Discovery",
+              "Range Rover Velar",
+              "LR2",
+              "Freelander",
+              "LR4",
+              "Defender 90",
+              "LR3",
+              "Discovery Series II",
+              "Defender 110"
+            ]
+          },
+          {
+            "name": "Lexus",
+            "models": [
+              "LC",
+              "ES",
+              "LX",
+              "GX",
+              "RC",
+              "IS",
+              "GS",
+              "UX",
+              "NX",
+              "RX",
+              "LS",
+              "CT",
+              "HS",
+              "LFA",
+              "IS F",
+              "SC"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "CLA",
+              "GLS",
+              "C-Class",
+              "G-Class",
+              "GLE",
+              "GLA",
+              "E-Class",
+              "A-Class",
+              "GLC",
+              "Mercedes-AMG C-Class",
+              "CLS",
+              "Mercedes-AMG CLA",
+              "GLC Coupe",
+              "Mercedes-AMG CLS",
+              "Mercedes-AMG E-Class",
+              "Mercedes-AMG G-Class",
+              "Mercedes-AMG GLE",
+              "Mercedes-AMG GLA",
+              "Mercedes-AMG S-Class",
+              "SL",
+              "Mercedes-AMG GT",
+              "Metris Passenger",
+              "Mercedes-Maybach S-Class",
+              "Mercedes-AMG GLE Coupe",
+              "Mercedes-AMG GLC Coupe",
+              "Sprinter 2500 Cargo",
+              "S-Class",
+              "Metris Cargo",
+              "SLC",
+              "Mercedes-AMG SLC",
+              "Mercedes-AMG GLS",
+              "Sprinter 2500 Crew",
+              "Metris WORKER Cargo",
+              "Metris WORKER Passenger",
+              "Sprinter 3500 XD Cargo",
+              "Sprinter 2500 Passenger",
+              "Sprinter WORKER Cargo",
+              "Sprinter 3500 Cargo",
+              "B-Class",
+              "Sprinter WORKER Passenger",
+              "CLS-Class",
+              "GL-Class",
+              "GLE Coupe",
+              "Mercedes-Maybach S 600",
+              "SLK",
+              "Mercedes-AMG SLK",
+              "M-Class",
+              "CLA-Class",
+              "GLK-Class",
+              "GLA-Class",
+              "SLS-Class",
+              "SL-Class",
+              "SLK-Class",
+              "CL-Class",
+              "R-Class",
+              "CLK-Class",
+              "SLR McLaren",
+              "300 E",
+              "190 E",
+              "300 D",
+              "300 SD",
+              "300 CE",
+              "500 SEL",
+              "400 SEL",
+              "500 SL",
+              "500 E",
+              "300 SL",
+              "600 SEC",
+              "300 TE",
+              "400 E",
+              "300 SE",
+              "600 SL",
+              "600 SEL",
+              "500 SEC",
+              "400 SE",
+              "GLB",
+              "Mercedes-AMG GLC",
+              "Mercedes-AMG SL"
+            ]
+          },
+          {
+            "name": "Mitsubishi",
+            "models": [
+              "Outlander Sport",
+              "Eclipse Cross",
+              "Mirage G4",
+              "Mirage",
+              "Outlander",
+              "Outlander PHEV",
+              "Lancer",
+              "i-MiEV",
+              "Lancer Evolution",
+              "Eclipse",
+              "Galant",
+              "Endeavor",
+              "Raider Double Cab",
+              "Raider Extended Cab",
+              "Montero",
+              "Diamante",
+              "Montero Sport",
+              "3000GT",
+              "Expo",
+              "Mighty Max Regular Cab",
+              "Mighty Max Macro Cab",
+              "Precis"
+            ]
+          },
+          {
+            "name": "Lincoln",
+            "models": [
+              "MKZ",
+              "Navigator",
+              "Aviator",
+              "Corsair",
+              "Navigator L",
+              "Nautilus",
+              "Continental",
+              "MKT",
+              "MKC",
+              "MKX",
+              "MKS",
+              "Town Car",
+              "Mark LT",
+              "LS",
+              "Zephyr",
+              "Blackwood",
+              "Mark VIII",
+              "Mark VII"
+            ]
+          },
+          {
+            "name": "MAZDA",
+            "models": [
+              "CX-5",
+              "MAZDA3",
+              "CX-30",
+              "MAZDA6",
+              "CX-9",
+              "MX-5 Miata RF",
+              "MX-5 Miata",
+              "CX-3",
+              "MAZDA5",
+              "MAZDA2",
+              "CX-7",
+              "RX-8",
+              "Tribute",
+              "B-Series Regular Cab",
+              "B-Series Extended Cab",
+              "MPV",
+              "B-Series Cab Plus",
+              "Protege5",
+              "Protege",
+              "626",
+              "Millenia",
+              "MX-6",
+              "MX-3",
+              "929",
+              "RX-7",
+              "323",
+              "Navajo"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks",
+              "NV3500 HD Passenger",
+              "Armada",
+              "Murano",
+              "NV1500 Cargo",
+              "Maxima",
+              "370Z",
+              "Altima",
+              "GT-R",
+              "NV3500 HD Cargo",
+              "Pathfinder",
+              "Rogue",
+              "NV200",
+              "Rogue Sport",
+              "NV2500 HD Cargo",
+              "Versa",
+              "TITAN XD Crew Cab",
+              "Titan Crew Cab",
+              "Frontier Crew Cab",
+              "Frontier King Cab",
+              "LEAF",
+              "Sentra",
+              "TITAN Single Cab",
+              "NV200 Taxi",
+              "Titan King Cab",
+              "TITAN XD Single Cab",
+              "Versa Note",
+              "TITAN XD King Cab",
+              "Quest",
+              "JUKE",
+              "Rogue Select",
+              "Xterra",
+              "Pathfinder Armada",
+              "Frontier Regular Cab",
+              "200SX",
+              "240SX",
+              "Regular Cab",
+              "King Cab",
+              "300ZX",
+              "NX",
+              "Stanza",
+              "350Z",
+              "cube"
+            ]
+          },
+          {
+            "name": "MINI",
+            "models": [
+              "Hardtop 2 Door",
+              "Convertible",
+              "Paceman",
+              "Countryman",
+              "Hardtop 4 Door",
+              "Coupe",
+              "Clubman",
+              "Hardtop",
+              "Roadster",
+              "Cooper"
+            ]
+          },
+          {
+            "name": "Porsche",
+            "models": [
+              "Macan",
+              "Taycan",
+              "Panamera",
+              "911",
+              "Cayenne",
+              "Boxster",
+              "Cayman",
+              "Cayenne Coupe",
+              "718 Boxster",
+              "718 Cayman",
+              "Carrera GT",
+              "968",
+              "928",
+              "718 Spyder"
+            ]
+          },
+          {
+            "name": "Ram",
+            "models": [
+              "3500 Crew Cab",
+              "1500 Crew Cab",
+              "2500 Crew Cab",
+              "2500 Mega Cab",
+              "1500 Classic Quad Cab",
+              "1500 Classic Crew Cab",
+              "1500 Quad Cab",
+              "1500 Classic Regular Cab",
+              "2500 Regular Cab",
+              "3500 Mega Cab",
+              "ProMaster Cargo Van",
+              "ProMaster City",
+              "ProMaster Window Van",
+              "3500 Regular Cab",
+              "1500 Regular Cab",
+              "C/V Tradesman",
+              "ProMaster 3500 Cargo",
+              "ProMaster 2500 Cargo",
+              "ProMaster 1500 Cargo",
+              "C/V",
+              "Dakota Crew Cab",
+              "Dakota Extended Cab"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "BRZ",
+              "WRX",
+              "Ascent",
+              "Impreza",
+              "Legacy",
+              "Crosstrek",
+              "Forester",
+              "Outback",
+              "XV Crosstrek",
+              "Tribeca",
+              "B9 Tribeca",
+              "Baja",
+              "Loyale",
+              "SVX",
+              "Justy"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Camry",
+              "Avalon",
+              "Corolla",
+              "Corolla Hatchback",
+              "86",
+              "Avalon Hybrid",
+              "4Runner",
+              "Camry Hybrid",
+              "C-HR",
+              "Corolla Hybrid",
+              "GR Supra",
+              "Highlander",
+              "Prius",
+              "RAV4",
+              "Prius Prime",
+              "Tacoma Access Cab",
+              "Sienna",
+              "Land Cruiser",
+              "Yaris",
+              "RAV4 Hybrid",
+              "Highlander Hybrid",
+              "Sequoia",
+              "Tundra Double Cab",
+              "Tacoma Double Cab",
+              "Tundra CrewMax",
+              "Yaris Hatchback",
+              "Mirai",
+              "Prius c",
+              "Corolla iM",
+              "Yaris iA",
+              "Prius v",
+              "Tundra Regular Cab",
+              "Prius Plug-in Hybrid",
+              "Venza",
+              "Matrix",
+              "Solara",
+              "Tundra Access Cab",
+              "Celica",
+              "Echo",
+              "MR2",
+              "Tacoma Xtracab",
+              "Supra",
+              "T100 Regular Cab",
+              "T100 Xtracab",
+              "Tercel",
+              "Paseo",
+              "Previa",
+              "Regular Cab",
+              "Xtra Cab",
+              "Cressida",
+              "RAV4 Prime",
+              "FJ Cruiser",
+              "Tacoma Regular Cab"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Passat",
+              "Tiguan",
+              "Jetta",
+              "Atlas",
+              "Arteon",
+              "Golf SportWagen",
+              "e-Golf",
+              "Golf",
+              "Golf GTI",
+              "Jetta GLI",
+              "Beetle",
+              "Golf Alltrack",
+              "Golf R",
+              "Tiguan Limited",
+              "Touareg",
+              "CC",
+              "Eos",
+              "GTI",
+              "Jetta SportWagen",
+              "Routan",
+              "Rabbit",
+              "New Beetle",
+              "GLI",
+              "Touareg 2",
+              "R32",
+              "Phaeton",
+              "Jetta (New)",
+              "Cabrio",
+              "Eurovan",
+              "Passat (New)",
+              "Cabrio (New)",
+              "Golf (New)",
+              "GTI (New)",
+              "Golf III",
+              "Jetta III",
+              "Corrado",
+              "Atlas Cross Sport",
+              "Cabriolet",
+              "Fox"
+            ]
+          },
+          {
+            "name": "Volvo",
+            "models": [
+              "XC40",
+              "XC60",
+              "XC90",
+              "S60",
+              "V90",
+              "V60",
+              "S90",
+              "S80",
+              "XC70",
+              "C30",
+              "C70",
+              "S40",
+              "V50",
+              "V70",
+              "S40 (New)",
+              "V40",
+              "S70",
+              "850",
+              "960",
+              "940",
+              "240",
+              "740"
+            ]
+          },
+          {
+            "name": "Alfa Romeo",
+            "models": [
+              "4C Spider",
+              "Stelvio",
+              "4C",
+              "Giulia",
+              "164",
+              "Spider"
+            ]
+          },
+          {
+            "name": "FIAT",
+            "models": [
+              "500L",
+              "500e",
+              "500 Abarth",
+              "500",
+              "500c Abarth",
+              "500c",
+              "124 Spider",
+              "500X"
+            ]
+          },
+          {
+            "name": "Freightliner",
+            "models": [
+              "Sprinter 2500 Crew",
+              "Sprinter 3500 Cargo",
+              "Sprinter 2500 Cargo",
+              "Sprinter 3500XD Cargo",
+              "Sprinter WORKER Cargo",
+              "Sprinter WORKER Passenger",
+              "Sprinter 2500 Passenger"
+            ]
+          },
+          {
+            "name": "Maserati",
+            "models": [
+              "Quattroporte",
+              "Levante",
+              "Ghibli",
+              "GranTurismo",
+              "GranSport",
+              "Coupe"
+            ]
+          },
+          {
+            "name": "Tesla",
+            "models": [
+              "Model X",
+              "Model S",
+              "Model 3"
+            ]
+          },
+          {
+            "name": "Aston Martin",
+            "models": [
+              "Vanquish S",
+              "DB11",
+              "Rapide S",
+              "Vanquish",
+              "Vantage",
+              "DB9 GT",
+              "DB9",
+              "Rapide",
+              "DBS",
+              "Virage"
+            ]
+          },
+          {
+            "name": "Bentley",
+            "models": [
+              "Flying Spur",
+              "Bentayga",
+              "Mulsanne",
+              "Continental",
+              "Brooklands",
+              "Arnage",
+              "Azure T",
+              "Azure"
+            ]
+          },
+          {
+            "name": "Ferrari",
+            "models": [
+              "Portofino",
+              "GTC4Lusso",
+              "812 Superfast",
+              "488 GTB",
+              "488 Spider",
+              "F12berlinetta",
+              "California",
+              "FF",
+              "458 Italia",
+              "458 Speciale",
+              "458 Spider",
+              "599 GTB Fiorano",
+              "599 GTO",
+              "612 Scaglietti",
+              "430 Scuderia",
+              "F430"
+            ]
+          },
+          {
+            "name": "Lamborghini",
+            "models": [
+              "Aventador",
+              "Huracan",
+              "Gallardo",
+              "Murcielago LP640",
+              "Murcielago"
+            ]
+          },
+          {
+            "name": "Lotus",
+            "models": [
+              "Evora 400",
+              "Evora",
+              "Exige S",
+              "Elise",
+              "Exige"
+            ]
+          },
+          {
+            "name": "McLaren",
+            "models": [
+              "720S",
+              "570GT",
+              "570S",
+              "MP4-12C",
+              "650S",
+              "675LT"
+            ]
+          },
+          {
+            "name": "Rolls-Royce",
+            "models": [
+              "Ghost",
+              "Wraith",
+              "Dawn",
+              "Phantom"
+            ]
+          },
+          {
+            "name": "smart",
+            "models": [
+              "fortwo electric drive",
+              "fortwo electric drive cabrio",
+              "fortwo",
+              "fortwo cabrio"
+            ]
+          },
+          {
+            "name": "Scion",
+            "models": [
+              "iM",
+              "tC",
+              "iA",
+              "iQ",
+              "FR-S",
+              "xB",
+              "xA",
+              "xD"
+            ]
+          },
+          {
+            "name": "SRT",
+            "models": [
+              "Viper"
+            ]
+          },
+          {
+            "name": "Suzuki",
+            "models": [
+              "Kizashi",
+              "SX4",
+              "Grand Vitara",
+              "Equator Crew Cab",
+              "XL-7",
+              "Equator Extended Cab",
+              "XL7",
+              "Esteem",
+              "Samurai",
+              "Reno",
+              "Forenza",
+              "Aerio",
+              "Verona",
+              "X-90",
+              "Vitara",
+              "Sidekick",
+              "Swift"
+            ]
+          },
+          {
+            "name": "Fisker",
+            "models": [
+              "Karma"
+            ]
+          },
+          {
+            "name": "Maybach",
+            "models": [
+              "62",
+              "57"
+            ]
+          },
+          {
+            "name": "Mercury",
+            "models": [
+              "Milan",
+              "Mariner",
+              "Grand Marquis",
+              "Sable",
+              "Mountaineer",
+              "Montego",
+              "Monterey",
+              "Villager",
+              "Marauder",
+              "Capri",
+              "Mystique",
+              "Cougar",
+              "Tracer",
+              "Topaz"
+            ]
+          },
+          {
+            "name": "Saab",
+            "models": [
+              "9-4X",
+              "3-Sep",
+              "9-7X",
+              "5-Sep",
+              "900",
+              "9000",
+              "9-2X"
+            ]
+          },
+          {
+            "name": "HUMMER",
+            "models": [
+              "H3",
+              "H3T",
+              "H2",
+              "H1"
+            ]
+          },
+          {
+            "name": "Pontiac",
+            "models": [
+              "Vibe",
+              "G3",
+              "G6",
+              "G6 (2009.5)",
+              "G8",
+              "Torrent",
+              "Grand Prix",
+              "Solstice",
+              "G5",
+              "GTO",
+              "Montana SV6",
+              "Bonneville",
+              "Aztek",
+              "Grand Am",
+              "Sunfire",
+              "Montana",
+              "Firebird",
+              "Trans Sport",
+              "Sunbird",
+              "LeMans"
+            ]
+          },
+          {
+            "name": "Saturn",
+            "models": [
+              "Aura",
+              "VUE",
+              "Outlook",
+              "SKY",
+              "Relay",
+              "Ion",
+              "Astra",
+              "S-Series",
+              "L-Series"
+            ]
+          },
+          {
+            "name": "Isuzu",
+            "models": [
+              "i-370 Extended Cab",
+              "i-290 Extended Cab",
+              "Ascender",
+              "i-370 Crew Cab",
+              "i-350 Crew Cab",
+              "i-280 Extended Cab",
+              "Axiom",
+              "Rodeo",
+              "Trooper",
+              "VehiCROSS",
+              "Rodeo Sport",
+              "Amigo",
+              "Hombre Spacecab",
+              "Hombre Regular Cab",
+              "Oasis",
+              "Regular Cab",
+              "Spacecab",
+              "Stylus",
+              "Impulse"
+            ]
+          },
+          {
+            "name": "Panoz",
+            "models": [
+              "Esperante"
+            ]
+          },
+          {
+            "name": "Oldsmobile",
+            "models": [
+              "Bravada",
+              "Alero",
+              "Silhouette",
+              "Cutlass",
+              "Intrigue",
+              "Aurora",
+              "LSS",
+              "88",
+              "Achieva",
+              "Regency",
+              "Cutlass Supreme",
+              "Ciera",
+              "98",
+              "Cutlass Ciera",
+              "Cutlass Cruiser",
+              "Toronado",
+              "Custom Cruiser"
+            ]
+          },
+          {
+            "name": "Daewoo",
+            "models": [
+              "Nubira",
+              "Leganza",
+              "Lanos"
+            ]
+          },
+          {
+            "name": "Plymouth",
+            "models": [
+              "Neon",
+              "Grand Voyager",
+              "Breeze",
+              "Prowler",
+              "Acclaim",
+              "Laser",
+              "Voyager",
+              "Colt",
+              "Colt Vista",
+              "Sundance"
+            ]
+          },
+          {
+            "name": "Eagle",
+            "models": [
+              "Vision",
+              "Talon",
+              "Summit",
+              "Premier"
+            ]
+          },
+          {
+            "name": "Geo",
+            "models": [
+              "Metro",
+              "Prizm",
+              "Tracker",
+              "Storm"
+            ]
+          },
+          {
+            "name": "Daihatsu",
+            "models": [
+              "Rocky",
+              "Charade"
+            ]
+          },
+          {
+            "name": "Polestar",
+            "models": [
+              "2"
+            ]
+          },
+          {
+            "name": "Rivian",
+            "models": [
+              "R1T",
+              "R1S"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Yukon XL"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Murano"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "F-350"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Blazer EV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Murano"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Explorer"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Explorer"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Pacifica"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Blazer EV"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Murano"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-250"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Seltos"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Blazer"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Outback"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Atlas Cross Sport"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q8 e-tron"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Sonata Hybrid"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV9"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage Hybrid"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Atlas"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "X7"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Tundra Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Envista"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Rogue"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Rogue"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Murano"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Yukon XL"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Rogue"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQE 350+"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Envista"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Sonata"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Ranger"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "SQ5"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q5 e"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 2500"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 6"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-150"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q8 e-tron"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQE 350+"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Fe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Solterra"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 2500"
+            ]
+          },
+          {
+            "name": "Lincoln",
+            "models": [
+              "Corsair"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Savana 2500"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Pacifica Hybrid"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "ZDX"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Altima"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Sonata Hybrid"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 3500"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "XT5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Gladiator"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "INFINITI",
+            "models": [
+              "QX50"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Versa"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Savana 2500"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "AMG GLE 53"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "F-350"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "A5 Sportback"
+            ]
+          },
+          {
+            "name": "Lincoln",
+            "models": [
+              "Nautilus"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Trailblazer"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i4 Gran Coupe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Fe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 6"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Elantra HEV"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Atlas Cross Sport"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Lexus",
+            "models": [
+              "RX 500h"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Versa"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Fe"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Prologue"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 6"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i5"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "MX-5 Miata RF"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Blazer EV"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "ID.4"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 2500"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 2500"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 3500"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Legacy"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "F-350"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              300
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i4 Gran Coupe"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q8 e-tron"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i7"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "M235 Gran Coupe"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Rogue"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V Hybrid"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q8 e-tron"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Land Rover",
+            "models": [
+              "Range Rover Evoque"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Odyssey"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Prologue"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 2500"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q5 e"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Titan"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "RS e-tron GT"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Titan"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "INFINITI",
+            "models": [
+              "QX50"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Land Rover",
+            "models": [
+              "Discovery Sport"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 3500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Odyssey"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Volvo",
+            "models": [
+              "XC90 Recharge Plug-In Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "XT5"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Sonata Hybrid"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sorento"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Frontier"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Titan"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Savana 2500"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Titan"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "HR-V"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Niro"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Encore GX"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV9"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 2500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 6"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Genesis",
+            "models": [
+              "Electrified G80"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLE 450"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLS 450"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Land Rover",
+            "models": [
+              "Discovery Sport"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-250"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Trax"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Odyssey"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 3500"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i5"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Pacifica"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              300
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Land Rover",
+            "models": [
+              "Defender"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Pacifica"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Gladiator"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Yukon XL"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "SQ8 e-tron"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q5 e"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "X7"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sorento Hybrid"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Seltos"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Niro"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Envision"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-250"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Niro"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Outback"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Elantra HEV"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Prologue"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Prologue"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Gladiator"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Pacifica"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 6"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Sonata Hybrid"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "X7"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Palisade"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i4 Gran Coupe"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Sonata Hybrid"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              740
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Palisade"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Explorer"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Versa"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-250"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Envision"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q8 e-tron"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Passport"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "LYRIQ"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Titan"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-250"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Odyssey"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Elantra HEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Elantra HEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 6"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Tundra Hybrid"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 3500"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Corolla Cross"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Explorer"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 2500"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox EV"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Wagoneer"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 2500"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V Hybrid"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "XT5"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Tundra Hybrid"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "INFINITI",
+            "models": [
+              "QX55"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Corolla"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 3500"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Pacifica"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Tundra Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "F-150"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "A3"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wrangler 4xe"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 3500"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "F-150"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Explorer"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Sonata Hybrid"
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 3500"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 2500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "LYRIQ"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLE 350"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Explorer"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "INFINITI",
+            "models": [
+              "QX50"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Elantra HEV"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Enclave"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Pacifica"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Versa"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "A5 Sportback"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLS 450"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Niro"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Sentra"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Seltos"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Versa"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 3500"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "EQS 450"
+            ]
+          },
+          {
+            "name": "Jaguar",
+            "models": [
+              "I-PACE"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "RAV4 Prime"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Wagoneer"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i4 Gran Coupe"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 2500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "LYRIQ"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 2500"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 6"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLE 450"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Mustang Mach-E"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 3500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Voyager"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 1500"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit Connect"
+            ]
+          },
+          {
+            "name": "Toyota",
+            "models": [
+              "Tundra Hybrid"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Gladiator"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 2500"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Maverick"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Jetta"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Versa"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 1500"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Terrain"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Charger"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-350"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "Q5 e"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sorento"
+            ]
+          },
+          {
+            "name": "INFINITI",
+            "models": [
+              "QX50"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Outback"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Pathfinder"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-350"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              530
+            ]
+          },
+          {
+            "name": "Acura",
+            "models": [
+              "MDX"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "HR-V"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "Passport"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "HR-V"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Santa Cruz"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Audi",
+            "models": [
+              "A5 Sportback"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Wagoneer"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-250"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "LYRIQ"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 2500"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "X7"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Seltos"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Envista"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "XT5"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Trax"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLA 250"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "X7"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 2500"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "LYRIQ"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Telluride"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLE 450"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-150"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "GLA 250"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Genesis",
+            "models": [
+              "Electrified GV70"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "i7"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Volvo",
+            "models": [
+              "S60 Recharge Plug-In Hybrid"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-350"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sorento"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-90 PHEV"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 1500"
+            ]
+          },
+          {
+            "name": "Buick",
+            "models": [
+              "Envista"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Cadillac",
+            "models": [
+              "XT6"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-250"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Impreza"
+            ]
+          },
+          {
+            "name": "Mazda",
+            "models": [
+              "CX-70"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              "Voyager"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Murano"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "BMW",
+            "models": [
+              "X3"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Outback"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Volvo",
+            "models": [
+              "C40 Recharge Pure Electric"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 1500"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Transit-350"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "IONIQ 5"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 2500"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Subaru",
+            "models": [
+              "Impreza"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Expedition"
+            ]
+          },
+          {
+            "name": "Honda",
+            "models": [
+              "CR-V"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Soul"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Chrysler",
+            "models": [
+              300
+            ]
+          },
+          {
+            "name": "GMC",
+            "models": [
+              "Sierra 2500"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Volkswagen",
+            "models": [
+              "Taos"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Kicks"
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "AMG C 43"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Durango"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Equinox"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Maverick"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Kona"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Escape"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Edge"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Sportage"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "EV6"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Bronco Sport"
+            ]
+          },
+          {
+            "name": "Kia",
+            "models": [
+              "Forte"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Versa"
+            ]
+          },
+          {
+            "name": "Ford",
+            "models": [
+              "Explorer"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer L"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              "ProMaster 1500"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Compass"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee 4xe"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              3500
+            ]
+          },
+          {
+            "name": "Hyundai",
+            "models": [
+              "Tucson Hybrid"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Gladiator"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Grand Cherokee L"
+            ]
+          },
+          {
+            "name": "RAM",
+            "models": [
+              2500
+            ]
+          },
+          {
+            "name": "Mercedes-Benz",
+            "models": [
+              "Sprinter 2500"
+            ]
+          },
+          {
+            "name": "Dodge",
+            "models": [
+              "Hornet"
+            ]
+          },
+          {
+            "name": "Jeep",
+            "models": [
+              "Wagoneer"
+            ]
+          },
+          {
+            "name": "Nissan",
+            "models": [
+              "Murano"
+            ]
+          },
+          {
+            "name": "Chevrolet",
+            "models": [
+              "Silverado 2500"
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "label": "Year",
+            "name": "year",
+            "type": "number",
+            "required": true
+          },
+          {
+            "label": "Fuel Type",
+            "name": "fuelType",
+            "type": "select",
+            "options": [
+              "Petrol",
+              "Diesel",
+              "Hybrid",
+              "Electric"
+            ],
+            "required": true
+          },
+          {
+            "label": "Transmission",
+            "name": "transmission",
+            "type": "select",
+            "options": [
+              "Automatic",
+              "Manual"
+            ],
+            "required": true
+          },
+          {
+            "label": "Mileage (KM)",
+            "name": "mileage",
+            "type": "number",
+            "required": false
+          },
+          {
+            "label": "Color",
+            "name": "color",
+            "type": "text",
+            "required": false
+          },
+          {
+            "label": "Engine Size",
+            "name": "engineSize",
+            "type": "text",
+            "required": false
+          },
+          {
+            "label": "Body Type",
+            "name": "bodyType",
+            "type": "select",
+            "options": [
+              "SUV",
+              "Sedan",
+              "Coupe",
+              "Hatchback",
+              "Pickup"
+            ],
+            "required": false
+          },
+          {
+            "label": "Condition",
+            "name": "condition",
+            "type": "select",
+            "options": [
+              "New",
+              "Used"
+            ],
+            "required": true
+          }
+        ]
+      },
+      {
+        "name": "Motor",
+        "brands": [
+          {
+            "name": "Yamaha",
+            "models": [
+              "YZF-R3"
+            ]
+          },
+          {
+            "name": "BSA",
+            "models": [
+              "Moto Guzzi"
+            ]
+          },
+          {
+            "name": "KTM",
+            "models": [
+              "BMW"
+            ]
+          },
+          {
+            "name": "ROYAL ENFIELD BULLET",
+            "models": [
+              "Honda"
+            ]
+          },
+          {
+            "name": "HONDA CB",
+            "models": [
+              "BMW"
+            ]
+          },
+          {
+            "name": "SUZUKI S",
+            "models": [
+              "Suzuki"
+            ]
+          },
+          {
+            "name": "Motor HONDA",
+            "models": [
+              "Honda"
+            ]
+          },
+          {
+            "name": "Motor MIRIZINDIGIHI",
+            "models": [
+              "Indian Motorcycle"
+            ]
+          },
+          {
+            "name": "M5J",
+            "models": [
+              "MV Agusta"
+            ]
+          },
+          {
+            "name": "bmw 12000",
+            "models": [
+              "BMW"
+            ]
+          },
+          {
+            "name": "SCH",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "R12",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "SUPRA F12",
+            "models": [
+              "Harley-Davidson"
+            ]
+          },
+          {
+            "name": "H44",
+            "models": [
+              "Indian Motorcycle"
+            ]
+          },
+          {
+            "name": "K45",
+            "models": [
+              "Indian Motorcycle"
+            ]
+          },
+          {
+            "name": "L44",
+            "models": [
+              "Honda"
+            ]
+          },
+          {
+            "name": "U78",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "V123",
+            "models": [
+              "Suzuki"
+            ]
+          },
+          {
+            "name": "WW1202",
+            "models": [
+              "Indian Motorcycle"
+            ]
+          },
+          {
+            "name": "kk",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "kk",
+            "models": [
+              "KTM"
+            ]
+          },
+          {
+            "name": "guk",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "ghj",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "hil",
+            "models": [
+              "Ducati"
+            ]
+          },
+          {
+            "name": "ghk",
+            "models": [
+              "Kawasaki"
+            ]
+          },
+          {
+            "name": "dhth",
+            "models": [
+              "Moto Guzzi"
+            ]
+          },
+          {
+            "name": "dvvkj",
+            "models": [
+              "Kawasaki"
+            ]
+          },
+          {
+            "name": "Mr",
+            "models": [
+              "Kawasaki"
+            ]
+          },
+          {
+            "name": "558",
+            "models": [
+              "Aprilia"
+            ]
+          },
+          {
+            "name": "ass",
+            "models": [
+              "BMW"
+            ]
+          },
+          {
+            "name": "xhnm",
+            "models": [
+              "Honda"
+            ]
+          },
+          {
+            "name": "qwe",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "bgt",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "lll",
+            "models": [
+              "Suzuki"
+            ]
+          },
+          {
+            "name": "m12",
+            "models": [
+              "Ducati"
+            ]
+          },
+          {
+            "name": "uku",
+            "models": [
+              "Moto Guzzi"
+            ]
+          },
+          {
+            "name": "fj",
+            "models": [
+              "Suzuki"
+            ]
+          },
+          {
+            "name": "gh",
+            "models": [
+              "Aprilia"
+            ]
+          },
+          {
+            "name": "kkk",
+            "models": [
+              "Ducati"
+            ]
+          },
+          {
+            "name": "hh",
+            "models": [
+              "Yamaha"
+            ]
+          },
+          {
+            "name": "dddc",
+            "models": [
+              "Kawasaki"
+            ]
+          },
+          {
+            "name": "vvv",
+            "models": [
+              "Honda"
+            ]
+          },
+          {
+            "name": "sse",
+            "models": [
+              "Indian Motorcycle"
+            ]
+          },
+          {
+            "name": "aefc",
+            "models": [
+              "Triumph"
+            ]
+          },
+          {
+            "name": "add",
+            "models": [
+              "Harley-Davidson"
+            ]
+          }
+        ],
+        "fields": [
+          {
+            "label": "Year",
+            "name": "year",
+            "type": "number",
+            "required": true
+          },
+          {
+            "label": "Engine Capacity (cc)",
+            "name": "engineCapacity",
+            "type": "number",
+            "required": true
+          },
+          {
+            "label": "Type",
+            "name": "bikeType",
+            "type": "select",
+            "options": [
+              "Sport",
+              "Cruiser",
+              "Touring",
+              "Scooter",
+              "Off-road"
+            ],
+            "required": true
+          },
+          {
+            "label": "Fuel Type",
+            "name": "fuelType",
+            "type": "select",
+            "options": [
+              "Petrol",
+              "Electric"
+            ],
+            "required": true
+          },
+          {
+            "label": "Mileage (KM)",
+            "name": "mileage",
+            "type": "number",
+            "required": false
+          },
+          {
+            "label": "Condition",
+            "name": "condition",
+            "type": "select",
+            "options": [
+              "New",
+              "Used"
+            ],
+            "required": true
+          },
+          {
+            "label": "Color",
+            "name": "color",
+            "type": "text",
+            "required": false
+          },
+          {
+            "label": "Number of Wheels",
+            "name": "wheels",
+            "type": "select",
+            "options": [
+              "2",
+              "3"
+            ],
+            "required": false
+          },
+          {
+            "label": "Accessories",
+            "name": "accessories",
+            "type": "checkbox",
+            "options": [
+              "Helmet",
+              "Side Bags",
+              "Windshield",
+              "GPS"
+            ],
+            "required": false
+          }
+        ]
+      }
+    ]
+  }
+]

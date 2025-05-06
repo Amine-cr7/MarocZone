@@ -1,7 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import adsService from "./adsService"
-
-
+import axios from "axios"
 
 const initialState = {
     ads: [],
@@ -83,6 +82,17 @@ export const uploadPhotos = createAsyncThunk('ads/photo', async ({ id, photos },
     }
 })
 
+export const getAdsbyUser = createAsyncThunk('ads/getallads-belongt-to-user', async (id, thunkApi) => {
+    try {
+        return await adsService.getAdsbyUser(id)
+    } catch (error) {
+        const message = (error.response && error.response.data && error.response.data.error)
+            || error.message || error.toString()
+        return thunkApi.rejectWithValue(message)
+    }
+})
+
+
 
 export const adsSlice = createSlice({
     name: 'ads',
@@ -162,10 +172,6 @@ export const adsSlice = createSlice({
                 state.isLoading = false
                 state.message = action.payload
                 state.isError = true
-            })
-            .addCase(uploadPhotos.fulfilled, (state, action) => {
-                state.step = 1
-                state.form = {}
             })
     }
 })

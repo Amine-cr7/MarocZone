@@ -7,38 +7,12 @@ import { logout, reset } from '../features/auth/authSlice'
 export default function Header() {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    const { user } = useSelector((state) => state.auth)
-    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
-    const dropdownRef = useRef(null)
-
+    const { user } = useSelector(state => state.auth)
     const onLogout = () => {
         dispatch(logout())
         dispatch(reset())
         navigate('/')
     }
-
-    const defaultAvatar = user
-        ? `https://ui-avatars.com/api/?name=${encodeURIComponent(user.name)}&background=random&size=64`
-        : '/default-avatar.png'
-
-    const toggleDropdown = () => {
-        setIsDropdownOpen(!isDropdownOpen)
-    }
-
-    // Close dropdown when clicking outside
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setIsDropdownOpen(false)
-            }
-        }
-
-        document.addEventListener('mousedown', handleClickOutside)
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside)
-        }
-    }, [])
-
     return (
         <header className="bg-white shadow-sm border-b">
             <div className="container mx-auto px-4 py-3 flex justify-between items-center">
@@ -81,63 +55,14 @@ export default function Header() {
                             <Link to="/register" className="flex items-center gap-1 hover:text-orange-600">
                                 <FaUser /> Register
                             </Link>
-                        </>
-                    ) : (
-                        <div className="relative" ref={dropdownRef}>
-                            <button
-                                onClick={toggleDropdown}
-                                className="flex items-center space-x-2 bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 focus:outline-none"
-                                aria-haspopup="true"
-                                aria-expanded={isDropdownOpen}
-                            >
-                                <span className="font-semibold">{user.name}</span>
-                                <img
-                                    src={defaultAvatar}
-                                    alt={`${user.name} avatar`}
-                                    className="w-6 h-6 rounded-full object-cover"
-                                />
-                            </button>
-
-                            {isDropdownOpen && (
-                                <div className="absolute right-0 flex flex-col bg-white border rounded shadow-md mt-2 z-50 min-w-[160px] animate-fade-in">
-                                    <Link
-                                        to="/profile"
-                                        className="px-4 py-2 hover:bg-gray-100 border-b"
-                                        onClick={() => setIsDropdownOpen(false)}
-                                    >
-                                        My Profile
-                                    </Link>
-                                    <Link
-                                        to={`/ads/user`}
-                                        className="px-4 py-2 hover:bg-gray-100 border-b"
-                                        onClick={() => setIsDropdownOpen(false)}
-                                    >
-                                        My Ads
-                                    </Link>
-                                    <button
-                                        onClick={() => {
-                                            onLogout()
-                                            setIsDropdownOpen(false)
-                                        }}
-                                        className="text-left px-4 py-2 hover:bg-gray-100 text-red-500"
-                                    >
-                                        <div className="flex items-center gap-2">
-                                            <FaSignOutAlt /> Logout
-                                        </div>
-                                    </button>
-                                </div>
-                            )}
-                        </div>
-                    )}
-
-                    <Link
-                        to="/ads/add"
-                        className="bg-orange-500 text-white px-4 py-1 rounded hover:bg-orange-600 transition-all"
-                    >
-                        Place an Ad
-                    </Link>
-                </div>
-            </div>
+                        </li>
+                    </>
+                ) : (
+                <li>
+                    <button className='btn' onClick={onLogout}><FaSignOutAlt/> Logout</button>
+                </li>
+            )}
+            </ul>
         </header>
     )
 }
