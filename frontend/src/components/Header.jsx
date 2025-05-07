@@ -114,6 +114,13 @@ export default function Header() {
                                     >
                                         My Ads
                                     </Link>
+                                    <Link
+                                        to={`/ads/populare`}
+                                        className="px-4 py-2 hover:bg-gray-100 border-b"
+                                        onClick={() => setIsDropdownOpen(false)}
+                                    >
+                                        Populare Ads
+                                    </Link>
                                     <button
                                         onClick={() => {
                                             onLogout()

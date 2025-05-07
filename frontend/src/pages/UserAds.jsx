@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAdByUser } from '../features/ads/adsSlice';
+import { deleteAd, getAdByUser } from '../features/ads/adsSlice';
+  import { useNavigate } from 'react-router-dom';
 
 export default function UserAds() {
   const dispatch = useDispatch();
@@ -10,11 +11,15 @@ export default function UserAds() {
     dispatch(getAdByUser());
   }, [dispatch]);
 
+  const navigate = useNavigate()  
+
   const handleDelete = (id) => {
-    // if (window.confirm('Are you sure you want to delete this ad?')) {
-    //   dispatch(deleteAd(id));
-    // }
+    if (window.confirm('Are you sure you want to delete this ad?')) {
+      dispatch(deleteAd(id))
+        .then(() => dispatch(getAdByUser()));
+    }
   };
+  
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 bg-white min-h-screen">
@@ -79,7 +84,7 @@ export default function UserAds() {
                     <div className="flex justify-end flex-wrap gap-3">
                       <button
                         className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-orange-500 rounded-lg shadow hover:bg-orange-600 transition"
-                        onClick={() => console.log('Edit', ad._id)}
+                        onClick={() => navigate(`/ads/update/${ad._id}`)}
                       >
                         Edit
                       </button>

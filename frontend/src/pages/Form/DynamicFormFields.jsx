@@ -5,6 +5,7 @@ import { createAd, setFormData, setStep } from '../../features/ads/adsSlice';
 export default function DynamicFormFields() {
   const dispatch = useDispatch();
   const { form, step } = useSelector(state => state.ads);
+  console.log(form)
   const { subcategory } = useSelector(state => state.categories);
 
   if (!subcategory.fields) {

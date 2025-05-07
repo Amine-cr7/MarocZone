@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function Home() {
   const dispatch = useDispatch()
   const { ads, isLoading, isError, isSuccess, message } = useSelector(state => state.ads)
-
+  console.log(ads)
   useEffect(() => {
     dispatch(getAllads())
   }, [dispatch])
