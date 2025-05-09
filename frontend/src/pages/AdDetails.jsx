@@ -7,6 +7,7 @@ const AdDetails = () => {
   const dispatch = useDispatch();
   const { _id } = useParams();
   const { ad, isLoading, isError, message } = useSelector(state => state.ads);
+  console.log(ad)
 
   useEffect(() => {
     dispatch(getAdById(_id));

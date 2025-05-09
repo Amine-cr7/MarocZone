@@ -19,11 +19,11 @@ const searchAds = asynchandler( async(req,res) => {
         if(maxPrice) filter.price.$lte = Number(maxPrice)
     }
 
-    const ads = await Ad.find(filter).populate('category')
+    const ads = await Ad.find(filter)
     res.status(200).json({
         message : 'success',
         count : ads.length,
-        data : ads
+        ads
     })
 })
 

@@ -6,6 +6,7 @@ const initialState = {
   ads: [],
   ad: {},
   myAds: [],
+  searchedAds: [],
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -157,6 +158,17 @@ export const getPopulareAds = createAsyncThunk("ads/getPopular", async (_, thunk
     }
   });
 
+  export const fetchSearchedAds = createAsyncThunk(
+    'ads/search',
+    async (filters, thunkAPI) => {
+      try {
+        return await adsService.searchAds(filters);
+      } catch (error) {
+        return thunkAPI.rejectWithValue(error.response?.data?.message || 'Search failed');
+      }
+    }
+  );
+
 
 
 export const adsSlice = createSlice({
@@ -170,6 +182,9 @@ export const adsSlice = createSlice({
     setFormData: (state, action) => {
       state.form = { ...state.form, ...action.payload };
     },
+    clearSearchedAds: (state) => {
+        state.searchedAds = []
+    }
   },
   extraReducers: (builder) => {
     builder
@@ -316,10 +331,23 @@ export const adsSlice = createSlice({
         state.message = action.payload;
         state.isError = true;
         state.isSuccess = false;
+      })
+      // search 
+      .addCase(fetchSearchedAds.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchSearchedAds.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.ads = action.payload;
+      })
+      .addCase(fetchSearchedAds.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
       });
   },
 });
 
-export const { reset, setFormData, setStep } = adsSlice.actions;
+export const { reset, setFormData, setStep , clearSearchedAds } = adsSlice.actions;
 
 export default adsSlice.reducer;

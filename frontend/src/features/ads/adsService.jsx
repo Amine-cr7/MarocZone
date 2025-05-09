@@ -69,6 +69,25 @@ const deleteAd = async (id, token) => {
   
 
 
+const searchAds = async ({ keyword, category, minPrice, maxPrice }) => {
+  try {
+    const response = await axios.get('http://localhost:5000/api/tools/search', {
+      params: {
+        keyword,
+        minPrice,
+        maxPrice
+      }
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error('Error searching ads:', error);
+    throw error;
+  }
+};
+
+
+
 const adsService = {
     getAllads,
     getAdById,
@@ -77,6 +96,7 @@ const adsService = {
     getAdByUser,
     updateAd,
     deleteAd,
-    getPopulareAds
+    getPopulareAds, 
+    searchAds
 }
 export default adsService 

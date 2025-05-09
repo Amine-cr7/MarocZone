@@ -52,6 +52,36 @@ const getAdById = asynchandler(async (req, res) => {
 
     res.status(200).json(AdById)
 })
+
+
+// const getAdById = asynchandler(async (req, res) => {
+//     const id = req.params.id;
+//     const userId = req.user.id;
+
+//     const AdById = await Ad.findOne({ _id: id }).populate('user', 'FullName email');
+//     if (!AdById) {
+//         return res.status(404).json({
+//             message: 'Ad not found',
+//         });
+//     }
+
+//     const existingView = await AdView.findOne({ adId: id, userId: userId });
+
+//     if (!existingView) {
+     
+//         const newView = new AdView({
+//             adId: id,
+//             userId: userId,
+//         });
+
+//         await newView.save();
+      
+//         AdById.views = (AdById.views || 0) + 1;
+//         await AdById.save();
+//     }
+
+//     res.status(200).json(AdById);
+// });
 const updateAd = asynchandler(async (req, res) => {
     const id = req.params.id
     const updatedAd = await Ad.findByIdAndUpdate(id, req.body, {
