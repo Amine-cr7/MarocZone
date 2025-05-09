@@ -7,24 +7,13 @@ import Search from './Search'
 export default function Home() {
   const dispatch = useDispatch()
   const { ads, isLoading, isError, isSuccess, message, searchedAds } = useSelector(state => state.ads)
-  
-  // Determine which ads to display - search results or all ads
-  const adsToDisplay = searchedAds && searchedAds.length > 0 ? searchedAds : 
-                     (Array.isArray(ads) ? ads : 
-                     (Array.isArray(ads?.ads) ? ads.ads : []));
 
-  // Load all ads on first render
+  const adsToDisplay = searchedAds.length ? searchedAds : ads;
   useEffect(() => {
     dispatch(getAllads())
   }, [dispatch])
 
-  // Log ads data for debugging
-  useEffect(() => {
-    console.log("ADS TYPE:", typeof ads)
-    console.log("IS ARRAY:", Array.isArray(ads))
-    console.log("ADS VALUE:", ads)
-    console.log("SEARCHED ADS:", searchedAds)
-  }, [ads, searchedAds])
+
 
   return (
     <>

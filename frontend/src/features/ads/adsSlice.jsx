@@ -338,7 +338,7 @@ export const adsSlice = createSlice({
       })
       .addCase(fetchSearchedAds.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.ads = action.payload;
+        state.searchedAds = action.payload;
       })
       .addCase(fetchSearchedAds.rejected, (state, action) => {
         state.isLoading = false;

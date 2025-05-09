@@ -20,11 +20,7 @@ const searchAds = asynchandler( async(req,res) => {
     }
 
     const ads = await Ad.find(filter)
-    res.status(200).json({
-        message : 'success',
-        count : ads.length,
-        ads
-    })
+    res.status(200).json(ads)
 })
 
 const filterAds = asynchandler(async (req, res) => {
