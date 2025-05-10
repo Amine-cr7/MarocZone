@@ -11,11 +11,15 @@ mongoose.connect(process.env.MONGO_URI);
 const electronicsData = JSON.parse(
   fs.readFileSync(path.join(__dirname, './_data/electronics.json'), 'utf-8')
 );
+const CarsData = JSON.parse(
+  fs.readFileSync(path.join(__dirname, './_data/cars.json'), 'utf-8')
+);
 
 const importData = async () => {
   try {
     // Create a new Category document with the parsed data
     await Category.create(electronicsData);
+    await Category.create(CarsData);
     console.log(`✅ ALL DATA IMPORTED`);
     process.exit();
   } catch (error) {

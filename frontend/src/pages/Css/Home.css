@@ -1,0 +1,27 @@
+
+.slick-prev:before, 
+.slick-next:before {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+  font-size: 25px;
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #007bff;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  opacity: 1;
+}
+
+
+.slick-dots li button:before {
+  color: white;
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #007bff;
+  opacity: 1;
+}
