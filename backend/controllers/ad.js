@@ -3,6 +3,7 @@ const asynchandler = require('express-async-handler')
 const path = require('path')
 const dotenv = require('dotenv');
 const ErrorResponse = require('../utils/ErrorResponse');
+const Adview = require('../models/Adview');
 dotenv.config({ path: path.resolve(__dirname, '../.env') });
 
 
@@ -35,53 +36,36 @@ const getAllAds = asynchandler(async (req, res, next) => {
     res.status(200).json(allAds);
 });
 
-
 const getAdById = asynchandler(async (req, res) => {
-    const id = req.params.id
-    const AdById = await Ad.findOne({ _id: id })
-        .populate('user', 'FullName email')
+    const id = req.params.id;
+    const userId = req.user?.id; 
+
+    const AdById = await Ad.findOne({ _id: id }).populate('user', 'FullName email');
+    
     if (!AdById) {
         return res.status(404).json({
-            message: 'ad not found',
-        })
+            message: 'Ad not found',
+        });
     }
 
-    AdById.views = (AdById.views || 0) + 1;
-    await AdById.save();
+    if (userId) {
+        const existingView = await Adview.findOne({ adId: id, userId: userId });
 
+        if (!existingView) {
+            const newView = new Adview({
+                adId: id,
+                userId: userId,
+            });
+            await newView.save();
+            
+            AdById.views = (AdById.views || 0) + 1;
+            await AdById.save();
+        }
+    }
 
-    res.status(200).json(AdById)
-})
+    res.status(200).json(AdById);
+});
 
-
-// const getAdById = asynchandler(async (req, res) => {
-//     const id = req.params.id;
-//     const userId = req.user.id;
-
-//     const AdById = await Ad.findOne({ _id: id }).populate('user', 'FullName email');
-//     if (!AdById) {
-//         return res.status(404).json({
-//             message: 'Ad not found',
-//         });
-//     }
-
-//     const existingView = await AdView.findOne({ adId: id, userId: userId });
-
-//     if (!existingView) {
-     
-//         const newView = new AdView({
-//             adId: id,
-//             userId: userId,
-//         });
-
-//         await newView.save();
-      
-//         AdById.views = (AdById.views || 0) + 1;
-//         await AdById.save();
-//     }
-
-//     res.status(200).json(AdById);
-// });
 const updateAd = asynchandler(async (req, res) => {
     const id = req.params.id
     const updatedAd = await Ad.findByIdAndUpdate(id, req.body, {

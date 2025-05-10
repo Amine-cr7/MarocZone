@@ -17,9 +17,16 @@ const uploadPhotos = async (id, photos, token) => {
     const response = await axios.put(`${API_URL}/${id}/photo`, photos, config);
     return response.data;
 }
-const getAdById = async (id) => {
-    const response = await axios.get(`${API_URL}/${id}`)
-    return response.data
+
+const getAdById = async (id, token) => {
+    const config = token ? {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    } : {};
+    
+    const response = await axios.get(`${API_URL}/${id}`, config);
+    return response.data;
 }
 
 const getAdByUser = async (token) => {

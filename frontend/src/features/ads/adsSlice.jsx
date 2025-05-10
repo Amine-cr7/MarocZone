@@ -57,7 +57,8 @@ export const getAdById = createAsyncThunk(
   "ads/getOne",
   async (id, thunkApi) => {
     try {
-      return await adsService.getAdById(id);
+      const token = thunkApi.getState().auth.user?.jwtToken;
+      return await adsService.getAdById(id, token);
     } catch (error) {
       const message =
         (error.message && error.response.data && error.response.data.message) ||
@@ -67,6 +68,7 @@ export const getAdById = createAsyncThunk(
     }
   }
 );
+
 
 export const createAd = createAsyncThunk(
   "ads/create",
