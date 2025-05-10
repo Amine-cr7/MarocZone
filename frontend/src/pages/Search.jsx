@@ -18,10 +18,6 @@ export default function Search() {
     dispatch(clearSearchedAds())
     setKeyword('') 
   }
-
-    useEffect(() => {
-      console.log("SEARCHED ADS:", searchedAds)
-    }, [ searchedAds])
   
 
   return (
