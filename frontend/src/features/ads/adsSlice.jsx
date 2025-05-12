@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import adsService from "./adsService";
 import axios from "axios";
+import { toast } from 'react-toastify';
 
 const initialState = {
   ads: [],
@@ -183,6 +184,39 @@ export const getPopulareAds = createAsyncThunk("ads/getPopular", async (_, thunk
     }
   )
 
+  export const getFavorites = createAsyncThunk('favorites/getAll', async (_, thunkApi) => {
+  try {
+    const token = thunkApi.getState().auth.user.jwtToken;
+    return await adsService.getFavorites(token);
+  } catch (error) {
+    return thunkApi.rejectWithValue(error.response?.data?.message || 'Error loading favorites');
+  }
+});
+
+export const addFavorite = createAsyncThunk('favorites/add', async (adId, thunkApi) => {
+  try {
+     const token = thunkApi.getState().auth.user.jwtToken;
+    const response = await adsService.addFavorite(adId,token);
+    toast.success(response.message);
+    return { adId };
+  } catch (error) {
+    toast.error(error.response?.data?.message || 'Error adding to favorites');
+    return thunkApi.rejectWithValue(error.response?.data?.message);
+  }
+});
+
+export const removeFavorite = createAsyncThunk('favorites/remove', async (adId, thunkApi) => {
+  try {
+     const token = thunkApi.getState().auth.user.jwtToken;
+    const response = await adsService.removeFavorite(adId,token);
+    toast.success(response.message);
+    return { adId };
+  } catch (error) {
+    toast.error(error.response?.data?.message || 'Error removing from favorites');
+    return thunkApi.rejectWithValue(error.response?.data?.message);
+  }
+});
+
 
 
 export const adsSlice = createSlice({
@@ -201,6 +235,11 @@ export const adsSlice = createSlice({
     },
     clearFilterAds: (state) => {
       state.filterAds = []
+    },
+      resetFavorites: (state) => {
+      state.items = [];
+      state.loading = false;
+      state.error = null;
     }
   },
   extraReducers: (builder) => {
@@ -377,10 +416,28 @@ export const adsSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
         state.isSuccess = false;
+      })
+      // favorites 
+      .addCase(getFavorites.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(getFavorites.fulfilled, (state, action) => {
+        state.loading = false;
+        state.items = action.payload;
+      })
+      .addCase(getFavorites.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      .addCase(addFavorite.fulfilled, (state, action) => {
+        // Optional: handle frontend update if needed
+      })
+      .addCase(removeFavorite.fulfilled, (state, action) => {
+        state.items = state.items.filter(fav => fav.ad._id !== action.payload.adId);
       });
   },
 });
 
-export const { reset, setFormData, setStep , clearSearchedAds , clearFilterAds } = adsSlice.actions;
+export const { reset, setFormData, setStep , clearSearchedAds , clearFilterAds , resetFavorites } = adsSlice.actions;
 
 export default adsSlice.reducer;

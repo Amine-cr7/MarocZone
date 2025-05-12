@@ -2,11 +2,13 @@ import axios from "axios";
 
 const API_URL = '/api/ads';
 const API = '/api/tools/populare';
+const API_Fav = '/api/ads/favorites';
 
 const getAllads = async () => {
     const response = await axios.get(API_URL)
     return response.data
 }
+
 const uploadPhotos = async (id, photos, token) => {
     const config = {
         headers: {
@@ -35,10 +37,9 @@ const getAdByUser = async (token) => {
             Authorization: `Bearer ${token}`,
         }
     };
-    const response = await axios.get(`${API_URL}/user`,config)
+    const response = await axios.get(`${API_URL}/user`, config)
     return response.data
 }
-
 
 const createAd = async (adData, token) => {
     const config = {
@@ -61,40 +62,32 @@ const updateAd = async ({ _id, adUpdate }, token) => {
 }
 
 const deleteAd = async (id, token) => {
-    const response = await axios.delete(`/api/ads/${id}`, {
+    const response = await axios.delete(`${API_URL}/${id}`, {
       headers: {
         Authorization: `Bearer ${token}`, 
       },
     });
     return response.data;
-  }
+}
 
-  const getPopulareAds = async () => {
+const getPopulareAds = async () => {
     const response = await axios.get(API)
     return response.data
-    };
-  
-
-
-const searchAds = async ({ keyword, minPrice, maxPrice }) => {
-  try {
-    const response = await axios.get('http://localhost:5000/api/tools/search', {
-      params: {
-        keyword,
-        minPrice,
-        maxPrice
-      }
-    });
-
-    return response.data;
-  } catch (error) {
-    console.error('Error searching ads:', error);
-    throw error;
-  }
 };
 
-const filterAds = async ({minPrice , maxPrice , location , dateFrom , dateTo , subCat , brand , model }) => {
-    const response = await axios.get('http://localhost:5000/api/tools/filter',{
+const searchAds = async ({ keyword, minPrice, maxPrice }) => {
+    const response = await axios.get('/api/tools/search', {
+        params: {
+            keyword,
+            minPrice,
+            maxPrice
+        }
+    });
+    return response.data;
+};
+
+const filterAds = async ({minPrice, maxPrice, location, dateFrom, dateTo, subCat, brand, model }) => {
+    const response = await axios.get('/api/tools/filter', {
         params: {
             minPrice,
             maxPrice,
@@ -105,10 +98,40 @@ const filterAds = async ({minPrice , maxPrice , location , dateFrom , dateTo , s
             brand,
             model
         }
-    })
-    return response.data ;
+    });
+    return response.data;
 }
 
+// Favorites functions
+const getFavorites = async (token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    };
+    const response = await axios.get(API_Fav, config);
+    return response.data;
+};
+
+const addFavorite = async (adId, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    };
+    const response = await axios.post(API_Fav, { adId }, config);
+    return response.data;
+};
+
+const removeFavorite = async (adId, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    };
+    const response = await axios.delete(`${API_Fav}/${adId}`, config);
+    return response.data;
+};
 
 const adsService = {
     getAllads,
@@ -120,6 +143,10 @@ const adsService = {
     deleteAd,
     getPopulareAds, 
     searchAds,
-    filterAds
+    filterAds,
+    getFavorites,
+    addFavorite,
+    removeFavorite
 }
-export default adsService 
+
+export default adsService

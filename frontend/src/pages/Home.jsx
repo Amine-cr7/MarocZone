@@ -1,12 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchSearchedAds, clearSearchedAds, getAllads } from '../features/ads/adsSlice';
+import { 
+  fetchSearchedAds, 
+  clearSearchedAds, 
+  getAllads,
+  addFavorite,
+  removeFavorite,
+  getFavorites
+} from '../features/ads/adsSlice';
 import { Link } from "react-router-dom";
 import Search from './Search';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Filter from './Filter';
+import { toast } from 'react-toastify';
 
 // Custom arrow components with improved styling
 const NextArrow = (props) => {
@@ -51,24 +59,77 @@ const PrevArrow = (props) => {
 
 export default function Home() {
   const dispatch = useDispatch();
-  const { ads, isLoading, isError, isSuccess, message, searchedAds , AdsFilter} = useSelector(state => state.ads);
+  const { 
+    ads, 
+    isLoading, 
+    isError, 
+    isSuccess, 
+    message, 
+    searchedAds, 
+    AdsFilter,
+    favorites 
+  } = useSelector(state => state.ads);
+  
   const [showFilters, setShowFilters] = useState(false);
+  const [favoriteAds, setFavoriteAds] = useState([]);
+  const [pendingFavoriteActions, setPendingFavoriteActions] = useState({});
   
   const adsToDisplay = searchedAds.length ? searchedAds : AdsFilter.length ? AdsFilter : ads;
-  console.log(adsToDisplay)
-  console.log(AdsFilter)
-  
+
   useEffect(() => {
     dispatch(getAllads());
+    dispatch(getFavorites());
   }, [dispatch]);
+
+  useEffect(() => {
+    if (favorites && favorites.items) {
+      setFavoriteAds(favorites.items.map(fav => fav.ad._id));
+    }
+  }, [favorites]);
 
   const toggleFilters = () => {
     setShowFilters(!showFilters);
   };
 
+  const handleFavoriteClick = async (adId, adTitle) => {
+    // Set pending state for this specific ad
+    setPendingFavoriteActions(prev => ({ ...prev, [adId]: true }));
+    
+    try {
+      if (favoriteAds.includes(adId)) {
+        // Optimistically update local state for immediate UI feedback
+        setFavoriteAds(prev => prev.filter(id => id !== adId));
+        
+        await dispatch(removeFavorite(adId)).unwrap();
+        toast.success(`Removed "${adTitle}" from favorites`);
+      } else {
+        // Optimistically update local state for immediate UI feedback
+        setFavoriteAds(prev => [...prev, adId]);
+        
+        await dispatch(addFavorite(adId)).unwrap();
+        toast.success(`Added "${adTitle}" to favorites`);
+      }
+    } catch (error) {
+      // Revert optimistic update on error
+      if (favoriteAds.includes(adId)) {
+        setFavoriteAds(prev => prev.filter(id => id !== adId));
+      } else {
+        setFavoriteAds(prev => [...prev, adId]);
+      }
+      
+      // Show error message
+      toast.error(`Could not update favorites: ${error.message || 'Unknown error'}`);
+    } finally {
+      // Clear pending state
+      setPendingFavoriteActions(prev => ({ ...prev, [adId]: false }));
+      
+      // Refresh favorites list from server
+      dispatch(getFavorites());
+    }
+  };
+
   // Base slider settings - only apply to multiple images
   const getSliderSettings = (images) => {
-    // If only 1 or 0 images, no need for slider settings
     if (!images || images.length <= 1) return {};
     
     return {
@@ -81,7 +142,7 @@ export default function Home() {
       autoplaySpeed: 3000,
       adaptiveHeight: false,
       lazyLoad: 'ondemand',
-      dotsClass: "slick-dots custom-dots", // Custom dots styling
+      dotsClass: "slick-dots custom-dots",
       nextArrow: <NextArrow />,
       prevArrow: <PrevArrow />,
       appendDots: dots => (
@@ -181,6 +242,8 @@ export default function Home() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {adsToDisplay.map(ad => {
           const sliderSettings = getSliderSettings(ad.images);
+          const isFavorite = favoriteAds.includes(ad._id);
+          const isPending = pendingFavoriteActions[ad._id];
 
           return (
             <div key={ad._id} className="bg-white rounded-lg shadow-md overflow-hidden transition-shadow hover:shadow-lg">
@@ -222,6 +285,36 @@ export default function Home() {
                 <div className="absolute top-3 right-3 bg-white bg-opacity-90 px-3 py-1 rounded-full shadow-md">
                   <span className="font-semibold text-orange-600">${ad.price}</span>
                 </div>
+
+                {/* Favorite Button - Enhanced with loading state */}
+                <button
+                  onClick={() => handleFavoriteClick(ad._id, ad.title)}
+                  disabled={isPending}
+                  className={`absolute top-3 left-3 p-2 rounded-full bg-white bg-opacity-80 shadow-md hover:bg-opacity-100 transition-all ${isPending ? 'cursor-not-allowed opacity-75' : ''}`}
+                  aria-label={isFavorite ? "Remove from favorites" : "Add to favorites"}
+                >
+                  {isPending ? (
+                    <svg className="animate-spin h-5 w-5 text-orange-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                  ) : (
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      className={`h-5 w-5 ${isFavorite ? 'text-red-500 fill-current' : 'text-gray-400'}`}
+                      viewBox="0 0 20 20"
+                      fill={isFavorite ? 'currentColor' : 'none'}
+                      stroke="currentColor"
+                      strokeWidth="2"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
+                </button>
               </div>
 
               {/* Content */}
