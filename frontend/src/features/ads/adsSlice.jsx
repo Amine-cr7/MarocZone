@@ -7,6 +7,7 @@ const initialState = {
   ad: {},
   myAds: [],
   searchedAds: [],
+  AdsFilter: [],
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -171,6 +172,17 @@ export const getPopulareAds = createAsyncThunk("ads/getPopular", async (_, thunk
     }
   );
 
+  export const filterAds = createAsyncThunk(
+    'ads/filter',
+    async (filter , thunkAPI) => {
+      try {
+        return await adsService.filterAds(filter);
+      } catch (error) {
+        return thunkAPI.rejectWithValue(error.response?.data?.message || 'Filter failed')
+      }
+    }
+  )
+
 
 
 export const adsSlice = createSlice({
@@ -186,6 +198,9 @@ export const adsSlice = createSlice({
     },
     clearSearchedAds: (state) => {
         state.searchedAds = []
+    },
+    clearFilterAds: (state) => {
+      state.filterAds = []
     }
   },
   extraReducers: (builder) => {
@@ -346,10 +361,26 @@ export const adsSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.message = action.payload;
+      })
+      // filter
+     .addCase(filterAds.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(filterAds.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.AdsFilter = action.payload;
+        state.isError = false;
+        state.isSuccess = true;
+      })
+      .addCase(filterAds.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+        state.isSuccess = false;
       });
   },
 });
 
-export const { reset, setFormData, setStep , clearSearchedAds } = adsSlice.actions;
+export const { reset, setFormData, setStep , clearSearchedAds , clearFilterAds } = adsSlice.actions;
 
 export default adsSlice.reducer;

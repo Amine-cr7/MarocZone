@@ -76,7 +76,7 @@ const deleteAd = async (id, token) => {
   
 
 
-const searchAds = async ({ keyword, category, minPrice, maxPrice }) => {
+const searchAds = async ({ keyword, minPrice, maxPrice }) => {
   try {
     const response = await axios.get('http://localhost:5000/api/tools/search', {
       params: {
@@ -93,6 +93,21 @@ const searchAds = async ({ keyword, category, minPrice, maxPrice }) => {
   }
 };
 
+const filterAds = async ({minPrice , maxPrice , location , dateFrom , dateTo , subCat , brand , model }) => {
+    const response = await axios.get('http://localhost:5000/api/tools/filter',{
+        params: {
+            minPrice,
+            maxPrice,
+            location,
+            dateFrom,
+            dateTo,
+            subCat,
+            brand,
+            model
+        }
+    })
+    return response.data ;
+}
 
 
 const adsService = {
@@ -104,6 +119,7 @@ const adsService = {
     updateAd,
     deleteAd,
     getPopulareAds, 
-    searchAds
+    searchAds,
+    filterAds
 }
 export default adsService 

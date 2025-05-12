@@ -7,8 +7,6 @@ import { getPopulareAds } from '../features/ads/adsSlice';
 export default function PopularAds() {
   const dispatch = useDispatch();
   const { ads, isLoading,  } = useSelector(state => state.ads)
-  console.log(ads)
-  const AdsPopulare = ads.ads || []
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,7 +25,7 @@ export default function PopularAds() {
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {AdsPopulare .filter(ad => ad.status === 'published')
+          {ads .filter(ad => ad.status === 'published')
                        .map((ad) => (
             <div
               key={ad._id}
