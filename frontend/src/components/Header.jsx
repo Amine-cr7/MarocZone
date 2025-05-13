@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { FaSignInAlt, FaSignOutAlt, FaUser } from 'react-icons/fa'
+import { FaSignInAlt, FaSignOutAlt, FaUser, FaHeart } from 'react-icons/fa'
 import { useDispatch, useSelector } from 'react-redux'
 import { logout, reset } from '../features/auth/authSlice'
 
@@ -83,58 +83,79 @@ export default function Header() {
                             </Link>
                         </>
                     ) : (
-                        <div className="relative" ref={dropdownRef}>
-                            <button
-                                onClick={toggleDropdown}
-                                className="flex items-center space-x-2 bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 focus:outline-none"
-                                aria-haspopup="true"
-                                aria-expanded={isDropdownOpen}
+                        <>
+                            {/* Favorites Button */}
+                            <Link 
+                                to="/ads/favorites" 
+                                className="flex items-center gap-1 text-gray-700 hover:text-orange-600"
+                                title="View Favorites"
                             >
-                                <span className="font-semibold">{user.name}</span>
-                                <img
-                                    src={defaultAvatar}
-                                    alt={`${user.name} avatar`}
-                                    className="w-6 h-6 rounded-full object-cover"
-                                />
-                            </button>
+                                <FaHeart className="text-orange-500" /> 
+                                <span className="hidden sm:inline">Favorites</span>
+                            </Link>
+                            
+                            <div className="relative" ref={dropdownRef}>
+                                <button
+                                    onClick={toggleDropdown}
+                                    className="flex items-center space-x-2 bg-gray-100 px-3 py-1 rounded hover:bg-gray-200 focus:outline-none"
+                                    aria-haspopup="true"
+                                    aria-expanded={isDropdownOpen}
+                                >
+                                    <span className="font-semibold">{user.name}</span>
+                                    <img
+                                        src={defaultAvatar}
+                                        alt={`${user.name} avatar`}
+                                        className="w-6 h-6 rounded-full object-cover"
+                                    />
+                                </button>
 
-                            {isDropdownOpen && (
-                                <div className="absolute right-0 flex flex-col bg-white border rounded shadow-md mt-2 z-50 min-w-[160px] animate-fade-in">
-                                    <Link
-                                        to="/profile"
-                                        className="px-4 py-2 hover:bg-gray-100 border-b"
-                                        onClick={() => setIsDropdownOpen(false)}
-                                    >
-                                        My Profile
-                                    </Link>
-                                    <Link
-                                        to={`/ads/myads`}
-                                        className="px-4 py-2 hover:bg-gray-100 border-b"
-                                        onClick={() => setIsDropdownOpen(false)}
-                                    >
-                                        My Ads
-                                    </Link>
-                                    <Link
-                                        to={`/ads/populare`}
-                                        className="px-4 py-2 hover:bg-gray-100 border-b"
-                                        onClick={() => setIsDropdownOpen(false)}
-                                    >
-                                        Populare Ads
-                                    </Link>
-                                    <button
-                                        onClick={() => {
-                                            onLogout()
-                                            setIsDropdownOpen(false)
-                                        }}
-                                        className="text-left px-4 py-2 hover:bg-gray-100 text-red-500"
-                                    >
-                                        <div className="flex items-center gap-2">
-                                            <FaSignOutAlt /> Logout
-                                        </div>
-                                    </button>
-                                </div>
-                            )}
-                        </div>
+                                {isDropdownOpen && (
+                                    <div className="absolute right-0 flex flex-col bg-white border rounded shadow-md mt-2 z-50 min-w-[160px] animate-fade-in">
+                                        <Link
+                                            to="/profile"
+                                            className="px-4 py-2 hover:bg-gray-100 border-b"
+                                            onClick={() => setIsDropdownOpen(false)}
+                                        >
+                                            My Profile
+                                        </Link>
+                                        <Link
+                                            to={`/ads/myads`}
+                                            className="px-4 py-2 hover:bg-gray-100 border-b"
+                                            onClick={() => setIsDropdownOpen(false)}
+                                        >
+                                            My Ads
+                                        </Link>
+                                        <Link
+                                            to={`/favorites`}
+                                            className="px-4 py-2 hover:bg-gray-100 border-b"
+                                            onClick={() => setIsDropdownOpen(false)}
+                                        >
+                                            <div className="flex items-center gap-2">
+                                                <FaHeart /> Favorites
+                                            </div>
+                                        </Link>
+                                        <Link
+                                            to={`/ads/populare`}
+                                            className="px-4 py-2 hover:bg-gray-100 border-b"
+                                            onClick={() => setIsDropdownOpen(false)}
+                                        >
+                                            Populare Ads
+                                        </Link>
+                                        <button
+                                            onClick={() => {
+                                                onLogout()
+                                                setIsDropdownOpen(false)
+                                            }}
+                                            className="text-left px-4 py-2 hover:bg-gray-100 text-red-500"
+                                        >
+                                            <div className="flex items-center gap-2">
+                                                <FaSignOutAlt /> Logout
+                                            </div>
+                                        </button>
+                                    </div>
+                                )}
+                            </div>
+                        </>
                     )}
 
                     <Link

@@ -9,6 +9,7 @@ const initialState = {
   myAds: [],
   searchedAds: [],
   AdsFilter: [],
+  favorites:[],
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -423,7 +424,7 @@ export const adsSlice = createSlice({
       })
       .addCase(getFavorites.fulfilled, (state, action) => {
         state.loading = false;
-        state.items = action.payload;
+        state.favorites = action.payload;
       })
       .addCase(getFavorites.rejected, (state, action) => {
         state.loading = false;
