@@ -9,7 +9,11 @@ const initialState = {
   myAds: [],
   searchedAds: [],
   AdsFilter: [],
-  favorites:[],
+    favorites: {
+      items: [],
+      loading: false,
+      error: null
+    },
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -185,38 +189,54 @@ export const getPopulareAds = createAsyncThunk("ads/getPopular", async (_, thunk
     }
   )
 
-  export const getFavorites = createAsyncThunk('favorites/getAll', async (_, thunkApi) => {
-  try {
-    const token = thunkApi.getState().auth.user.jwtToken;
-    return await adsService.getFavorites(token);
-  } catch (error) {
-    return thunkApi.rejectWithValue(error.response?.data?.message || 'Error loading favorites');
+ export const getFavorites = createAsyncThunk(
+  'ads/getFavorites',
+  async (_, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user?.jwtToken;
+      return await adsService.getFavorites(token);
+    } catch (error) {
+      const message =
+        (error.response && error.response.data && error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
   }
-});
+);
 
-export const addFavorite = createAsyncThunk('favorites/add', async (adId, thunkApi) => {
-  try {
-     const token = thunkApi.getState().auth.user.jwtToken;
-    const response = await adsService.addFavorite(adId,token);
-    toast.success(response.message);
-    return { adId };
-  } catch (error) {
-    toast.error(error.response?.data?.message || 'Error adding to favorites');
-    return thunkApi.rejectWithValue(error.response?.data?.message);
+export const addFavorite = createAsyncThunk(
+  'ads/addFavorite',
+  async (adId, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user?.jwtToken;
+      return await adsService.addFavorite(adId, token);
+    } catch (error) {
+      const message =
+        (error.response && error.response.data && error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
   }
-});
+);
 
-export const removeFavorite = createAsyncThunk('favorites/remove', async (adId, thunkApi) => {
-  try {
-     const token = thunkApi.getState().auth.user.jwtToken;
-    const response = await adsService.removeFavorite(adId,token);
-    toast.success(response.message);
-    return { adId };
-  } catch (error) {
-    toast.error(error.response?.data?.message || 'Error removing from favorites');
-    return thunkApi.rejectWithValue(error.response?.data?.message);
+export const removeFavorite = createAsyncThunk(
+  'ads/removeFavorite',
+  async (adId, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user?.jwtToken;
+      await adsService.removeFavorite(adId, token);
+      return adId; // Return the adId that was removed
+    } catch (error) {
+      const message =
+        (error.response && error.response.data && error.response.data.message) ||
+        error.message ||
+        error.toString();
+      return thunkAPI.rejectWithValue(message);
+    }
   }
-});
+);
 
 
 
@@ -418,23 +438,43 @@ export const adsSlice = createSlice({
         state.message = action.payload;
         state.isSuccess = false;
       })
-      // favorites 
+       // Favorites reducers
       .addCase(getFavorites.pending, (state) => {
-        state.loading = true;
+        state.favorites.loading = true;
+        state.favorites.error = null;
       })
       .addCase(getFavorites.fulfilled, (state, action) => {
-        state.loading = false;
-        state.favorites = action.payload;
+        state.favorites.loading = false;
+        state.favorites.items = action.payload;
       })
       .addCase(getFavorites.rejected, (state, action) => {
-        state.loading = false;
-        state.error = action.payload;
+        state.favorites.loading = false;
+        state.favorites.error = action.payload;
+        toast.error(action.payload);
+      })
+      .addCase(addFavorite.pending, (state, action) => {
+        // Optional: You can set a pending state for specific ad if needed
       })
       .addCase(addFavorite.fulfilled, (state, action) => {
-        // Optional: handle frontend update if needed
+        // Add the new favorite to the items array
+        state.favorites.items.push(action.payload);
+        toast.success('Added to favorites');
+      })
+      .addCase(addFavorite.rejected, (state, action) => {
+        toast.error(action.payload);
+      })
+      .addCase(removeFavorite.pending, (state, action) => {
+        // Optional: You can set a pending state for specific ad if needed
       })
       .addCase(removeFavorite.fulfilled, (state, action) => {
-        state.items = state.items.filter(fav => fav.ad._id !== action.payload.adId);
+        // Remove the favorite with matching adId
+        state.favorites.items = state.favorites.items.filter(
+          fav => fav.ad._id !== action.payload
+        );
+        toast.success('Removed from favorites');
+      })
+      .addCase(removeFavorite.rejected, (state, action) => {
+        toast.error(action.payload);
       });
   },
 });

@@ -29,6 +29,8 @@ router.route('/user')
 router.route('/favorites')
   .get(protect, getFavorites)
   .post(protect, addFavorite)
+
+router.route('/favorites/:adId')
   .delete(protect, removeFavorite);
 
 router.route('/:id/photo')

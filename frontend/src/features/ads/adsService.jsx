@@ -123,14 +123,21 @@ const addFavorite = async (adId, token) => {
     return response.data;
 };
 
+// In adsService.js
 const removeFavorite = async (adId, token) => {
     const config = {
         headers: {
             Authorization: `Bearer ${token}`,
         }
     };
-    const response = await axios.delete(`${API_Fav}/${adId}`, config);
-    return response.data;
+    
+    try {
+        const response = await axios.delete(`${API_Fav}/${adId}`, config);
+        return response.data;
+    } catch (error) {
+        console.error('Error removing favorite:', error.response?.data);
+        throw error;
+    }
 };
 
 const adsService = {
