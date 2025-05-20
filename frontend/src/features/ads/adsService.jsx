@@ -140,6 +140,50 @@ const removeFavorite = async (adId, token) => {
     }
 };
 
+// Comments functions
+const getComments = async (id) => {
+    const response = await axios.get(`${API_URL}/comments/${id}`);
+    return response.data;
+};
+
+const addComment = async (id, text, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    };
+    const response = await axios.post(
+        `${API_URL}/comments/${id}`, 
+        { text }, 
+        config
+    );
+    return response.data;
+};
+
+
+// Ratings functions
+const getRatings = async (id) => {
+    const response = await axios.get(`${API_URL}/ratings/${id}`);
+    return response.data;
+};
+
+const addRating = async (id, stars, token) => {
+    const config = {
+        headers: {
+            Authorization: `Bearer ${token}`,
+        }
+    };
+    const response = await axios.post(
+        `${API_URL}/ratings/${id}`, 
+        { stars }, 
+        config
+    );
+    return response.data;
+};
+
+
+
+
 const adsService = {
     getAllads,
     getAdById,
@@ -153,7 +197,11 @@ const adsService = {
     filterAds,
     getFavorites,
     addFavorite,
-    removeFavorite
+    removeFavorite,
+    getComments,
+    addComment,
+    getRatings,
+    addRating
 }
 
 export default adsService

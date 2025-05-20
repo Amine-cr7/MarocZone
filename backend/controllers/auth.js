@@ -37,6 +37,7 @@ const registerUser = asynchandler(async (req, res, next) => {
       id: user._id,
       FullName: user.FullName,
       email: user.email,
+      role: user.role, 
       jwtToken: generateToken(user._id)
   });
 });
@@ -59,6 +60,7 @@ const loginUser = asynchandler(async (req, res, next) => {
     id: user._id,
     FullName: user.FullName,
     email: user.email,
+    role: user.role, 
     jwtToken: generateToken(user._id)
   });
 })

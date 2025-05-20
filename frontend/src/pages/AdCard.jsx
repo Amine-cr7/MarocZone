@@ -4,7 +4,7 @@ import ImageSlider from './ImageSlider';
 
 const AdCard = ({ ad, isFavorite, isPending, onFavoriteClick }) => {
      if (!ad || !ad._id) {
-    return null; // or return a placeholder/skeleton component
+    return null;
   }
   
   return (

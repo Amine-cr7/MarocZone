@@ -8,7 +8,11 @@ const {
   updateAd,
   deleteAd,
   uploadPhotosAd,
-  getAdsByUser
+  getAdsByUser,
+  getComment,
+  addComment,
+  getRatings,
+  addRating
 } = require('../controllers/ad');
 
 const {
@@ -40,5 +44,13 @@ router.route('/:id')
   .get(protect, getAdById)
   .put(protect, updateAd)
   .delete(protect, deleteAd);
+
+router.route('/comments/:id')
+  .get(getComment)
+  .post(protect, addComment);
+
+router.route('/ratings/:id')
+  .get(getRatings)
+  .post(protect, addRating);
 
 module.exports = router;

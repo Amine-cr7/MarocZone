@@ -1,19 +1,24 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import adsService from "./adsService";
 import axios from "axios";
-import { toast } from 'react-toastify';
+import { toast } from "react-toastify";
 
 const initialState = {
   ads: [],
-  ad: {},
+  ad: {
+    comments: [],
+    ratings: [],
+    averageRating: 0,
+    userRating: null, // Add this if you track individual user ratings
+  },
   myAds: [],
   searchedAds: [],
   AdsFilter: [],
-    favorites: {
-      items: [],
-      loading: false,
-      error: null
-    },
+  favorites: {
+    items: [],
+    loading: false,
+    error: null,
+  },
   isError: false,
   isSuccess: false,
   isLoading: false,
@@ -75,7 +80,6 @@ export const getAdById = createAsyncThunk(
     }
   }
 );
-
 
 export const createAd = createAsyncThunk(
   "ads/create",
@@ -155,7 +159,9 @@ export const deleteAd = createAsyncThunk("ads/delete", async (id, thunkApi) => {
   }
 });
 
-export const getPopulareAds = createAsyncThunk("ads/getPopular", async (_, thunkApi) => {
+export const getPopulareAds = createAsyncThunk(
+  "ads/getPopular",
+  async (_, thunkApi) => {
     try {
       return await adsService.getPopulareAds();
     } catch (error) {
@@ -165,39 +171,46 @@ export const getPopulareAds = createAsyncThunk("ads/getPopular", async (_, thunk
         error.toString();
       return thunkApi.rejectWithValue(message);
     }
-  });
+  }
+);
 
-  export const fetchSearchedAds = createAsyncThunk(
-    'ads/search',
-    async (filters, thunkAPI) => {
-      try {
-        return await adsService.searchAds(filters);
-      } catch (error) {
-        return thunkAPI.rejectWithValue(error.response?.data?.message || 'Search failed');
-      }
+export const fetchSearchedAds = createAsyncThunk(
+  "ads/search",
+  async (filters, thunkAPI) => {
+    try {
+      return await adsService.searchAds(filters);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || "Search failed"
+      );
     }
-  );
+  }
+);
 
-  export const filterAds = createAsyncThunk(
-    'ads/filter',
-    async (filter , thunkAPI) => {
-      try {
-        return await adsService.filterAds(filter);
-      } catch (error) {
-        return thunkAPI.rejectWithValue(error.response?.data?.message || 'Filter failed')
-      }
+export const filterAds = createAsyncThunk(
+  "ads/filter",
+  async (filter, thunkAPI) => {
+    try {
+      return await adsService.filterAds(filter);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || "Filter failed"
+      );
     }
-  )
+  }
+);
 
- export const getFavorites = createAsyncThunk(
-  'ads/getFavorites',
+export const getFavorites = createAsyncThunk(
+  "ads/getFavorites",
   async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user?.jwtToken;
       return await adsService.getFavorites(token);
     } catch (error) {
       const message =
-        (error.response && error.response.data && error.response.data.message) ||
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
         error.message ||
         error.toString();
       return thunkAPI.rejectWithValue(message);
@@ -206,14 +219,16 @@ export const getPopulareAds = createAsyncThunk("ads/getPopular", async (_, thunk
 );
 
 export const addFavorite = createAsyncThunk(
-  'ads/addFavorite',
+  "ads/addFavorite",
   async (adId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user?.jwtToken;
       return await adsService.addFavorite(adId, token);
     } catch (error) {
       const message =
-        (error.response && error.response.data && error.response.data.message) ||
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
         error.message ||
         error.toString();
       return thunkAPI.rejectWithValue(message);
@@ -222,7 +237,7 @@ export const addFavorite = createAsyncThunk(
 );
 
 export const removeFavorite = createAsyncThunk(
-  'ads/removeFavorite',
+  "ads/removeFavorite",
   async (adId, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user?.jwtToken;
@@ -230,7 +245,9 @@ export const removeFavorite = createAsyncThunk(
       return adId; // Return the adId that was removed
     } catch (error) {
       const message =
-        (error.response && error.response.data && error.response.data.message) ||
+        (error.response &&
+          error.response.data &&
+          error.response.data.message) ||
         error.message ||
         error.toString();
       return thunkAPI.rejectWithValue(message);
@@ -238,7 +255,59 @@ export const removeFavorite = createAsyncThunk(
   }
 );
 
+export const getComments = createAsyncThunk(
+  "ads/getComments",
+  async (id, thunkAPI) => {
+    try {
+      return await adsService.getComments(id);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || "Failed to get comments"
+      );
+    }
+  }
+);
 
+export const addComment = createAsyncThunk(
+  "ads/addComment",
+  async ({ id, text }, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user?.jwtToken;
+      return await adsService.addComment(id, text, token);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || "Failed to add comment"
+      );
+    }
+  }
+);
+
+export const getRatings = createAsyncThunk(
+  "ads/getRatings",
+  async (id, thunkAPI) => {
+    try {
+      return await adsService.getRatings(id);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || "Failed to get ratings"
+      );
+    }
+  }
+);
+
+export const addRating = createAsyncThunk(
+  "ads/addRating",
+  async ({ id, stars }, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user?.jwtToken;
+      return await adsService.addRating(id, stars, token);
+    } catch (error) {
+      return thunkAPI.rejectWithValue(
+        error.response?.data?.message || "Failed to add rating"
+      );
+    }
+  }
+);
 
 export const adsSlice = createSlice({
   name: "ads",
@@ -252,16 +321,25 @@ export const adsSlice = createSlice({
       state.form = { ...state.form, ...action.payload };
     },
     clearSearchedAds: (state) => {
-        state.searchedAds = []
+      state.searchedAds = [];
     },
     clearFilterAds: (state) => {
-      state.filterAds = []
+      state.filterAds = [];
     },
-      resetFavorites: (state) => {
+    resetFavorites: (state) => {
       state.items = [];
       state.loading = false;
       state.error = null;
-    }
+    },
+    resetComments: (state) => {
+      state.ad.comments = [];
+    },
+
+    resetRatings: (state) => {
+      state.ad.ratings = [];
+      state.ad.averageRating = 0;
+      state.ad.userRating = null;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -306,6 +384,11 @@ export const adsSlice = createSlice({
         state.ad = action.payload;
         state.isError = false;
         state.isSuccess = true;
+
+        // Initialize comments and ratings if they don't exist
+        if (!state.ad.comments) state.ad.comments = [];
+        if (!state.ad.ratings) state.ad.ratings = [];
+        if (!state.ad.averageRating) state.ad.averageRating = 0;
       })
       .addCase(getAdById.rejected, (state, action) => {
         state.isLoading = false;
@@ -393,7 +476,7 @@ export const adsSlice = createSlice({
         state.isError = true;
         state.message = action.payload;
       })
-      // get Populare ads 
+      // get Populare ads
       .addCase(getPopulareAds.pending, (state) => {
         state.isLoading = true;
       })
@@ -409,7 +492,7 @@ export const adsSlice = createSlice({
         state.isError = true;
         state.isSuccess = false;
       })
-      // search 
+      // search
       .addCase(fetchSearchedAds.pending, (state) => {
         state.isLoading = true;
       })
@@ -423,7 +506,7 @@ export const adsSlice = createSlice({
         state.message = action.payload;
       })
       // filter
-     .addCase(filterAds.pending, (state) => {
+      .addCase(filterAds.pending, (state) => {
         state.isLoading = true;
       })
       .addCase(filterAds.fulfilled, (state, action) => {
@@ -438,7 +521,7 @@ export const adsSlice = createSlice({
         state.message = action.payload;
         state.isSuccess = false;
       })
-       // Favorites reducers
+      // Favorites reducers
       .addCase(getFavorites.pending, (state) => {
         state.favorites.loading = true;
         state.favorites.error = null;
@@ -458,7 +541,7 @@ export const adsSlice = createSlice({
       .addCase(addFavorite.fulfilled, (state, action) => {
         // Add the new favorite to the items array
         state.favorites.items.push(action.payload);
-        toast.success('Added to favorites');
+        toast.success("Added to favorites");
       })
       .addCase(addFavorite.rejected, (state, action) => {
         toast.error(action.payload);
@@ -469,16 +552,81 @@ export const adsSlice = createSlice({
       .addCase(removeFavorite.fulfilled, (state, action) => {
         // Remove the favorite with matching adId
         state.favorites.items = state.favorites.items.filter(
-          fav => fav.ad._id !== action.payload
+          (fav) => fav.ad._id !== action.payload
         );
-        toast.success('Removed from favorites');
+        toast.success("Removed from favorites");
       })
       .addCase(removeFavorite.rejected, (state, action) => {
+        toast.error(action.payload);
+      })
+      // Comments
+      .addCase(getComments.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getComments.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.ad.comments = action.payload || []; // Ensure it's always an array
+      })
+      .addCase(getComments.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(addComment.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addComment.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.ad.comments.push(action.payload);
+        toast.success("Comment added successfully");
+      })
+      .addCase(addComment.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        toast.error(action.payload);
+      })
+      //Ratings
+      .addCase(getRatings.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getRatings.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.ad.ratings = action.payload.ratings || [];
+        state.ad.averageRating = action.payload.averageRating || 0;
+        state.ad.userRating = action.payload.userRating || null;
+      })
+      .addCase(getRatings.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload;
+      })
+      .addCase(addRating.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(addRating.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.ad.ratings = action.payload.ratings;
+        state.ad.averageRating = action.payload.averageRating;
+        state.ad.userRating = action.payload.userRating;
+        toast.success("Rating added successfully");
+      })
+      .addCase(addRating.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
         toast.error(action.payload);
       });
   },
 });
 
-export const { reset, setFormData, setStep , clearSearchedAds , clearFilterAds , resetFavorites } = adsSlice.actions;
+export const {
+  reset,
+  setFormData,
+  setStep,
+  clearSearchedAds,
+  clearFilterAds,
+  resetFavorites,
+  resetComments,
+  resetRatings,
+} = adsSlice.actions;
 
 export default adsSlice.reducer;
