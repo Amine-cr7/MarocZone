@@ -52,7 +52,7 @@ const StarRating = ({ rating, onRate, interactive = true }) => {
 const AdDetails = () => {
   const dispatch = useDispatch();
   const { _id } = useParams();
-  const { ad, isLoading, isError, message } = useSelector(state => state.ads);
+  const { ad , isLoading, isError, message } = useSelector(state => state.ads);
   const { user } = useSelector(state => state.auth);
   const [commentText, setCommentText] = useState('');
   const [userRating, setUserRating] = useState(0);
@@ -62,6 +62,10 @@ const AdDetails = () => {
     dispatch(getComments(_id));
     dispatch(getRatings(_id));
   }, [dispatch, _id]);
+
+  console.log(ad.comments)
+  console.log(ad.ratings)
+  console.log(ad)
 
   const handleAddComment = () => {
     if (!commentText.trim()) {

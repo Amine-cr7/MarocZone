@@ -73,7 +73,7 @@ const adSchema = new mongoose.Schema({
   createdAt: { type: Date, default: Date.now },
 });
 
-adSchema.index({ '_id': 1, 'ratings.user': 1 }, { unique: true });
+// adSchema.index({ '_id': 1, 'ratings.user': 1 }, { unique: true });
 
 module.exports = mongoose.model("Ad", adSchema);
 

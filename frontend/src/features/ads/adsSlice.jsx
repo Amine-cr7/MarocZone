@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import adsService from "./adsService";
-import axios from "axios";
 import { toast } from "react-toastify";
 
 const initialState = {
@@ -327,10 +326,11 @@ export const adsSlice = createSlice({
       state.filterAds = [];
     },
     resetFavorites: (state) => {
-      state.items = [];
-      state.loading = false;
-      state.error = null;
-    },
+  state.favorites.items = [];
+  state.favorites.loading = false;
+  state.favorites.error = null;
+},
+
     resetComments: (state) => {
       state.ad.comments = [];
     },
@@ -384,8 +384,6 @@ export const adsSlice = createSlice({
         state.ad = action.payload;
         state.isError = false;
         state.isSuccess = true;
-
-        // Initialize comments and ratings if they don't exist
         if (!state.ad.comments) state.ad.comments = [];
         if (!state.ad.ratings) state.ad.ratings = [];
         if (!state.ad.averageRating) state.ad.averageRating = 0;
@@ -577,7 +575,7 @@ export const adsSlice = createSlice({
       })
       .addCase(addComment.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.ad.comments.push(action.payload);
+        state.ad.comments.unshift(action.payload);
         toast.success("Comment added successfully");
       })
       .addCase(addComment.rejected, (state, action) => {
@@ -591,9 +589,9 @@ export const adsSlice = createSlice({
       })
       .addCase(getRatings.fulfilled, (state, action) => {
         state.isLoading = false;
-        state.ad.ratings = action.payload.ratings || [];
-        state.ad.averageRating = action.payload.averageRating || 0;
-        state.ad.userRating = action.payload.userRating || null;
+          state.ad.ratings = action.payload.ratings;
+  state.ad.averageRating = action.payload.averageRating;
+  state.ad.userRating = action.payload.userRating;
       })
       .addCase(getRatings.rejected, (state, action) => {
         state.isLoading = false;

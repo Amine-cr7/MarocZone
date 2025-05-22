@@ -13,6 +13,7 @@ import AdDetails from "./pages/AdDetails";
 import UpdateAd from "./pages/UpdateAd";
 import PopularAds from "./pages/PopulareAds";
 import Favorites from "./pages/Favorites";
+import Dashboard from "./pages/Admin/Dashboard";
 function App() {
   return (
     <BrowserRouter>
@@ -49,6 +50,7 @@ function App() {
         />
         <Route path="/ads/populare" element={<PopularAds />} />
         <Route path="/ads/favorites" element={<Favorites />} />
+        <Route path="/ads/dashboard" element={<Dashboard />} />
         </Routes>
 
         <ToastContainer />

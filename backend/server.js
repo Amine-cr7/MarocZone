@@ -33,6 +33,7 @@ app.use('/api/auth',require('./routes/auth'));
 app.use('/api/categories',require('./routes/category'));
 app.use('/api/ads', require('./routes/ad') )
 app.use('/api/tools', require('./routes/search'))
+app.use('/api/admin', require('./routes/admin'))
 app.use(errorHandler)
 app.listen(port, () => console.log('Server Started On Port ' + port))
 

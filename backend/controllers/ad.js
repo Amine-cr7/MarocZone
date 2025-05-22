@@ -220,11 +220,7 @@ const getComment = asynchandler(async (req, res) => {
     });
   }
 
-  res.status(200).json({
-    success: true,
-    count: ad.comments.length,
-    data: ad.comments,
-  });
+  res.status(200).json(ad.comments);
 });
 
 const addRating = asynchandler(async (req, res) => {
@@ -281,9 +277,7 @@ const addRating = asynchandler(async (req, res) => {
     );
   }
 
-  res.status(200).json({
-        stars
-  });
+  res.status(200).json(stars);
 });
 
 const getRatings = asynchandler(async (req, res) => {
