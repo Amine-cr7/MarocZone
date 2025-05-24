@@ -28,14 +28,6 @@ const userSchema = new mongoose.Schema({
             /^(\+212|0)([ \-]?\d){9}$/
             , 'please add a valid phone']
     },
-    // city: {
-    //     type: "String",
-    //     required: [true, 'Please Add A field City'],
-    // },
-    // adresse: {
-    //     type: "String",
-    //     required: [true, 'Please Add A field Adresse'],
-    // },
     role: { type: String, enum: ['user', 'admin'], default: 'user' },
 
 })

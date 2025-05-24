@@ -14,6 +14,7 @@ import UpdateAd from "./pages/UpdateAd";
 import PopularAds from "./pages/PopulareAds";
 import Favorites from "./pages/Favorites";
 import Dashboard from "./pages/Admin/Dashboard";
+import PanelControl from "./pages/Admin/PanelControl";
 function App() {
   return (
     <BrowserRouter>
@@ -51,6 +52,7 @@ function App() {
         <Route path="/ads/populare" element={<PopularAds />} />
         <Route path="/ads/favorites" element={<Favorites />} />
         <Route path="/ads/dashboard" element={<Dashboard />} />
+        <Route path="/ads/panelcontrol" element={<PanelControl />} />
         </Routes>
 
         <ToastContainer />

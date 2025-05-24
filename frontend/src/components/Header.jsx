@@ -176,12 +176,20 @@ export default function Header() {
             </>
           )}
           {user.role === "admin" ? (
-            <Link
-              to={`/ads/dashboard`}
-              className="px-4 py-2 hover:bg-gray-100 border-b"
-            >
-              Dashboard
-            </Link>
+            <>
+              <Link
+                to={`/ads/dashboard`}
+                className="px-4 py-2 hover:bg-gray-100 border-b"
+              >
+                Dashboard
+              </Link>
+              <Link
+                to={`/ads/panelcontrol`}
+                className="px-4 py-2 hover:bg-gray-100 border-b"
+              >
+                Panel Control
+              </Link>
+            </>
           ) : (
             ""
           )}
