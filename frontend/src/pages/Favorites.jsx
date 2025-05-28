@@ -7,7 +7,7 @@ export default function Favorites() {
   const dispatch = useDispatch();
   const { favorites, isLoading } = useSelector(state => state.ads);
   const navigate = useNavigate();
-  
+  console.log(favorites)
   useEffect(() => {
     dispatch(getFavorites());
   }, [dispatch]);
@@ -43,9 +43,9 @@ export default function Favorites() {
           const ad = favorite.ad;
           
           
-          if (ad.status !== 'published') {
-            return null;
-          }
+          if (!ad || ad.status !== 'published') {
+  return null;
+}
           
           return (
             <div

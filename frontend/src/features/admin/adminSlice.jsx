@@ -1,15 +1,23 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import adminService from "./adminService";
+
 import { toast } from "react-toastify";
+import adminService from "./adminsService";
+
 
 const initialState = {
   ads: [],
   stats: {},
   adsBySubCategory: [],
   users: [],
+  reports: [],
   loading: false,
   error: null,
+  isLoading: false,
+  isError: false,
+  isSuccess: false,
+  message: '',
 };
+
 
 export const getAdsPerDay = createAsyncThunk(
   "ads/getAdsPerDay",
@@ -35,7 +43,7 @@ export const getDashboardStats = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.user.jwtToken;
-      return await adminService.getDashboardStats(token);
+      return await  adminService.getDashboardStats(token);
     } catch (error) {
       const message =
         error.response?.data?.message || error.message || error.toString();
@@ -103,8 +111,9 @@ export const updateUserRole = createAsyncThunk(
       const data = await adminService.updateUserRole(_id, role, token);
       return data;
     } catch (error) {
+      console.error("Role update error:", error.response?.data || error.message); // Debug log
       const message =
-        error.response?.data?.message || error.message || error.toString();
+        error.response?.data?.message || error.message || "Server Error";
       toast.error(message);
       return thunkAPI.rejectWithValue(message);
     }
@@ -142,10 +151,80 @@ export const deleteAd = createAsyncThunk(
   }
 );
 
+
+
+
+export const createReport = createAsyncThunk(
+  'report/create',
+  async (reportData, thunkAPI) => {
+    try {
+     const token = thunkAPI.getState().auth.user.jwtToken;
+      return await adminService.createReport(reportData, token);
+    } catch (error) {
+      toast.error(error.response?.data?.message || 'Error');
+return thunkAPI.rejectWithValue(error.response?.data?.message || 'Error');
+
+     
+    }
+  }
+);
+
+export const getAllReports = createAsyncThunk(
+  'report/getAll',
+  async (_, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.jwtToken;
+      return await adminService.getAllReports(token);
+    } catch (error) {
+      toast.error(error.response?.data?.message || 'Error');
+return thunkAPI.rejectWithValue(error.response?.data?.message || 'Error');
+
+    }
+  }
+);
+
+export const acceptReport = createAsyncThunk(
+  "admin/acceptReport",
+  async (reportId, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.jwtToken;
+      return await adminService.acceptReport(reportId, token);
+    } catch (error) {
+      const message =
+        error.response?.data?.message || error.message || "Server Error";
+      toast.error(message);
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+export const deleteReport = createAsyncThunk(
+  "admin/deleteReport",
+  async (reportId, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.user.jwtToken;
+      return await adminService.deleteReport(reportId, token);
+    } catch (error) {
+      const message =
+        error.response?.data?.message || error.message || "Server Error";
+      toast.error(message);
+      return thunkAPI.rejectWithValue(message);
+    }
+  }
+);
+
+
 const adsSlice = createSlice({
   name: "ads",
   initialState,
-  reducers: {},
+  reducers: {
+      resetReportState: (state) => {
+      state.isLoading = false;
+      state.isError = false;
+      state.isSuccess = false;
+      state.message = '';
+    }
+  },
   extraReducers: (builder) => {
     builder
       // getAdsPerDay
@@ -211,7 +290,7 @@ const adsSlice = createSlice({
       })
       .addCase(deleteUser.fulfilled, (state, action) => {
         state.loading = false;
-        state.users = state.users.filter(user => user._id !== action.payload);
+        state.users = state.users.filter((user) => user._id !== action.payload);
       })
       .addCase(deleteUser.rejected, (state, action) => {
         state.loading = false;
@@ -225,9 +304,12 @@ const adsSlice = createSlice({
       })
       .addCase(updateUserRole.fulfilled, (state, action) => {
         state.loading = false;
-        const index = state.users.findIndex(user => user._id === action.payload._id);
+        const updatedUser = action.payload;
+        const index = state.users.findIndex(
+          (user) => user._id === updatedUser._id
+        );
         if (index !== -1) {
-          state.users[index] = action.payload;
+          state.users[index] = updatedUser;
         }
       })
       .addCase(updateUserRole.rejected, (state, action) => {
@@ -256,13 +338,60 @@ const adsSlice = createSlice({
       })
       .addCase(deleteAd.fulfilled, (state, action) => {
         state.loading = false;
-        state.ads = state.ads.filter(ad => ad._id !== action.payload);
+        state.ads = state.ads.filter((ad) => ad._id !== action.payload);
       })
       .addCase(deleteAd.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+      //reports 
+      .addCase(createReport.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(createReport.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.message = 'Report created successfully';
+      })
+      .addCase(createReport.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload || 'Error creating report';
+      })
+
+      .addCase(getAllReports.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(getAllReports.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isSuccess = true;
+        state.reports = action.payload;
+      })
+      .addCase(getAllReports.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.message = action.payload || 'Error fetching reports';
+      })
+
+        // accept
+      .addCase(acceptReport.fulfilled, (state) => {
+        state.loading = false;
+      })
+      .addCase(acceptReport.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload;
+      })
+
+      // delete
+      .addCase(deleteReport.fulfilled, (state) => {
+        state.loading = false;
+      })
+      .addCase(deleteReport.rejected, (state, action) => {
         state.loading = false;
         state.error = action.payload;
       });
   },
 });
 
+export const { resetReportState } = adsSlice.actions;
 export default adsSlice.reducer;

@@ -1,3 +1,4 @@
+
 import axios from "axios";
 
 const API_URL = "/api/admin/";
@@ -48,11 +49,12 @@ const deleteUser = async (id, token) => {
   await axios.delete(`${API_URL}users/${id}`, config);
 };
 
-const updateUserRole = async ({ _id, role }, token) => {
+
+const updateUserRole = async (id, role, token) => { 
   const config = {
     headers: { Authorization: `Bearer ${token}` },
   };
-  const response = await axios.put(`${API_URL}users/${_id}/role`, { role }, config);
+  const response = await axios.put(`${API_URL}users/${id}/role`, { role }, config);
   return response.data;
 };
 
@@ -72,6 +74,51 @@ const deleteAd = async (id, token) => {
 };
 
 
+// reports 
+const createReport = async (reportData, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  };
+
+  const response = await axios.post(`${API_URL}/report`, reportData, config);
+  return response.data;
+};
+
+
+const getAllReports = async (token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`
+    }
+  };
+
+  const response = await axios.get(`${API_URL}/reports`, config);
+  return response.data;
+};
+
+const acceptReport = async (reportId, token) => {
+  const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const response = await axios.post(`${API_URL}${reportId}/accept`, {}, config);
+  return response.data;
+};
+
+
+const deleteReport = async (reportId, token) => {
+    const config = {
+    headers: {
+      Authorization: `Bearer ${token}`,
+    },
+  };
+  const res = await axios.delete(`${API_URL}${reportId}`, config);
+  return res.data;
+};
+
 
 
 const adminService = {
@@ -83,6 +130,10 @@ const adminService = {
   updateUserRole,
   getAllAds,
   deleteAd,
+  getAllReports,
+  createReport,
+  acceptReport,
+  deleteReport
 };
 
 export default adminService;

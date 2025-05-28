@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { protect, authorize } = require('../middlewares/authMiddleware');
 const { getAdsPerDay , getDashboardStats , getAdsBySubCategory , getAllUsers,deleteUser,updateUserRole,getAllAds,deleteAd } = require('../controllers/admin');
+const { getAllReports , createReport , acceptReport , deleteReport} = require('../controllers/report');
 
 router.route('/ads-per-day')
   .get(protect, authorize('admin'), getAdsPerDay); 
@@ -26,6 +27,20 @@ router.route('/ads')
 
 router.route('/ads/:id')
   .delete(protect , authorize('admin'), deleteAd)
+
+router.route('/report')
+  .post(protect, createReport); 
+
+router.route('/reports')
+  .get(protect, authorize('admin'), getAllReports);
+
+router.route('/:reportId/accept')
+  .post(protect, authorize('admin'), acceptReport);
+
+router.route('/:reportId')
+  .delete(protect, authorize('admin'), deleteReport);
+
+
 
 
 module.exports = router;
