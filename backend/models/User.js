@@ -1,42 +1,61 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
-
-const userSchema = new mongoose.Schema({
-    FullName: {
-        type: "String",
-        required: [true, 'Please Add A field name'],
-        trim: true,
-        maxlength: [50, 'name can not be more than 50 characters']
+const userSchema = new mongoose.Schema(
+  {
+    fullName: {
+      type: String,
+      required: [true, "Full name is required"],
+      trim: true,
+      maxlength: [50, "Full name cannot exceed 50 characters"],
     },
     email: {
-        type: "String",
-        required: [true, 'Please Add A field Email'],
-        unique: true,
-        match: [
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-            'please add a valid email'
-        ]
+      type: String,
+      required: [true, "Email is required"],
+      unique: true,
+      lowercase: true,
+      match: [
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+        "Please provide a valid email",
+      ],
     },
     password: {
-        type: "String",
-        required: [true, 'Please Add A field Password']
+      type: String,
+      required: [true, "Password is required"],
+      minlength: [6, "Password must be at least 6 characters"],
+      select: false,
     },
     phone: {
-        type: "String",
-        required: [true, 'Please Add A field Phone'],
-        match: [
-            /^(\+212|0)([ \-]?\d){9}$/
-            , 'please add a valid phone']
+      type: String,
+      required: [true, "Phone is required"],
+      match: [/^(\+212|0)([ \-]?\d){9}$/, "Please provide a valid Moroccan phone number"],
     },
-    // city: {
-    //     type: "String",
-    //     required: [true, 'Please Add A field City'],
-    // },
-    // adresse: {
-    //     type: "String",
-    //     required: [true, 'Please Add A field Adresse'],
-    // },
-    role: { type: String, enum: ['user', 'admin'], default: 'user' },
+    location: {
+      city: { type: String, trim: true },
+      region: {
+        type: String,
+        enum: [
+          "Casablanca-Settat",
+          "Rabat-Salé-Kénitra",
+          "Marrakech-Safi",
+          "Fès-Meknès",
+          "Tanger-Tétouan-Al Hoceïma",
+          "Souss-Massa",
+          "Oriental",
+          "Béni Mellal-Khénifra",
+          "Drâa-Tafilalet",
+          "Guelmim-Oued Noun",
+        ],
+      },
+    },
+    role: {
+      type: String,
+      enum: ["user", "admin"],
+      default: "user",
+    },
+    resetPasswordToken: String,
+    resetPasswordExpire: Date,
+  },
+  { timestamps: true }
+);
 
-})
-module.exports = mongoose.model('User',userSchema)
+module.exports = mongoose.model("User", userSchema);

@@ -1,27 +1,42 @@
 const mongoose = require("mongoose");
 
-const adSchema = new mongoose.Schema({
-    title: String,
+const adSchema = new mongoose.Schema(
+  {
+    title: { type: String, required: true },
     description: String,
-    price: Number,
-    phone:Number,
+    price: { type: Number, required: true },
+    phone: { type: String },
     images: [String],
-    subCat:String,
-    brand:String,
-    model:String,
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User' },
-    location: String,
-    details: mongoose.Schema.Types.Mixed,
-    status: {
-        type: String,
-        enum: ['draft', 'published'],
-        default: 'draft'
-    },
-    views: {
-        type:Number,
-        default:0
-    },
-    createdAt: { type: Date, default: Date.now }
-});  
 
-module.exports = mongoose.model('Ad',adSchema)
+    category: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Category",
+      required: true,
+    },
+    subcategory: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Subcategory",
+      required: true,
+    },
+
+    fields: {
+      type: Map,
+      of: mongoose.Schema.Types.Mixed,
+    },
+
+    user: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+    location: String,
+    status: {
+      type: String,
+      enum: ["draft", "published", "sold", "expired"],
+      default: "draft",
+    },
+    views: { type: Number, default: 0 },
+  },
+  { timestamps: true },
+); 
+module.exports = mongoose.model("Ad", adSchema);

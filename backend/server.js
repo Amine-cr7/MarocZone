@@ -29,10 +29,13 @@ if (process.env.NODE_ENV === 'development') {
 };
 app.use(fileupload())
 app.use(express.static(path.join(__dirname , 'public')))
-app.use('/api/auth',require('./routes/auth'));
-app.use('/api/categories',require('./routes/category'));
-app.use('/api/ads', require('./routes/ad') )
+const { authRouter, userRouter } = require('./routes/userRoutes');
+app.use('/api/auth', authRouter);
+app.use('/api/users', userRouter);
+app.use('/api/categories',require('./routes/categoryRoutes'));
+app.use('/api/subcategories',require('./routes/subcategoryRoutes'));
+app.use('/api/fields',require('./routes/fieldTemplateRoutes'));
+app.use('/api/ads', require('./routes/adRoutes') )
 app.use('/api/tools', require('./routes/search'))
 app.use(errorHandler)
-app.listen(port, () => console.log('Server Started On Port ' + port))
-
+app.listen(port, () => console.log('Server Started On Port ' + port));
