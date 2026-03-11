@@ -3,21 +3,21 @@ require('dotenv').config({ path: path.join(__dirname, '../.env') });
 
 const mongoose = require('mongoose');
 const fs = require('fs');
+const bcrypt = require('bcrypt');
 const Category = require('./models/Category');
 const Subcategory = require('./models/Subcategory');
 const FieldTemplate = require('./models/Fieldtemplate');
+const User = require('./models/User');
 
-// ─── DB Connection ────────────────────────────────────────────────────────────
 mongoose
   .connect(process.env.MONGO_URI)
-  .then(() => console.log('✅  MongoDB connected'))
+  .then(() => console.log('MongoDB connected'))
   .catch((err) => {
-    console.error('❌  MongoDB connection error:', err.message);
+    console.error('MongoDB connection error:', err.message);
     process.exit(1);
   });
 
-// ─── Import ───────────────────────────────────────────────────────────────────
-const importData = async () => {
+const importCategories = async () => {
   try {
     const rawData = fs.readFileSync(path.join(__dirname, 'seedData.json'), 'utf-8');
     const categoriesData = JSON.parse(rawData);
@@ -29,28 +29,23 @@ const importData = async () => {
     for (const catData of categoriesData) {
       const { subcategories, ...categoryFields } = catData;
 
-      // Upsert category (safe for re-runs)
       const category = await Category.findOneAndUpdate(
         { slug: categoryFields.slug },
         categoryFields,
         { upsert: true, new: true, setDefaultsOnInsert: true }
       );
       totalCategories++;
-      console.log(`  📁  Category: ${category.name}`);
 
       for (const subData of subcategories) {
         const { fields, ...subcategoryFields } = subData;
 
-        // Upsert subcategory linked to parent category
         const subcategory = await Subcategory.findOneAndUpdate(
           { slug: subcategoryFields.slug, category: category._id },
           { ...subcategoryFields, category: category._id },
           { upsert: true, new: true, setDefaultsOnInsert: true }
         );
         totalSubcategories++;
-        console.log(`    📂  Subcategory: ${subcategory.name}`);
 
-        // Upsert each field template linked to the subcategory
         for (const fieldData of fields) {
           await FieldTemplate.findOneAndUpdate(
             { name: fieldData.name, subcategory: subcategory._id },
@@ -59,59 +54,100 @@ const importData = async () => {
           );
           totalFields++;
         }
-        console.log(`       ✏️   Inserted/updated ${fields.length} field templates`);
       }
     }
 
-    console.log('\n─────────────────────────────────────────────');
-    console.log(`✅  Seed completed successfully!`);
-    console.log(`   Categories   : ${totalCategories}`);
-    console.log(`   Subcategories: ${totalSubcategories}`);
-    console.log(`   Field Templates: ${totalFields}`);
-    console.log('─────────────────────────────────────────────\n');
-
+    console.log('Categories seed completed');
+    console.log('Categories     :', totalCategories);
+    console.log('Subcategories  :', totalSubcategories);
+    console.log('Field Templates:', totalFields);
     process.exit(0);
   } catch (err) {
-    console.error('❌  Import failed:', err.message);
-    console.error(err.stack);
+    console.error('Import failed:', err.message);
     process.exit(1);
   }
 };
 
-// ─── Delete ───────────────────────────────────────────────────────────────────
-const deleteData = async () => {
+const deleteCategories = async () => {
   try {
-    console.log('🗑️   Deleting all seed data...');
-
     const [fields, subs, cats] = await Promise.all([
       FieldTemplate.deleteMany({}),
       Subcategory.deleteMany({}),
       Category.deleteMany({}),
     ]);
 
-    console.log('\n─────────────────────────────────────────────');
-    console.log('✅  All collections cleared!');
-    console.log(`   FieldTemplates deleted : ${fields.deletedCount}`);
-    console.log(`   Subcategories deleted  : ${subs.deletedCount}`);
-    console.log(`   Categories deleted     : ${cats.deletedCount}`);
-    console.log('─────────────────────────────────────────────\n');
-
+    console.log('Categories collections cleared');
+    console.log('FieldTemplates deleted :', fields.deletedCount);
+    console.log('Subcategories deleted  :', subs.deletedCount);
+    console.log('Categories deleted     :', cats.deletedCount);
     process.exit(0);
   } catch (err) {
-    console.error('❌  Delete failed:', err.message);
-    console.error(err.stack);
+    console.error('Delete failed:', err.message);
     process.exit(1);
   }
 };
 
-// ─── CLI Entry Point ──────────────────────────────────────────────────────────
-if (process.argv[2] === '-i') {
-  importData();
-} else if (process.argv[2] === '-d') {
-  deleteData();
+const importAdmin = async () => {
+  try {
+    const existingAdmin = await User.findOne({ role: 'admin' });
+    if (existingAdmin) {
+      console.log('Admin already exists:', existingAdmin.email);
+      process.exit(0);
+    }
+
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(process.env.ADMIN_PASSWORD, salt);
+
+    await User.create({
+      fullName: 'Super Admin',
+      email: process.env.ADMIN_EMAIL ,
+      password: hashedPassword,
+      phone: process.env.ADMIN_PHONE,
+      role: 'admin',
+      status: 'active',
+      location: {
+        city: 'Casablanca',
+        region: 'Casablanca-Settat',
+      },
+    });
+
+    console.log('Admin seeded successfully');
+    console.log('Email   :', process.env.ADMIN_EMAIL);
+    console.log('Password:', process.env.ADMIN_PASSWORD);
+    process.exit(0);
+  } catch (err) {
+    console.error('Admin seed failed:', err.message);
+    process.exit(1);
+  }
+};
+
+const deleteAdmin = async () => {
+  try {
+    const result = await User.deleteMany({ role: 'admin' });
+    console.log('Admins deleted:', result.deletedCount);
+    process.exit(0);
+  } catch (err) {
+    console.error('Delete admin failed:', err.message);
+    process.exit(1);
+  }
+};
+
+const action = process.argv[2];
+const target = process.argv[3];
+
+if (action === '-i' && target === '-categories') {
+  importCategories();
+} else if (action === '-d' && target === '-categories') {
+  deleteCategories();
+} else if (action === '-i' && target === '-admin') {
+  importAdmin();
+} else if (action === '-d' && target === '-admin') {
+  deleteAdmin();
 } else {
   console.log('Usage:');
-  console.log('  node seeder.js -i   →  Import seed data');
-  console.log('  node seeder.js -d   →  Delete all data');
+  console.log('  node seeder.js -i -categories');
+  console.log('  node seeder.js -d -categories');
+  console.log('  node seeder.js -i -admin');
+  console.log('  node seeder.js -d -admin');
   process.exit(0);
 }

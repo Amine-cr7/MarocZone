@@ -18,6 +18,11 @@ const userSchema = new mongoose.Schema(
         "Please provide a valid email",
       ],
     },
+    status: {
+      type: String,
+      enum: ["active", "banned", "suspended"],
+      default: "active",
+    },
     password: {
       type: String,
       required: [true, "Password is required"],
@@ -27,7 +32,10 @@ const userSchema = new mongoose.Schema(
     phone: {
       type: String,
       required: [true, "Phone is required"],
-      match: [/^(\+212|0)([ \-]?\d){9}$/, "Please provide a valid Moroccan phone number"],
+      match: [
+        /^(\+212|0)([ \-]?\d){9}$/,
+        "Please provide a valid Moroccan phone number",
+      ],
     },
     location: {
       city: { type: String, trim: true },
@@ -55,7 +63,7 @@ const userSchema = new mongoose.Schema(
     resetPasswordToken: String,
     resetPasswordExpire: Date,
   },
-  { timestamps: true }
+  { timestamps: true },
 );
 
 module.exports = mongoose.model("User", userSchema);

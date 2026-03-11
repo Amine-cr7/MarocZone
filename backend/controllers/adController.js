@@ -16,9 +16,10 @@ const getAdById = asyncHandler(async (req, res) => {
 
 // GET /api/ads/user  (uses req.user.id from protect middleware)
 const getAdsByUser = asyncHandler(async (req, res) => {
-  const ads = await adService.getAdsByUser(req.user.id);
+  const ads = await adService.getAdsByUser(req.user.id, req.query);
   res.status(200).json(ads);
 });
+
 
 // POST /api/ads
 const createAd = asyncHandler(async (req, res) => {

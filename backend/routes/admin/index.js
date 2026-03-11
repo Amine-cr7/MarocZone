@@ -6,10 +6,11 @@ const router = express.Router();
 // protect all admin routes in one place
 router.use(protect, authorize("admin"));
 
-router.use("/ads",   require("./adminAdRoutes"));
+router.use("/ads", require("./adminAdRoutes"));
 
-// TODO — wire up when controllers are ready
-// router.use("/users", require("./adminUserRoutes"));
+router.use("/users", require("./adminUserRoutes"));
+
+
 // router.use("/stats", require("./adminStatsRoutes"));
 
 module.exports = router;

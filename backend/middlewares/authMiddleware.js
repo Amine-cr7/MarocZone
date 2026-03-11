@@ -1,34 +1,47 @@
-const asynchandler = require('express-async-handler')
+const asyncHandler = require("express-async-handler");
+const User = require("../models/User");
+const jwt = require("jsonwebtoken");
 
-const jwt = require('jsonwebtoken')
-const User = require('../models/User')
+const protect = asyncHandler(async (req, res, next) => {
+  let token;
 
-const protect = asynchandler(async (req,res,next) => {
-    let token ;
-    if(req.headers.authorization && req.headers.authorization.startsWith('Bearer')){
-        try{
-            token = req.headers.authorization.split(' ')[1]
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.startsWith("Bearer")
+  ) {
+    token = req.headers.authorization.split(" ")[1];
+  }
 
-            const decoded = jwt.verify(token,process.env.JWT_SECRET)
-            req.user = await User.findById(decoded.id).select('-password')
-            next()
-        } catch(err){
-            res.status(401)
-            throw new Error('Not Authorized')
-        }
-    }
-    if(!token){
-        res.status(401)
-        throw new Error('No Token')
-    }
-})
+  if (!token) {
+    res.status(401);
+    throw new Error("No Token");
+  }
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    req.user = await User.findById(decoded.id).select("-password");
+  } catch (err) {
+    res.status(401);
+    throw new Error("Token expired or invalid");
+  }
+
+  if (req.user.status !== "active") {
+    res.status(403);
+    throw new Error("Your account has been banned or suspended");
+  }
+
+  next();
+});
+
 const authorize = (...roles) => {
-    return (req,res,next) => {
-        if(!roles.includes(req.user.role)){
-            res.status(401)
-            throw new Error(`User Role ${req.user.role} not Authorized to this route `) 
-        }
-        next()
+  return (req, res, next) => {
+    if (!roles.includes(req.user.role)) {
+      res.status(401);
+      throw new Error(
+        `User Role ${req.user.role} not Authorized to this route `,
+      );
     }
-}
-module.exports = {protect,authorize}
+    next();
+  };
+};
+module.exports = { protect, authorize };

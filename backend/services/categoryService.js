@@ -1,3 +1,4 @@
+const Ad = require("../models/Ad");
 const Category = require("../models/Category");
 const ErrorResponse = require("../utils/ErrorResponse");
 

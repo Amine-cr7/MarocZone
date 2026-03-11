@@ -63,4 +63,4 @@ const fieldTemplateSchema = new mongoose.Schema(
 
 fieldTemplateSchema.index({ subcategory: 1, name: 1 }, { unique: true });
 
-module.exports = mongoose.model("FieldTemplate", fieldTemplateSchema);
+module.exports = mongoose.models.FieldTemplate || mongoose.model("FieldTemplate", fieldTemplateSchema);

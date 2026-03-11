@@ -129,14 +129,32 @@ const getAdById = async (id) => {
   return ad;
 };
 
-const getAdsByUser = async (userId) => {
-  return await Ad.find({ user: userId })
-    .populate("category", "name icon")
-    .populate("subcategory", "name")
-    .sort({ createdAt: -1 })
-    .lean();
-};
+const getAdsByUser = async (userId, filter = {}) => {
+  const query = { user: userId };
 
+  // user can filter his own ads by status
+  if (filter.status) query.status = filter.status;
+
+  const page = Number(filter.page) || 1;
+  const limit = Number(filter.limit) || 20;
+  const skip = (page - 1) * limit;
+
+  const [ads, total] = await Promise.all([
+    Ad.find(query)
+      .populate("category", "name icon")
+      .populate("subcategory", "name")
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit)
+      .lean(),
+    Ad.countDocuments(query),
+  ]);
+
+  return {
+    data: ads,
+    pagination: { total, page, limit, pages: Math.ceil(total / limit) },
+  };
+};
 const createAd = async (data, userId) => {
   const subcategory = await Subcategory.findById(data.subcategory);
   if (!subcategory) {
@@ -266,6 +284,7 @@ const getAllAdsAdmin = async (filter = {}) => {
   if (filter.status) query.status = filter.status;
   if (filter.category) query.category = filter.category;
   if (filter.subcategory) query.subcategory = filter.subcategory;
+  if (filter.user) query.user = filter.user;
   if (filter.location) query.location = new RegExp(filter.location, "i");
   if (filter.minPrice || filter.maxPrice) {
     query.price = {};
@@ -273,14 +292,27 @@ const getAllAdsAdmin = async (filter = {}) => {
     if (filter.maxPrice) query.price.$lte = Number(filter.maxPrice);
   }
 
-  return await Ad.find(query)
-    .populate("category", "name icon")
-    .populate("subcategory", "name")
-    .populate("user", "fullName phone email")
-    .sort({ createdAt: -1 })
-    .lean();
-};
+  const page = Number(filter.page) || 1;
+  const limit = Number(filter.limit) || 20;
+  const skip = (page - 1) * limit;
 
+  const [ads, total] = await Promise.all([
+    Ad.find(query)
+      .populate("category", "name icon")
+      .populate("subcategory", "name")
+      .populate("user", "fullName phone email")
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit)
+      .lean(),
+    Ad.countDocuments(query),
+  ]);
+
+  return {
+    data: ads,
+    pagination: { total, page, limit, pages: Math.ceil(total / limit) },
+  };
+};
 const bulkDeleteAds = async (ids) => {
   if (!ids || ids.length === 0) {
     throw new ErrorResponse("No ids provided", 400);

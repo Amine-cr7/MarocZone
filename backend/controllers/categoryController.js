@@ -25,7 +25,7 @@ const updateCategory = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "Category updated", data: category });
 });
 
-// DELETE /api/categories/:id
+// DELETE /api/admin/categories/:id
 const deleteCategory = asyncHandler(async (req, res) => {
   await categoryService.deleteCategory(req.params.id);
   res.status(200).json({ message: "Category deleted" });
