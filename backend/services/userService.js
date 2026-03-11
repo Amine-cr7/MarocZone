@@ -1,4 +1,5 @@
 const User = require("../models/User");
+const Token = require("../models/Token");
 const ErrorResponse = require("../utils/ErrorResponse");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -7,8 +8,16 @@ const nodemailer = require("nodemailer");
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
-const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "30d" });
+const generateAccessToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: "15m" });
+};
+
+const generateRefreshToken = () => {
+  return crypto.randomBytes(40).toString("hex");
+};
+
+const hashToken = (token) => {
+  return crypto.createHash("sha256").update(token).digest("hex");
 };
 
 const hashPassword = async (password) => {
@@ -27,25 +36,17 @@ const transporter = nodemailer.createTransport({
 
 // ─── Auth ─────────────────────────────────────────────────────────────────────
 
-const register = async (data) => {
+const register = async (data, device) => {
   const { fullName, email, password, phone, location } = data;
 
-  const existing = await User.findOne({
-    $or: [{ email }, { phone }],
-  });
-
+  const existing = await User.findOne({ $or: [{ email }, { phone }] });
   if (existing) {
     if (existing.email === email)
-      throw new ErrorResponse(
-        "This email is already associated with an account",
-        409,
-      );
+      throw new ErrorResponse("This email is already associated with an account", 409);
     if (existing.phone === phone)
-      throw new ErrorResponse(
-        "This phone is already associated with an account",
-        409,
-      );
+      throw new ErrorResponse("This phone is already associated with an account", 409);
   }
+
   const user = await User.create({
     fullName,
     email,
@@ -54,32 +55,82 @@ const register = async (data) => {
     location,
   });
 
+  const accessToken = generateAccessToken(user._id);
+  const refreshToken = generateRefreshToken();
+
+  await Token.create({
+    user: user._id,
+    token: hashToken(refreshToken),
+    expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    device: device || "unknown",
+  });
+
   return {
-    _id: user._id,
-    fullName: user.fullName,
-    email: user.email,
-    phone: user.phone,
-    location: user.location,
-    token: generateToken(user._id),
+    user: {
+      _id: user._id,
+      fullName: user.fullName,
+      email: user.email,
+      phone: user.phone,
+      location: user.location,
+    },
+    accessToken,
+    refreshToken,
   };
 };
 
-const login = async ({ email, password }) => {
+const login = async ({ email, password }, device) => {
   const user = await User.findOne({ email }).select("+password");
   if (!user) throw new ErrorResponse("Invalid email or password", 401);
 
   const isMatch = await bcrypt.compare(password, user.password);
   if (!isMatch) throw new ErrorResponse("Invalid email or password", 401);
 
+  const accessToken = generateAccessToken(user._id);
+  const refreshToken = generateRefreshToken();
+
+  await Token.create({
+    user: user._id,
+    token: hashToken(refreshToken),
+    expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+    device: device || "unknown",
+  });
+
   return {
-    _id: user._id,
-    fullName: user.fullName,
-    email: user.email,
-    phone: user.phone,
-    location: user.location,
-    role: user.role,
-    token: generateToken(user._id),
+    user: {
+      _id: user._id,
+      fullName: user.fullName,
+      email: user.email,
+      phone: user.phone,
+      location: user.location,
+      role: user.role,
+    },
+    accessToken,
+    refreshToken,
   };
+};
+
+const refresh = async (rawRefreshToken) => {
+  if (!rawRefreshToken) throw new ErrorResponse("No refresh token", 401);
+
+  const tokenDoc = await Token.findOne({
+    token: hashToken(rawRefreshToken),
+    expiresAt: { $gt: Date.now() },
+  });
+
+  if (!tokenDoc) throw new ErrorResponse("Invalid or expired refresh token", 401);
+
+  const accessToken = generateAccessToken(tokenDoc.user);
+  return { accessToken };
+};
+
+const logout = async (rawRefreshToken) => {
+  if (!rawRefreshToken) throw new ErrorResponse("No refresh token", 401);
+  await Token.deleteOne({ token: hashToken(rawRefreshToken) });
+};
+
+const logoutAll = async (userId) => {
+  // logout from all devices
+  await Token.deleteMany({ user: userId });
 };
 
 const forgotPassword = async (email) => {
@@ -88,11 +139,8 @@ const forgotPassword = async (email) => {
 
   const resetToken = crypto.randomBytes(20).toString("hex");
 
-  user.resetPasswordToken = crypto
-    .createHash("sha256")
-    .update(resetToken)
-    .digest("hex");
-  user.resetPasswordExpire = Date.now() + 10 * 60 * 1000; // 10 minutes
+  user.resetPasswordToken = hashToken(resetToken);
+  user.resetPasswordExpire = Date.now() + 10 * 60 * 1000;
   await user.save();
 
   await transporter.sendMail({
@@ -106,18 +154,11 @@ const forgotPassword = async (email) => {
       <p>This token expires in 10 minutes.</p>
     `,
   });
-
-  return resetToken;
 };
 
 const resetPassword = async ({ resetToken, newPassword }) => {
-  const hashedToken = crypto
-    .createHash("sha256")
-    .update(resetToken)
-    .digest("hex");
-
   const user = await User.findOne({
-    resetPasswordToken: hashedToken,
+    resetPasswordToken: hashToken(resetToken),
     resetPasswordExpire: { $gt: Date.now() },
   });
 
@@ -138,7 +179,6 @@ const getMe = async (userId) => {
 };
 
 const updateMe = async (userId, data) => {
-  // prevent password update through this route
   delete data.password;
   delete data.role;
 
@@ -165,6 +205,9 @@ const updatePassword = async (userId, { currentPassword, newPassword }) => {
 module.exports = {
   register,
   login,
+  refresh,
+  logout,
+  logoutAll,
   forgotPassword,
   resetPassword,
   getMe,

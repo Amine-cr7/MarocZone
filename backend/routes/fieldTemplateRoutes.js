@@ -6,11 +6,13 @@ const {
   updateField,
   deleteField,
 } = require("../controllers/fieldTemplateController");
+const { protect, authorize } = require("../middlewares/authMiddleware");
+
+const admin = [protect, authorize("admin")];
 
 const router = express.Router();
 
-router.route("/").get(getFields).post(createField);
-
-router.route("/:id").get(getField).put(updateField).delete(deleteField);
+router.route("/").get(getFields).post(...admin, createField);
+router.route("/:id").get(getField).put(...admin, updateField).delete(...admin, deleteField);
 
 module.exports = router;

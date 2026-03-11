@@ -34,8 +34,13 @@ const updateAd = asyncHandler(async (req, res) => {
 
 // DELETE /api/ads/:id
 const deleteAd = asyncHandler(async (req, res) => {
-  await adService.deleteAd(req.params.id, req.user.id);
+  await adService.deleteAd(req.params.id, { userId: req.user.id });
   res.status(200).json({ message: "Ad deleted" });
+});
+
+const changeAdStatus = asyncHandler(async (req, res) => {
+  const ad = await adService.changeAdStatus(req.params.id, req.body.status,{userId:req.user.id});
+  res.status(200).json({ message: "Ad status updated", data: ad });
 });
 
 // PUT /api/ads/:id/photos
@@ -65,7 +70,9 @@ const getPopularAds = asyncHandler(async(req,res) => {
 module.exports = {
   getAllAds,
   getAdById,
+  changeAdStatus,
   getAdsByUser,
+  getPopularAds,
   createAd,
   updateAd,
   deleteAd,

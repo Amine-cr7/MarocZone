@@ -7,13 +7,18 @@ const path = require("path");
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
 const validateFields = async (subcategoryId, fields = {}) => {
-  const templates = await FieldTemplate.find({ subcategory: subcategoryId }).lean();
+  const templates = await FieldTemplate.find({
+    subcategory: subcategoryId,
+  }).lean();
 
   for (const template of templates) {
     const value = fields[template.name];
 
     // check required fields
-    if (template.required && (value === undefined || value === null || value === "")) {
+    if (
+      template.required &&
+      (value === undefined || value === null || value === "")
+    ) {
       throw new ErrorResponse(`Field "${template.label}" is required`, 400);
     }
 
@@ -22,11 +27,21 @@ const validateFields = async (subcategoryId, fields = {}) => {
     // validate by type
     switch (template.type) {
       case "number":
-        if (isNaN(value)) throw new ErrorResponse(`Field "${template.label}" must be a number`, 400);
+        if (isNaN(value))
+          throw new ErrorResponse(
+            `Field "${template.label}" must be a number`,
+            400,
+          );
         if (template.min !== undefined && value < template.min)
-          throw new ErrorResponse(`Field "${template.label}" must be at least ${template.min}`, 400);
+          throw new ErrorResponse(
+            `Field "${template.label}" must be at least ${template.min}`,
+            400,
+          );
         if (template.max !== undefined && value > template.max)
-          throw new ErrorResponse(`Field "${template.label}" must be at most ${template.max}`, 400);
+          throw new ErrorResponse(
+            `Field "${template.label}" must be at most ${template.max}`,
+            400,
+          );
         break;
 
       case "select":
@@ -36,14 +51,23 @@ const validateFields = async (subcategoryId, fields = {}) => {
 
       case "multiselect":
         if (!Array.isArray(value))
-          throw new ErrorResponse(`Field "${template.label}" must be an array`, 400);
+          throw new ErrorResponse(
+            `Field "${template.label}" must be an array`,
+            400,
+          );
         if (!value.every((v) => template.options.includes(v)))
-          throw new ErrorResponse(`Invalid value(s) for "${template.label}"`, 400);
+          throw new ErrorResponse(
+            `Invalid value(s) for "${template.label}"`,
+            400,
+          );
         break;
 
       case "boolean":
         if (typeof value !== "boolean")
-          throw new ErrorResponse(`Field "${template.label}" must be true or false`, 400);
+          throw new ErrorResponse(
+            `Field "${template.label}" must be true or false`,
+            400,
+          );
         break;
     }
   }
@@ -63,12 +87,31 @@ const getAllAds = async (filter = {}) => {
     if (filter.maxPrice) query.price.$lte = Number(filter.maxPrice);
   }
 
-  return await Ad.find(query)
-    .populate("category", "name icon")
-    .populate("subcategory", "name")
-    .populate("user", "fullName phone")
-    .sort({ createdAt: -1 })
-    .lean();
+  const page = Number(filter.page) || 1;
+  const limit = Number(filter.limit) || 20;
+  const skip = (page - 1) * limit;
+
+  const [ads, total] = await Promise.all([
+    Ad.find(query)
+      .populate("category", "name icon")
+      .populate("subcategory", "name")
+      .populate("user", "fullName phone")
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(limit)
+      .lean(),
+    Ad.countDocuments(query),
+  ]);
+
+  return {
+    data: ads,
+    pagination: {
+      total,
+      page,
+      limit,
+      pages: Math.ceil(total / limit),
+    },
+  };
 };
 
 const getAdById = async (id) => {
@@ -97,7 +140,10 @@ const getAdsByUser = async (userId) => {
 const createAd = async (data, userId) => {
   const subcategory = await Subcategory.findById(data.subcategory);
   if (!subcategory) {
-    throw new ErrorResponse(`Subcategory not found with id: ${data.subcategory}`, 404);
+    throw new ErrorResponse(
+      `Subcategory not found with id: ${data.subcategory}`,
+      404,
+    );
   }
 
   await validateFields(data.subcategory, data.fields);
@@ -127,20 +173,41 @@ const updateAd = async (id, data, userId) => {
     .lean();
 };
 
-const deleteAd = async (id, userId) => {
+const deleteAd = async (id, { userId, isAdmin = false }) => {
   const ad = await Ad.findById(id);
   if (!ad) throw new ErrorResponse(`Ad not found with id: ${id}`, 404);
 
-  if (ad.user.toString() !== userId) {
+  if (!isAdmin && ad.user.toString() !== userId) {
     throw new ErrorResponse("You are not authorized to delete this ad", 403);
   }
 
   await ad.deleteOne();
 };
 
-const getPopularAds = async(req,res) => {
-    const ads = await Ad.find().sort({views : -1}).limit(10).populate('category')
-    return ads;
+const getPopularAds = async (req, res) => {
+  const ads = await Ad.find()
+    .sort({ views: -1 })
+    .limit(10)
+    .populate("category");
+  return ads;
+};
+
+const updateAdStatus = async (id, status, { userId, isAdmin = false }) => {
+  const ad = await Ad.findById(id);
+  if (!ad) throw new ErrorResponse(`Ad not found with id: ${id}`, 404);
+
+  if (!isAdmin) {
+    if (ad.user.toString() !== userId) {
+      throw new ErrorResponse("You are not authorized", 403);
+    }
+    if (status !== "sold") {
+      throw new ErrorResponse("You can only mark your ad as sold", 403);
+    }
+  }
+
+  ad.status = status;
+  await ad.save();
+  return ad;
 };
 
 const uploadAdPhotos = async (id, userId, files, env) => {
@@ -148,7 +215,10 @@ const uploadAdPhotos = async (id, userId, files, env) => {
   if (!ad) throw new ErrorResponse("Ad not found", 404);
 
   if (ad.user.toString() !== userId) {
-    throw new ErrorResponse("You are not authorized to upload photos for this ad", 403);
+    throw new ErrorResponse(
+      "You are not authorized to upload photos for this ad",
+      403,
+    );
   }
 
   if (!files || !files.files) throw new ErrorResponse("No files uploaded", 400);
@@ -163,14 +233,19 @@ const uploadAdPhotos = async (id, userId, files, env) => {
     }
 
     if (file.size > env.MAX_FILE_UPLOAD) {
-      throw new ErrorResponse(`File "${file.name}" exceeds the size limit`, 400);
+      throw new ErrorResponse(
+        `File "${file.name}" exceeds the size limit`,
+        400,
+      );
     }
 
     const fileName = `photo_${ad._id}_${Date.now()}_${file.name}`;
     const uploadPath = path.join(env.FILE_UPLOAD_PATH, fileName);
 
     await new Promise((resolve, reject) => {
-      file.mv(uploadPath, (err) => (err ? reject(new ErrorResponse("File upload failed", 500)) : resolve()));
+      file.mv(uploadPath, (err) =>
+        err ? reject(new ErrorResponse("File upload failed", 500)) : resolve(),
+      );
     });
 
     uploadedFileNames.push(fileName);
@@ -183,6 +258,37 @@ const uploadAdPhotos = async (id, userId, files, env) => {
   return uploadedFileNames;
 };
 
+// admin
+
+const getAllAdsAdmin = async (filter = {}) => {
+  const query = {};
+
+  if (filter.status) query.status = filter.status;
+  if (filter.category) query.category = filter.category;
+  if (filter.subcategory) query.subcategory = filter.subcategory;
+  if (filter.location) query.location = new RegExp(filter.location, "i");
+  if (filter.minPrice || filter.maxPrice) {
+    query.price = {};
+    if (filter.minPrice) query.price.$gte = Number(filter.minPrice);
+    if (filter.maxPrice) query.price.$lte = Number(filter.maxPrice);
+  }
+
+  return await Ad.find(query)
+    .populate("category", "name icon")
+    .populate("subcategory", "name")
+    .populate("user", "fullName phone email")
+    .sort({ createdAt: -1 })
+    .lean();
+};
+
+const bulkDeleteAds = async (ids) => {
+  if (!ids || ids.length === 0) {
+    throw new ErrorResponse("No ids provided", 400);
+  }
+  const result = await Ad.deleteMany({ _id: { $in: ids } });
+  return { deleted: result.deletedCount };
+};
+
 module.exports = {
   getAllAds,
   getAdById,
@@ -190,6 +296,9 @@ module.exports = {
   createAd,
   updateAd,
   deleteAd,
+  updateAdStatus,
+  bulkDeleteAds,
+  getAllAdsAdmin,
   getPopularAds,
   uploadAdPhotos,
 };

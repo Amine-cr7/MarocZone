@@ -2,6 +2,9 @@ const express = require("express");
 const {
   register,
   login,
+  refresh,
+  logout,
+  logoutAll,
   forgotPassword,
   resetPassword,
   getMe,
@@ -15,6 +18,9 @@ const authRouter = express.Router();
 
 authRouter.post("/register", register);
 authRouter.post("/login", login);
+authRouter.post("/refresh", refresh);
+authRouter.post("/logout", logout);
+authRouter.post("/logout-all", protect, logoutAll);
 authRouter.post("/forgot-password", forgotPassword);
 authRouter.post("/reset-password", resetPassword);
 

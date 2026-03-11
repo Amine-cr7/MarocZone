@@ -32,7 +32,7 @@ const adSchema = new mongoose.Schema(
     location: String,
     status: {
       type: String,
-      enum: ["draft", "published", "sold", "expired"],
+      enum: ["pending", "published","rejected", "sold", "expired"],
       default: "draft",
     },
     views: { type: Number, default: 0 },
