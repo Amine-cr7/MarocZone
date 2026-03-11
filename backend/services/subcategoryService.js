@@ -7,9 +7,7 @@ const getAllSubcategories = async (filter = {}) => {
 
   if (filter.category) query.category = filter.category;
 
-  return await Subcategory.find(query)
-    .populate("category", "name icon")
-    .lean();
+  return await Subcategory.find(query).populate("category", "name icon").lean();
 };
 
 const getSubcategoryById = async (id) => {
@@ -27,7 +25,10 @@ const getSubcategoryById = async (id) => {
 const createSubcategory = async (data) => {
   const category = await Category.findById(data.category);
   if (!category) {
-    throw new ErrorResponse(`Category not found with id: ${data.category}`, 404);
+    throw new ErrorResponse(
+      `Category not found with id: ${data.category}`,
+      404,
+    );
   }
 
   const existing = await Subcategory.findOne({
@@ -37,7 +38,7 @@ const createSubcategory = async (data) => {
   if (existing) {
     throw new ErrorResponse(
       `A subcategory with name "${data.name}" already exists in this category`,
-      409
+      409,
     );
   }
 
@@ -54,7 +55,10 @@ const updateSubcategory = async (id, data) => {
   if (data.category) {
     const category = await Category.findById(data.category);
     if (!category) {
-      throw new ErrorResponse(`Category not found with id: ${data.category}`, 404);
+      throw new ErrorResponse(
+        `Category not found with id: ${data.category}`,
+        404,
+      );
     }
   }
 
@@ -71,6 +75,9 @@ const deleteSubcategory = async (id) => {
   if (!subcategory) {
     throw new ErrorResponse(`Subcategory not found with id: ${id}`, 404);
   }
+  const hasAds = await Ad.exists({ subcategory: id, status: "published" });
+  if (hasAds)
+    throw new ErrorResponse("Cannot delete subcategory with active ads", 400);
 
   await subcategory.deleteOne();
 };

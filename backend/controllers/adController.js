@@ -52,6 +52,16 @@ const uploadPhotosAd = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "Images uploaded successfully", data: fileNames });
 });
 
+const getPopularAds = asyncHandler(async(req,res) => {
+    const ads = await adService.getPopularAds();
+    
+    res.status(200).json({
+        message: 'Popular ads fetched successfully',
+        count: ads.length,
+        data: ads
+    });
+});
+
 module.exports = {
   getAllAds,
   getAdById,

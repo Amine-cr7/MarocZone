@@ -35,9 +35,16 @@ const updateCategory = async (id, data) => {
 
 const deleteCategory = async (id) => {
   const category = await Category.findById(id);
-  if (!category) {
-    throw new ErrorResponse(`Category not found with id: ${id}`, 404);
+  if (!category) throw new ErrorResponse("Category not found", 404);
+
+  const hasAds = await Ad.exists({ category: id, status: "published" });
+  if (hasAds) {
+    throw new ErrorResponse(
+      "Cannot delete category with active ads",
+      400
+    );
   }
+
   await category.deleteOne();
 };
 

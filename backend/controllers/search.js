@@ -57,15 +57,7 @@ const filterAds = asynchandler(async (req, res) => {
     });
 });
 
-const getPopularAds = asynchandler(async(req,res) => {
-    const ads = await Ad.find().sort({views : -1}).limit(10).populate('category')
 
-    res.status(200).json({
-        message: 'Popular ads fetched successfully',
-        count: ads.length,
-        data: ads
-    });
-})
 module.exports = {
     searchAds,
     filterAds,

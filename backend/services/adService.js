@@ -138,6 +138,11 @@ const deleteAd = async (id, userId) => {
   await ad.deleteOne();
 };
 
+const getPopularAds = async(req,res) => {
+    const ads = await Ad.find().sort({views : -1}).limit(10).populate('category')
+    return ads;
+};
+
 const uploadAdPhotos = async (id, userId, files, env) => {
   const ad = await Ad.findById(id);
   if (!ad) throw new ErrorResponse("Ad not found", 404);
@@ -185,5 +190,6 @@ module.exports = {
   createAd,
   updateAd,
   deleteAd,
+  getPopularAds,
   uploadAdPhotos,
 };
