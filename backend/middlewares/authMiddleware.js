@@ -20,6 +20,7 @@ const protect = asyncHandler(async (req, res, next) => {
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = await User.findById(decoded.id).select("-password");
+    if (!req.user) throw new ErrorResponse("User no longer exists", 401);
   } catch (err) {
     throw new ErrorResponse("Token expired or invalid", 401);
   }
@@ -36,7 +37,7 @@ const authorize = (...roles) => {
     if (!roles.includes(req.user.role)) {
       throw new ErrorResponse(
         `User Role ${req.user.role} not Authorized to this route `,
-        401,
+        403,
       );
     }
     next();

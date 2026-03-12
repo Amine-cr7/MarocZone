@@ -8,7 +8,10 @@ const cookieParser = require("cookie-parser");
 const connectDb = require("./config/db");
 const { errorHandler } = require("./middlewares/errorMiddleware");
 const fileupload = require("express-fileupload");
-const createLimiter = require("./middleware/rateLimitMiddleware");
+const createLimiter = require("./middlewares/rateLimitMiddleware");
+const ExpressMongoSanitize = require("express-mongo-sanitize");
+const xss = require("xss-clean");
+const helmet = require("helmet");
 
 connectDb();
 
@@ -17,16 +20,19 @@ const app = express();
 
 app.use(cors({ origin: process.env.CLIENT_URL, credentials: true }));
 app.use(express.json());
-app.use(cookieParser()); 
+app.use(cookieParser());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 app.use(fileupload());
 app.use(express.static(path.join(__dirname, "public")));
-
+app.use(helmet());
+app.use(ExpressMongoSanitize());
+app.use(xss());
 app.use(createLimiter(100));
 
 const { authRouter, userRouter } = require("./routes/userRoutes");
+
 app.use("/api/auth", authRouter);
 app.use("/api/users", userRouter);
 app.use("/api/categories", require("./routes/categoryRoutes"));
