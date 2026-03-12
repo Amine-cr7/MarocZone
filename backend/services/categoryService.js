@@ -13,12 +13,19 @@ const getCategoryById = async (id) => {
   }
   return category;
 };
-
 const createCategory = async (data) => {
+  if (!data.name || data.name.trim() === "") {
+    throw new ErrorResponse("Category name is required", 400);
+  }
+
   const existing = await Category.findOne({ name: data.name });
   if (existing) {
-    throw new ErrorResponse(`A category with name "${data.name}" already exists`, 409);
+    throw new ErrorResponse(
+      `A category with name "${data.name}" already exists`,
+      409,
+    );
   }
+
   return await Category.create(data);
 };
 
@@ -40,10 +47,7 @@ const deleteCategory = async (id) => {
 
   const hasAds = await Ad.exists({ category: id, status: "published" });
   if (hasAds) {
-    throw new ErrorResponse(
-      "Cannot delete category with active ads",
-      400
-    );
+    throw new ErrorResponse("Cannot delete category with active ads", 400);
   }
 
   await category.deleteOne();

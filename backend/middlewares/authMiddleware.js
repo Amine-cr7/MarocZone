@@ -1,6 +1,7 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../models/User");
 const jwt = require("jsonwebtoken");
+const ErrorResponse = require("../utils/ErrorResponse");
 
 const protect = asyncHandler(async (req, res, next) => {
   let token;
@@ -13,21 +14,18 @@ const protect = asyncHandler(async (req, res, next) => {
   }
 
   if (!token) {
-    res.status(401);
-    throw new Error("No Token");
+    throw new ErrorResponse("No Token", 401);
   }
 
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
     req.user = await User.findById(decoded.id).select("-password");
   } catch (err) {
-    res.status(401);
-    throw new Error("Token expired or invalid");
+    throw new ErrorResponse("Token expired or invalid", 401);
   }
 
   if (req.user.status !== "active") {
-    res.status(403);
-    throw new Error("Your account has been banned or suspended");
+    throw new ErrorResponse("Your account has been banned or suspended", 403);
   }
 
   next();
@@ -36,9 +34,9 @@ const protect = asyncHandler(async (req, res, next) => {
 const authorize = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
-      res.status(401);
-      throw new Error(
+      throw new ErrorResponse(
         `User Role ${req.user.role} not Authorized to this route `,
+        401,
       );
     }
     next();
