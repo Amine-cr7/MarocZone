@@ -4,10 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "node backend/serve.js",
-    "server": "nodemon  backend/server.js",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\" "
+    "start": "node serve.js",
+    "server": "nodemon server.js"
   },
   "author": "",
   "license": "MIT",

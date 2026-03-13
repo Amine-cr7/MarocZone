@@ -39,4 +39,12 @@ const adSchema = new mongoose.Schema(
   },
   { timestamps: true },
 ); 
+adSchema.index({ category: 1 });
+adSchema.index({ subcategory: 1 });
+adSchema.index({ user: 1 });
+adSchema.index({ price: 1 });
+adSchema.index({ status: 1 });
+adSchema.index({ category: 1, status: 1 });
+adSchema.index({ createdAt: -1 });
+
 module.exports = mongoose.model("Ad", adSchema);

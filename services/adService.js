@@ -88,7 +88,7 @@ const getAllAds = async (filter = {}) => {
   }
 
   const page = Number(filter.page) || 1;
-  const limit = Number(filter.limit) || 20;
+  const limit = Math.min(Number(filter.limit) || 20, 100);
   const skip = (page - 1) * limit;
 
   const [ads, total] = await Promise.all([
