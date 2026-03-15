@@ -44,19 +44,7 @@ const changeAdStatus = asyncHandler(async (req, res) => {
   res.status(200).json({ message: "Ad status updated", data: ad });
 });
 
-// PUT /api/ads/:id/photos
-const uploadPhotosAd = asyncHandler(async (req, res) => {
-  const fileNames = await adService.uploadAdPhotos(
-    req.params.id,
-    req.user.id,
-    req.files,
-    {
-      MAX_FILE_UPLOAD: process.env.MAX_FILE_UPLOAD,
-      FILE_UPLOAD_PATH: process.env.FILE_UPLOAD_PATH,
-    }
-  );
-  res.status(200).json({ message: "Images uploaded successfully", data: fileNames });
-});
+
 
 const getPopularAds = asyncHandler(async(req,res) => {
     const ads = await adService.getPopularAds();
@@ -77,5 +65,4 @@ module.exports = {
   createAd,
   updateAd,
   deleteAd,
-  uploadPhotosAd,
 };

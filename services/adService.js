@@ -228,54 +228,6 @@ const updateAdStatus = async (id, status, { userId, isAdmin = false }) => {
   return ad;
 };
 
-const uploadAdPhotos = async (id, userId, files, env) => {
-  const ad = await Ad.findById(id);
-  if (!ad) throw new ErrorResponse("Ad not found", 404);
-
-  if (ad.user.toString() !== userId) {
-    throw new ErrorResponse(
-      "You are not authorized to upload photos for this ad",
-      403,
-    );
-  }
-
-  if (!files || !files.files) throw new ErrorResponse("No files uploaded", 400);
-
-  let fileList = Array.isArray(files.files) ? files.files : [files.files];
-
-  const uploadedFileNames = [];
-
-  for (const file of fileList) {
-    if (!file.mimetype.startsWith("image")) {
-      throw new ErrorResponse(`File "${file.name}" is not an image`, 400);
-    }
-
-    if (file.size > env.MAX_FILE_UPLOAD) {
-      throw new ErrorResponse(
-        `File "${file.name}" exceeds the size limit`,
-        400,
-      );
-    }
-
-    const fileName = `photo_${ad._id}_${Date.now()}_${file.name}`;
-    const uploadPath = path.join(env.FILE_UPLOAD_PATH, fileName);
-
-    await new Promise((resolve, reject) => {
-      file.mv(uploadPath, (err) =>
-        err ? reject(new ErrorResponse("File upload failed", 500)) : resolve(),
-      );
-    });
-
-    uploadedFileNames.push(fileName);
-  }
-
-  ad.images = uploadedFileNames;
-  ad.status = "published";
-  await ad.save();
-
-  return uploadedFileNames;
-};
-
 // admin
 
 const getAllAdsAdmin = async (filter = {}) => {
@@ -332,5 +284,4 @@ module.exports = {
   bulkDeleteAds,
   getAllAdsAdmin,
   getPopularAds,
-  uploadAdPhotos,
 };

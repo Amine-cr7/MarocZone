@@ -6,7 +6,6 @@ const {
   createAd,
   updateAd,
   deleteAd,
-  uploadPhotosAd,
   changeAdStatus,
 } = require("../controllers/adcontroller");
 const { protect } = require("../middlewares/authMiddleware");
@@ -25,6 +24,5 @@ router
   .put(protect, updateAd)
   .delete(protect, deleteAd);
 
-router.route("/:id/photos").put(protect, uploadPhotosAd);
 
 module.exports = router;

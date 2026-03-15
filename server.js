@@ -2,17 +2,16 @@ const path = require("path");
 const express = require("express");
 const morgan = require("morgan");
 const dotenv = require("dotenv");
-dotenv.config({ path: path.resolve(__dirname, "../.env") });
+
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const connectDb = require("./config/db");
 const { errorHandler } = require("./middlewares/errorMiddleware");
-const fileupload = require("express-fileupload");
 const createLimiter = require("./middlewares/rateLimitMiddleware");
 const ExpressMongoSanitize = require("express-mongo-sanitize");
 const xss = require("xss-clean");
 const helmet = require("helmet");
-
+dotenv.config();
 connectDb();
 
 const port = process.env.PORT || 5000;
@@ -24,8 +23,7 @@ app.use(cookieParser());
 if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
-app.use(fileupload());
-app.use(express.static(path.join(__dirname, "public")));
+
 app.use(helmet());
 app.use(ExpressMongoSanitize());
 app.use(xss());
